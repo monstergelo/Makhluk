@@ -17,4 +17,12 @@ protected :
     */
 };
 
+class Gajah : public Herbivora {
+    
+}
+
+class Burung_Unta : public Herbivora {
+    
+}
+
 #endif // HERBIVORA_H
