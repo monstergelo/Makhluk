@@ -7,7 +7,7 @@ class Herbivora : public Hewan {
 public :
     virtual bool berlari()=0;
     /*
-    Menghasilkan nilai true jika omnivora menyadari predatornya ada di sekitarnya.
+    Menghasilkan nilai true jika herbivora menyadari predatornya ada di sekitarnya.
     Hal ini mengakibatkan kecepatan meningkat.
     */
 protected :
@@ -21,14 +21,14 @@ class Gajah : public Herbivora {
 public:
     bool berlari();
 protected:
-    deltakecepatan = 2;
+    deltaKecepatan = 2;
 }
 
 class Burung_Unta : public Herbivora {
 public:
     bool berlari();
 protected:
-    deltakecepatan = 4;
+    deltaKecepatan = 4;
 }
 
 #endif // HERBIVORA_H
