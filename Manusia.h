@@ -1,0 +1,17 @@
+#ifndef MANUSIA_H
+#define MANUSIA_H
+
+#include "MakhlukHidup.h"
+#include "HuntingSkill.h"
+
+class Manusia : public MakhlukHidup, public HuntingSkill {
+public :
+    virtual bool menghindar()=0;
+    /*
+    Mengembalikan nilai true jika ada predator di sekitar.
+    Hal ini digunakan untuk menentukan gerak selanjutnya yaitu
+    menjauh dari target.
+    */
+};
+
+#endif // MANUSIA_H
