@@ -19,14 +19,14 @@ protected :
 
 class Gajah : public Herbivora {
 public:
-
+    bool berlari();
 protected:
     deltakecepatan = 2;
 }
 
 class Burung_Unta : public Herbivora {
 public:
-
+    bool berlari();
 protected:
     deltakecepatan = 4;
 }
