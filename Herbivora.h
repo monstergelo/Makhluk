@@ -18,11 +18,17 @@ protected :
 };
 
 class Gajah : public Herbivora {
-    
+public:
+
+protected:
+    deltakecepatan = 2;
 }
 
 class Burung_Unta : public Herbivora {
-    
+public:
+
+protected:
+    deltakecepatan = 4;
 }
 
 #endif // HERBIVORA_H
