@@ -13,5 +13,5 @@ public :
     menjauh dari target.
     */
 };
-
+//wawawawawawaw;
 #endif // MANUSIA_H
