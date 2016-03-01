@@ -5,6 +5,26 @@
 
 class Herbivora : public Hewan {
 public :
+    //5 sekawan
+    Hewan();
+    ~Hewan();
+    Hewan(const Hewan&);
+    Hewan& operator=(const Hewan&);
+    ifstream operator>> (istream&);
+    ofstream operator<< (ostream&);
+    
+    //services
+    void menua();
+    //menambah umur dari makhluk hidup
+    void gerak();
+    //mengbah posisi makhluk hidup sesuai arah dan kecepatan
+    bool mati();
+    //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
+    void display();
+    //menampilkan makhluk hidup ke layar
+    bool Lapar();
+    bool memburu();
+
     virtual bool berlari()=0;
     /*
     Menghasilkan nilai true jika herbivora menyadari predatornya ada di sekitarnya.
@@ -17,18 +37,5 @@ protected :
     */
 };
 
-class Gajah : public Herbivora {
-public:
-    bool berlari();
-protected:
-    deltaKecepatan = 2;
-}
-
-class Burung_Unta : public Herbivora {
-public:
-    bool berlari();
-protected:
-    deltaKecepatan = 4;
-}
 
 #endif // HERBIVORA_H
