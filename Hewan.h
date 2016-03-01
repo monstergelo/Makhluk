@@ -19,7 +19,12 @@ public :
     Menghasilkan true jika tingkat kekenyangan rendah.
     Hal ini mengakitkan skill berburu dari hewan muncul.
     */
-protected :
+    void set_tingkat_kekenyangan();
+    void set_maks_tingkat_kekenyangan();
+    void get_tingkat_kekenyangan();
+    void get_maks_tingkat_kekenyangan();
+    
+private :
     int tingkat_kekenyangan;
     /*
     Menyimpan nilai tingkat kekenyangan dari hewan. Hal ini dapat digunakan
