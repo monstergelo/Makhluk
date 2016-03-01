@@ -3,8 +3,9 @@
 
 #include "MakhlukHidup.h"
 #include "HuntingSkill.h"
+#include "Gerak.h"
 
-class Hewan : public MakhlukHidup, public HuntingSkill{
+class Hewan : public MakhlukHidup, public HuntingSkill, public Gerak{
 public :
     //5 sekawan
     Hewan();
@@ -13,7 +14,7 @@ public :
     Hewan& operator=(const Hewan&);
     ifstream operator>> (istream&);
     ofstream operator<< (ostream&);
-    
+
     virtual bool Lapar()=0;
     /*
     Menghasilkan true jika tingkat kekenyangan rendah.
@@ -23,7 +24,7 @@ public :
     void set_maks_tingkat_kekenyangan();
     void get_tingkat_kekenyangan();
     void get_maks_tingkat_kekenyangan();
-    
+
 private :
     int tingkat_kekenyangan;
     /*

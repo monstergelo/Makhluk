@@ -3,8 +3,9 @@
 
 #include "MakhlukHidup.h"
 #include "HuntingSkill.h"
+#include "Gerak.h"
 
-class Manusia : public MakhlukHidup, public HuntingSkill {
+class Manusia : public MakhlukHidup, public HuntingSkill, public Gerak {
 public :
     virtual bool menghindar()=0;
     /*
