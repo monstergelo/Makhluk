@@ -24,13 +24,14 @@ public :
     //menampilkan makhluk hidup ke layar
     bool Lapar();
     bool memburu();
+    void set_deltaKecepatan(int);
 
     virtual bool berlari()=0;
     /*
     Menghasilkan nilai true jika herbivora menyadari predatornya ada di sekitarnya.
     Hal ini mengakibatkan kecepatan meningkat.
     */
-protected :
+private :
     int deltaKecepatan;
     /*
     Menyimpan nilai peningkatan kecepatan
