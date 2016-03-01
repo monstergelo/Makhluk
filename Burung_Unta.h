@@ -18,5 +18,6 @@ public :
   //menampilkan makhluk hidup ke layar
   bool Lapar();
   bool memburu();
+  bool berlari();
 
 }
