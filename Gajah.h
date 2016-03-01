@@ -17,6 +17,9 @@ public :
   //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
   void display();
   //menampilkan makhluk hidup ke layar
+  bool Lapar();
+  bool memburu();
+  
   
   void berlari();
 }
