@@ -6,10 +6,10 @@
 class Herbivora : public Hewan {
 public :
     //5 sekawan
-    Hewan();
-    ~Hewan();
-    Hewan(const Hewan&);
-    Hewan& operator=(const Hewan&);
+    Herbivora();
+    ~Herbivora();
+    Herbivora(const Herbivora&);
+    Herbivora& operator=(const Herbivora&);
     ifstream operator>> (istream&);
     ofstream operator<< (ostream&);
     
