@@ -6,8 +6,13 @@
 
 class Hewan : public MakhlukHidup, public HuntingSkill{
 public :
-    //5 ekawan
-    
+    //5 sekawan
+    Hewan();
+    ~Hewan();
+    Hewan(const Hewan&);
+    Hewan& operator=(const Hewan&);
+    ifstream operator>> (istream&);
+    ofstream operator<< (ostream&);
     
     virtual bool Lapar()=0;
     /*
