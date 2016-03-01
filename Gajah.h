@@ -7,6 +7,8 @@ public :
   ~Gajah();
   Gajah(const Gajah&);
   Gajah& operator= (const Gajah&);
+  ifstream operator>> (istream&);
+  ofstream operator<< (ostream&);
   
   //services
   void menua();
