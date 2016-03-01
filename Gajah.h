@@ -9,13 +9,13 @@ public :
   Gajah& operator= (const Gajah&);
   
   //services
-  void menua() 
+  void menua();
   //menambah umur dari makhluk hidup
-  void gerak()
+  void gerak();
   //mengbah posisi makhluk hidup sesuai arah dan kecepatan
-  bool mati()
+  bool mati();
   //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
-  void display()
+  void display();
   //menampilkan makhluk hidup ke layar
   
   void berlari();
