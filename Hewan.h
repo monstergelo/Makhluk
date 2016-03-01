@@ -6,6 +6,7 @@
 
 class Hewan : public MakhlukHidup, public HuntingSkill{
 public :
+    
     virtual bool Lapar()=0;
     /*
     Menghasilkan true jika tingkat kekenyangan rendah.
