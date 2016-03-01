@@ -2,7 +2,10 @@
 
 class Burung_Unta : public Herbivora {
 public :
+  Burung_Unta();
+  ~Burung_Unta();
+  Burung_Unta(const Burung_Unta&);
+  Burung_Unta& operator= (const Burung_Unta&);
+  
   bool berlari();
-private :
-  //belum ada ide
 }
