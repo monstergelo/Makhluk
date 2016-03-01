@@ -1,7 +1,7 @@
 #include "Herbivora.h"
 
 Herbivora::Herbivora() {
-    //inisialisasi data 
+    //inisialisasi data
 }
 
 Herbivora::~Herbivora() {
