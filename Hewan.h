@@ -6,6 +6,8 @@
 
 class Hewan : public MakhlukHidup, public HuntingSkill{
 public :
+    //5 ekawan
+    
     
     virtual bool Lapar()=0;
     /*
