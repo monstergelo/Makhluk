@@ -1,16 +1,16 @@
 #include "Gajah.h"
 
-virtual void Gajah::menua() {
+void Gajah::menua() {
   
 }
-virtual void Gajah::gerak() {
+void Gajah::gerak() {
   
 }
-virtual bool Gajah::mati() {
+bool Gajah::mati() {
   
 }
 
-virtual void Gajah::display() {
+void Gajah::display() {
   
 }
 
