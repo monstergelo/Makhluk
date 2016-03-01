@@ -6,6 +6,8 @@ public :
   ~Burung_Unta();
   Burung_Unta(const Burung_Unta&);
   Burung_Unta& operator= (const Burung_Unta&);
+  ifstream operator>> (istream&);
+  ofstream operator<< (ostream&);
   
     //services
   void menua();
