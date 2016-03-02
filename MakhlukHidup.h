@@ -5,11 +5,11 @@
 
 class MakhlukHidup {
 public :
-    virtual void menua()= 0;
+    void menua();
     //menambah umur dari makhluk hidup
-    virtual bool mati()= 0;
+    bool mati();
     //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
-    virtual void display()=0;
+    void display();
     //menampilkan makhluk hidup ke layar
 
     //getter

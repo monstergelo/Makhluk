@@ -7,12 +7,15 @@
 
 class Manusia : public MakhlukHidup, public HuntingSkill, public Gerak {
 public :
-    virtual bool menghindar()=0;
+    virtual bool setMenghindar(bool m)=0;
     /*
-    Mengembalikan nilai true jika ada predator di sekitar.
+    Mengeset bool menghindar jika ada predator di sekitar.
     Hal ini digunakan untuk menentukan gerak selanjutnya yaitu
-    menjauh dari target.
+    menjauh dari predator.
     */
+private :
+    bool menghindar;
+
 };
 //wawawawawawaw;
 #endif // MANUSIA_H

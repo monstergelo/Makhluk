@@ -14,11 +14,6 @@ public :
     //OPERATOR ==
     bool operator==(const Point&);
 
-    bool inRadius(int r);
-    /* Mengembalikan true ketika ada suatu titik yang lain
-    berada di radius r
-    */
-
     void geser(int dx, int dy);
     //Menggeser sebuah titik sebesar dx, dy
 

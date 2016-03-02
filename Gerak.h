@@ -1,6 +1,7 @@
 #ifndef GERAK_H
 #define GERAK_H
 
+#include <stdlib.h>
 #include "Point.h"
 
 #define U 1 //Utara
@@ -20,13 +21,14 @@ public :
     //CCTOR tidak perlu
     //DTOR tidak perlu
     //Operator =
-    Gerak& operator= (const Gerak&);
+    Gerak& operator= (const Gerak& G);
     //Operator input output tidak perlu
-    void gerak_bebas() = 0;
+    virtual void gerak_bebas() = 0;
     //Membuat gerakan dengan kecepatan tertentu dan arah yang random
-    void gerak_berarah(const Point&) = 0;
+    //Arah awalnya terdefinisi
+    virtual void gerak_berarah(const Point&) = 0;
     //Membuat gerakan dengan arah menuju suatu titik
-    void gerak_menjauh(const Point&) = 0;
+    virtual void gerak_menjauh(const Point&) = 0;
     //Membuat gerakan dengan arah menjauhi suatu titik;
 
 private :
