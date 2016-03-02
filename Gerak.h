@@ -26,20 +26,20 @@ public :
     Point gerak_bebas(Point Awal);
     //Membuat gerakan dengan kecepatan tertentu dan arah yang random
     //Arah awalnya terdefinisi
-    Point gerak_memburu(Point Awal, Point Predator);
+    Point gerak_memburu(Point Awal, Point Target);
     //Membuat gerakan dengan arah menuju suatu titik
-    Point gerak_menjauh(Point Awal, Point Target);
+    Point gerak_menjauh(Point Awal, Point Predator);
     //Membuat gerakan dengan arah menjauhi suatu titik;
     Point gerak_berarah(Point Awal, int _arah);
     //Membuat gerakan arah yang ditentukan
 
     //SETTER
-    void setKecepatan(int _kecepatan);
-    void setArah(int _arah);
+    void set_Kecepatan(int _kecepatan);
+    void set_Arah(int _arah);
 
     //GETTER
-    int getKecepatan();
-    int getArah();
+    int get_Kecepatan();
+    int get_Arah();
 
 private :
 	int kecepatan;

@@ -1,5 +1,8 @@
 #include "Gerak.h"
 #include "Point.h"
+#include <iostream>
+
+using namespace std;
 
 //CTOR
 Gerak::Gerak(int k, int a)
@@ -28,19 +31,19 @@ Point Gerak::gerak_memburu(Point Awal, Point Target)
 //Membuat gerakan dengan arah menuju suatu titik
 {
     Point temp;
-    if ((Awal.getAbsis() == Target.getAbsis()) && (Awal.getOrdinat() > Target.getOrdinat()))
+    if ((Awal.getAbsis() == Target.getAbsis()) && (Awal.getOrdinat() < Target.getOrdinat()))
         temp = gerak_berarah(Awal,1);
-    else if ((Awal.getAbsis() > Target.getAbsis()) && (Awal.getOrdinat() > Target.getOrdinat()))
-        temp = gerak_berarah(Awal,2);
-    else if ((Awal.getAbsis() > Target.getAbsis()) && (Awal.getOrdinat() == Target.getOrdinat()))
-        temp = gerak_berarah(Awal,3);
-    else if ((Awal.getAbsis() > Target.getAbsis()) && (Awal.getOrdinat() < Target.getOrdinat()))
-        temp = gerak_berarah(Awal,4);
-    else if ((Awal.getAbsis() == Target.getAbsis()) && (Awal.getOrdinat() < Target.getOrdinat()))
-        temp = gerak_berarah(Awal,5);
     else if ((Awal.getAbsis() < Target.getAbsis()) && (Awal.getOrdinat() < Target.getOrdinat()))
-        temp = gerak_berarah(Awal,6);
+        temp = gerak_berarah(Awal,2);
     else if ((Awal.getAbsis() < Target.getAbsis()) && (Awal.getOrdinat() == Target.getOrdinat()))
+        temp = gerak_berarah(Awal,3);
+    else if ((Awal.getAbsis() < Target.getAbsis()) && (Awal.getOrdinat() > Target.getOrdinat()))
+        temp = gerak_berarah(Awal,4);
+    else if ((Awal.getAbsis() == Target.getAbsis()) && (Awal.getOrdinat() > Target.getOrdinat()))
+        temp = gerak_berarah(Awal,5);
+    else if ((Awal.getAbsis() > Target.getAbsis()) && (Awal.getOrdinat() > Target.getOrdinat()))
+        temp = gerak_berarah(Awal,6);
+    else if ((Awal.getAbsis() > Target.getAbsis()) && (Awal.getOrdinat() == Target.getOrdinat()))
         temp = gerak_berarah(Awal,7);
     else
         temp = gerak_berarah(Awal,8);
@@ -53,17 +56,17 @@ Point Gerak::gerak_menjauh(Point Awal, Point Predator)
     Point temp;
     if ((Awal.getAbsis() == Predator.getAbsis()) && (Awal.getOrdinat() > Predator.getOrdinat()))
         temp = gerak_berarah(Awal,5);
-    else if ((Awal.getAbsis() > Predator.getAbsis()) && (Awal.getOrdinat() > Predator.getOrdinat()))
-        temp = gerak_berarah(Awal,6);
-    else if ((Awal.getAbsis() > Predator.getAbsis()) && (Awal.getOrdinat() == Predator.getOrdinat()))
-        temp = gerak_berarah(Awal,7);
-    else if ((Awal.getAbsis() > Predator.getAbsis()) && (Awal.getOrdinat() < Predator.getOrdinat()))
-        temp = gerak_berarah(Awal,8);
-    else if ((Awal.getAbsis() == Predator.getAbsis()) && (Awal.getOrdinat() < Predator.getOrdinat()))
-        temp = gerak_berarah(Awal,1);
     else if ((Awal.getAbsis() < Predator.getAbsis()) && (Awal.getOrdinat() < Predator.getOrdinat()))
-        temp = gerak_berarah(Awal,2);
+        temp = gerak_berarah(Awal,6);
     else if ((Awal.getAbsis() < Predator.getAbsis()) && (Awal.getOrdinat() == Predator.getOrdinat()))
+        temp = gerak_berarah(Awal,7);
+    else if ((Awal.getAbsis() < Predator.getAbsis()) && (Awal.getOrdinat() > Predator.getOrdinat()))
+        temp = gerak_berarah(Awal,8);
+    else if ((Awal.getAbsis() == Predator.getAbsis()) && (Awal.getOrdinat() > Predator.getOrdinat()))
+        temp = gerak_berarah(Awal,1);
+    else if ((Awal.getAbsis() > Predator.getAbsis()) && (Awal.getOrdinat() > Predator.getOrdinat()))
+        temp = gerak_berarah(Awal,2);
+    else if ((Awal.getAbsis() > Predator.getAbsis()) && (Awal.getOrdinat() == Predator.getOrdinat()))
         temp = gerak_berarah(Awal,3);
     else
         temp = gerak_berarah(Awal,4);
@@ -75,9 +78,9 @@ Point Gerak::gerak_berarah(Point Awal, int _arah)
 {
     Point temp = Awal;
     switch (_arah) {
-        case 1 : temp.geser(1,0); break;
+        case 1 : temp.geser(0,1); break;
         case 2 : temp.geser(1,1); break;
-        case 3 : temp.geser(0,1); break;
+        case 3 : temp.geser(1,0); break;
         case 4 : temp.geser(1,-1); break;
         case 5 : temp.geser(0,-1); break;
         case 6 : temp.geser(-1,-1); break;
@@ -85,4 +88,27 @@ Point Gerak::gerak_berarah(Point Awal, int _arah)
         case 8 : temp.geser(-1,1); break;
     }
     return temp;
+}
+
+
+    //SETTER
+void Gerak::set_Kecepatan(int _kecepatan)
+{
+    kecepatan = _kecepatan;
+}
+
+void Gerak::set_Arah(int _arah)
+{
+    arah = _arah;
+}
+
+    //GETTER
+int Gerak::get_Kecepatan()
+{
+    return kecepatan;
+}
+
+int Gerak::get_Arah()
+{
+    return arah;
 }
