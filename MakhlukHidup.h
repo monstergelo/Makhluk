@@ -12,11 +12,18 @@ public :
     virtual void display()=0;
     //menampilkan makhluk hidup ke layar
 
+    //getter
+    int get_umur();
+    int get_ulang_tahung();
+    char get_DNA();
+    int get_batas_umur();
+
+    //setter
+    void get_umur(int);
+    void get_ulang_tahung(int);
+    void get_DNA(char);
+
 protected :
-    point posisi;
-    //Menyimpan posisi Makhluk Hidup setelah berpindah
-    point PPosisi;
-    //Menyimpan posisi Makhluk Hidup sebelum berpindah
     int umur;
     //Menyimpan umur dari makhluk hidup;
     int ulang_tahun;
