@@ -1,11 +1,12 @@
+#include <thread>
+#include "AdministratorMakhlukHidup.h"
 
 //class untuk mengatur kehidupan makhluk hidup
 class KonduktorMakhlukHidup: public AdministratorMakhlukHidup
 {
 public:
-	//ctor, dtor, cctor
+	//ctor, dtor
 	KonduktorMakhlukHidup();
-	KonduktorMakhlukHidup(const ModeratorMakhlukHidup&);
 	~KonduktorMakhlukHidup();
 
 	//method
@@ -14,5 +15,4 @@ public:
 
 
 private:
-	
-}
+};
