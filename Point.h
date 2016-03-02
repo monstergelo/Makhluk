@@ -16,6 +16,14 @@ public :
 
     void geser(int dx, int dy);
     //Menggeser sebuah titik sebesar dx, dy
+    
+    //Getter
+    int getAbsis();
+    int getOrdinat();
+    
+    //Setter
+    void setAbsis(int _x);
+    void setOrdinat(int _y);
 
 private :
     int x; //Menyimpan Absis

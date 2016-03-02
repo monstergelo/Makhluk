@@ -25,3 +25,20 @@ void Point::geser(int dx, int dy)
     x += dx;
     y += dy;
 }
+
+//Getter
+int Point::getAbsis(){
+    return x;
+}
+int Point::getOrdinat(){
+    return y;
+}
+
+//Setter
+void Point::setAbsis(int _x){
+    x = _x;
+}
+
+void Point::setOrdinat(int _y){
+    y = _y;
+}
