@@ -1,9 +1,20 @@
 #ifndef HUNTING_SKILL
 #define HUNTING_SKILL
 
+
+
 class HuntingSkill {
 public :
-    void setMemburu();
+    //CTOR
+    HuntingSkill (char* Target = NULL);
+    //CCTOR
+    HuntingSkill (const HuntingSkill&);
+    //DTOR
+    ~HuntingSkill ();
+    //OPERATOR =
+    HuntingSkill& operator= (const HuntingSkill&);
+
+    void setMemburu(bool M);
     /*
     Mengembalikan nilai true jika ada target di sekitar.
     Hal ini digunakan untuk menentukan gerak selanjutnya yaitu
