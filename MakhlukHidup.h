@@ -1,29 +1,26 @@
 #ifndef MAKHLUK_HIDUP_H
 #define MAKHLUK_HIDUP_H
-
+#include <time.h>
 #include "Point.h"
 
 class MakhlukHidup {
 public :
-    void menua();
+    MahlukHidup(int _umur, int _ulangtahun, Point _posisi, char _DNA, char* _predator);
+    MahlukHidup(const MahlukHidup&);
+    ~MahlukHidup();
+    MahlukHidup& operator=()
+    virtual void menua()= 0;
     //menambah umur dari makhluk hidup
-    bool mati();
+    virtual bool mati()= 0;
     //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
-    void display();
+    virtual void display()=0;
     //menampilkan makhluk hidup ke layar
 
-    //getter
-    int get_umur();
-    int get_ulang_tahung();
-    char get_DNA();
-    int get_batas_umur();
-
-    //setter
-    void get_umur(int);
-    void get_ulang_tahung(int);
-    void get_DNA(char);
-
 protected :
+    Point posisi;
+    //Menyimpan posisi Makhluk Hidup setelah berpindah
+    Point PPosisi;
+    //Menyimpan posisi Makhluk Hidup sebelum berpindah
     int umur;
     //Menyimpan umur dari makhluk hidup;
     int ulang_tahun;
