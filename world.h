@@ -1,4 +1,5 @@
 using namespace std;
+#include 
 
 class World
 {
@@ -13,9 +14,17 @@ public:
 
 
 private:
+	//atribut
 	int *Area; //matrix untuk menyimpan pointer objek, index menggambarkan posisi
 	int panjang;
 	int lebar;
 	list<int> daftarMakhluk; //ganti jadi list Makhluk ntar
 	list<int> threadMakhluk; //ganti jadi list thread ntar
+
+
+	//method pembantu
+	void resetCursor();
+	void moveCursor(int, int);
+	void cursorSwitch(bool b);
+	void clear();
 }
