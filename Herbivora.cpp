@@ -2,7 +2,7 @@
 
 Herbivora::Herbivora(int kec) {
 	set_deltaKecepatan(kec);
-
+	set_ukuran_predator(4);
 }
 
 Herbivora::Herbivora(const Herbivora& H) {
@@ -10,9 +10,14 @@ Herbivora::Herbivora(const Herbivora& H) {
 }
 
 //services
-void Herbivora::gerak(){
+void Herbivora::bergerak(MakhlukHidup M){
+
     if (!Lapar()) {
-    	gerak_bebas(getPosisi());
+    	if (!berlari(M)) {
+    		gerak_bebas(getPosisi());
+    	} else {
+    		setPosisi(gerak_menjauh(getPosisi(),M.getPosisi()));
+    	}
     } else {
     	gerak_memburu(getPosisi(), /*Point dari target*/);
     }
@@ -26,27 +31,51 @@ virtual void Herbivora::set_deltaKecepatan(int _deltaKecepatan) {
 	deltaKecepatan = _deltaKecepatan;
 }
 
-
-bool Herbivora::Lapar(){
-	//lagi bikin
-}
-
-bool Herbivora::berlari() {
-	Point P; //Menyimpan Point predator
-
+bool Herbivora::isPredator(MakhlukHidup M) {
+	int i = 0;
 	bool stop = false;
-	int i = 1;
-	while (i < 10 && !stop) {
-		if (gerak_berarah(getPosisi(),i) == /*Point dari predator*/) {
-			setPosisi(gerak_menjauh(getPosisi(),/*Point dari predator*/));
+	while (i < M.get_ukuran_predator() && !stop) {
+		if (M.get_DNA() == predator[i]) {
 			stop = true;
 		} else {
 			i++;
 		}
-	} //i >= 10 || stop
-	if (i >= 10) {
-		return false;
+	}
+	return (i < M.get_ukuran_predator());
+}
+
+bool Herbivora::isTarget(MakhlukHidup M) {
+	int i = 0;
+	bool stop = false;
+	while (i < M.get_ukuran_predator() && !stop) {
+		if (get_DNA() == M.predator[i]) {
+			stop = true;
+		} else {
+			i++;
+		}
+	}
+	return (i < M.get_ukuran_predator());
+}
+
+bool Herbivora::Lapar(){
+	
+}
+
+bool Herbivora::berlari(MakhlukHidup M) {
+	Point P; //Menyimpan Point predator
+
+	bool stop = false;
+	int i = 1;
+	if (isPredator(M)) {
+		while (i < 10 && !stop) {
+			if (gerak_berarah(getPosisi(),i) == /*Point dari predator*/) {
+				stop = true;
+			} else {
+				i++;
+			}
+		} //i >= 10 || stop
+		return (i >= 10);
 	} else {
-		return true;
+		return false;
 	}
 }
