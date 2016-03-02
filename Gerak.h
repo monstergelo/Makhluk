@@ -21,15 +21,25 @@ public :
     //CCTOR tidak perlu
     //DTOR tidak perlu
     //Operator =
-    Gerak& operator= (const Gerak& G);
+    Gerak& operator= (const Gerak&);
     //Operator input output tidak perlu
-    virtual void gerak_bebas() = 0;
+    Point gerak_bebas(Point Awal);
     //Membuat gerakan dengan kecepatan tertentu dan arah yang random
     //Arah awalnya terdefinisi
-    virtual void gerak_memburu(const Point&) = 0;
+    Point gerak_memburu(Point Awal, Point Predator);
     //Membuat gerakan dengan arah menuju suatu titik
-    virtual void gerak_menjauh(const Point&) = 0;
+    Point gerak_menjauh(Point Awal, Point Target);
     //Membuat gerakan dengan arah menjauhi suatu titik;
+    Point gerak_berarah(Point Awal, int _arah);
+    //Membuat gerakan arah yang ditentukan
+
+    //SETTER
+    void setKecepatan(int _kecepatan);
+    void setArah(int _arah);
+
+    //GETTER
+    int getKecepatan();
+    int getArah();
 
 private :
 	int kecepatan;
