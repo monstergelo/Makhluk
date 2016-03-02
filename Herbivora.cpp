@@ -6,7 +6,8 @@ Herbivora::Herbivora(int kec) {
 }
 
 Herbivora::Herbivora(const Herbivora& H) {
-    set_deltaKecepatan(get_deltaKecepatan(H));
+    set_deltaKecepatan(H.get_deltaKecepatan());
+    set_ukuran_predator(H.get_ukuran_predator());
 }
 
 //services
@@ -19,7 +20,7 @@ void Herbivora::bergerak(MakhlukHidup M){
     		setPosisi(gerak_menjauh(getPosisi(),M.getPosisi()));
     	}
     } else {
-    	gerak_memburu(getPosisi(), /*Point dari target*/);
+    	gerak_memburu(getPosisi(), M.getPosisi());
     }
 
 }
@@ -58,17 +59,16 @@ bool Herbivora::isTarget(MakhlukHidup M) {
 }
 
 bool Herbivora::Lapar(){
-	
+	return (get_tingkat_kekenyangan() >= 5);
 }
 
 bool Herbivora::berlari(MakhlukHidup M) {
-	Point P; //Menyimpan Point predator
-
 	bool stop = false;
 	int i = 1;
+
 	if (isPredator(M)) {
 		while (i < 10 && !stop) {
-			if (gerak_berarah(getPosisi(),i) == /*Point dari predator*/) {
+			if (gerak_berarah(getPosisi(),i) == M.getPosisi()) {
 				stop = true;
 			} else {
 				i++;
