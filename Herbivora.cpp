@@ -1,49 +1,52 @@
 #include "Herbivora.h"
 
-Herbivora::Herbivora() {
-    //inisialisasi data
-}
+Herbivora::Herbivora(int kec) {
+	set_deltaKecepatan(kec);
 
-Herbivora::~Herbivora() {
-    
 }
 
 Herbivora::Herbivora(const Herbivora& H) {
-    
-}
-
-Herbivora& Herbivora::operator=(const Herbivora& H) {
-    
-}
-
-ifstream Herbivora::operator>> (istream&){
-    
-}
-ofstream Herbivora::operator<< (ostream&){
-    
+    set_deltaKecepatan(get_deltaKecepatan(H));
 }
 
 //services
-void Herbivora::menua(){
-    
-}
-//menambah umur dari makhluk hidup
 void Herbivora::gerak(){
-    
-}
-//mengbah posisi makhluk hidup sesuai arah dan kecepatan
-bool Herbivora::mati(){
-    
-}
-//mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
-void Herbivora::display(){
-    
-}
-//menampilkan makhluk hidup ke layar
-bool Herbivora::Lapar(){
-    
-}
-bool Herbivora::memburu(){
-    
+    if (!Lapar()) {
+    	gerak_bebas(getPosisi());
+    } else {
+    	gerak_memburu(getPosisi(), /*Point dari target*/);
+    }
+
 }
 
+virtual int Herbivora::get_deltaKecepatan(){
+	return deltaKecepatan;
+}
+virtual void Herbivora::set_deltaKecepatan(int _deltaKecepatan) {
+	deltaKecepatan = _deltaKecepatan;
+}
+
+
+bool Herbivora::Lapar(){
+	//lagi bikin
+}
+
+bool Herbivora::berlari() {
+	Point P; //Menyimpan Point predator
+
+	bool stop = false;
+	int i = 1;
+	while (i < 10 && !stop) {
+		if (gerak_berarah(getPosisi(),i) == /*Point dari predator*/) {
+			setPosisi(gerak_menjauh(getPosisi(),/*Point dari predator*/));
+			stop = true;
+		} else {
+			i++;
+		}
+	} //i >= 10 || stop
+	if (i >= 10) {
+		return false;
+	} else {
+		return true;
+	}
+}
