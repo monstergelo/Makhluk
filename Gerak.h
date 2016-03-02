@@ -26,7 +26,7 @@ public :
     virtual void gerak_bebas() = 0;
     //Membuat gerakan dengan kecepatan tertentu dan arah yang random
     //Arah awalnya terdefinisi
-    virtual void gerak_berarah(const Point&) = 0;
+    virtual void gerak_memburu(const Point&) = 0;
     //Membuat gerakan dengan arah menuju suatu titik
     virtual void gerak_menjauh(const Point&) = 0;
     //Membuat gerakan dengan arah menjauhi suatu titik;
