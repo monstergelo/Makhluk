@@ -1,28 +1,24 @@
 #include "MakhlukHidup.h"
 
-MakhlukHidup::MakhlukHidup(int _umur, char *_predator, char _DNA, int _ulangtahun, Point P) : batas_umur(_umur){
+MakhlukHidup::MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P) : ukuran_predator(20), batas_umur(_umur), posisi(P.getAbsis(),P.getOrdinat()), PPosisi(P.getAbsis(),P.getOrdinat()) {
     DNA = _DNA;
-    posisi =  P;
-    PPosisi = P;
     ulang_tahun = _ulangtahun;
-    predator = new char[20];
-    for (int i = 0; i < 20; i++){
-        predator[i] = _predator[i];
-    }
 }
 
-MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : batas_umur(M.batas_umur){
+MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(20), batas_umur(M.batas_umur){
     DNA = M.DNA;
     posisi  = M.posisi;
     PPosisi = M.PPosisi;
     ulang_tahun = M.ulang_tahun;
-    predator = new char[20];
-    for (int i = 0; i < 20; i++){
-        predator[i] = M.predator[i];
+    if (predator != NULL){
+        predator = new char[ukuran_predator];
+        for (int i = 0; i < ukuran_predator; i++){
+            predator[i] = M.predator[i];
+        }
     }
 }
 
-MakhlukHidup::~MakhlukHidup(){
+virtual MakhlukHidup::~MakhlukHidup(){
     delete [] predator;
 }
 
@@ -30,8 +26,8 @@ MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
     delete [] predator;
     DNA = M.DNA;
     ulang_tahun = M.ulang_tahun;
-    predator = new char[20];
-    for (int i = 0; i < 20; i++){
+    predator = new char[ukuran_predator];
+    for (int i = 0; i < ukuran_predator; i++){
         predator[i] = M.predator[i];
     }
     return *this;

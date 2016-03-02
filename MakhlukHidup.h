@@ -2,15 +2,16 @@
 #define MAKHLUK_HIDUP_H
 
 #include "Point.h"
+#include <stdlib.h>
 
 class MakhlukHidup {
     public :
         //ctor
-        MakhlukHidup(int _umur, char *predator, char _DNA, int _ulangtahun, Point P);
+        MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P);
         //cctor
         MakhlukHidup(const MakhlukHidup&);
         //dtor
-        ~MakhlukHidup();
+        virtual ~MakhlukHidup();
         //operator =
         MakhlukHidup& operator=(const MakhlukHidup&);
         void menua();
@@ -44,7 +45,12 @@ class MakhlukHidup {
         const int batas_umur;
         //Menyimpan batas umur makhluk hidup
         Point posisi;
+        //Menyimpan posisi awal
         Point PPosisi;
+        //Menyimpan posisi sebelumnya
+        const int ukuran_predator;
+        //meyimpan jumlah dari predator
+
 };
 
 #endif // MAKHLUK_HIDUP_H
