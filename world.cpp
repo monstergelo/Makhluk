@@ -49,6 +49,13 @@ void World::updateDisplay()
 	}
 	*/
 }
+
+bool World::gameOver()
+{
+
+}
+
+
 //private//=======================================================================================
 void World::resetCursor()
 {
