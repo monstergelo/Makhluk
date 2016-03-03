@@ -18,7 +18,7 @@ HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_targe
 }
 
 //DTOR
-virtual HuntingSkill::~HuntingSkill () {
+HuntingSkill::~HuntingSkill () {
     delete [] Target;
 }
 //OPERATOR =
