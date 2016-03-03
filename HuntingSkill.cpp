@@ -28,9 +28,11 @@ HuntingSkill::~HuntingSkill () {
 //OPERATOR =
 HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
     delete [] Target;
-    Target = new char[ukuran_target];
-    for (int i=0; i<ukuran_target; i++)
-        Target[i] = H.Target[i];
+    if (Target != NULL) {
+        Target = new char[ukuran_target];
+        for (int i=0; i<ukuran_target; i++)
+            Target[i] = H.Target[i];
+    }
     memburu = H.memburu;
 
 }
