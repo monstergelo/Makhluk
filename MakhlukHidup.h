@@ -4,10 +4,13 @@
 #include "Point.h"
 #include <stdlib.h>
 
+//Variabel Global
+static Point PAwal(0,0);
+
 class MakhlukHidup {
     public :
         //ctor
-        MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P);
+        MakhlukHidup(int _umur = 0, char _DNA = '*', int _ulangtahun = 0, Point P = PAwal);
         //cctor
         MakhlukHidup(const MakhlukHidup&);
         //dtor
@@ -28,9 +31,9 @@ class MakhlukHidup {
         int get_batas_umur();
         Point getPosisi();
         //setter
-        void get_umur(int);
-        void get_ulang_tahun(int);
-        void get_DNA(char);
+        void set_umur(int);
+        void set_ulang_tahun(int);
+        void set_DNA(char);
         void setPosisi(Point);
 
     protected :
