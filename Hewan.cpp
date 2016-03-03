@@ -1,8 +1,8 @@
 #include "Hewan.h"
 
-Hewan::Hewan(){
-    tingkat_kekenyangan = 0;
-    maks_tingkat_kekenyangan = 0;
+Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks) : MakhlukHidup(_umur,_DNA,_ulangtahun,P){
+    tingkat_kekenyangan = kenyang;
+    maks_tingkat_kekenyangan = maks;
 };
 
 Hewan::Hewan(const Hewan& H){
@@ -16,6 +16,9 @@ Hewan& Hewan::operator=(const Hewan& H){
     return *this;
 }
 
+void Hewan::setLapar(){
+    Lapar = true;
+}
 /*
 Menghasilkan true jika tingkat kekenyangan rendah.
 Hal ini mengakitkan skill berburu dari hewan muncul.
@@ -34,4 +37,8 @@ int Hewan::get_tingkat_kekenyangan(){
 
 int Hewan::get_maks_tingkat_kekenyangan(){
     return maks_tingkat_kekenyangan;
+}
+
+bool Hewan::get_lapar(){
+    return Lapar;
 }
