@@ -6,8 +6,8 @@ Herbivora::Herbivora(int kec) {
 }
 
 Herbivora::Herbivora(const Herbivora& H) {
-    set_deltaKecepatan(H.get_deltaKecepatan());
-    set_ukuran_predator(H.get_ukuran_predator());
+    this->set_deltaKecepatan(H.get_deltaKecepatan());
+    this->set_ukuran_predator(H.get_ukuran_predator());
 }
 
 //services
@@ -25,10 +25,10 @@ void Herbivora::bergerak(MakhlukHidup M){
 
 }
 
-virtual int Herbivora::get_deltaKecepatan(){
+int Herbivora::get_deltaKecepatan(){
 	return deltaKecepatan;
 }
-virtual void Herbivora::set_deltaKecepatan(int _deltaKecepatan) {
+void Herbivora::set_deltaKecepatan(int _deltaKecepatan) {
 	deltaKecepatan = _deltaKecepatan;
 }
 
@@ -36,7 +36,7 @@ bool Herbivora::isPredator(MakhlukHidup M) {
 	int i = 0;
 	bool stop = false;
 	while (i < M.get_ukuran_predator() && !stop) {
-		if (M.get_DNA() == predator[i]) {
+		if (M.get_DNA() == get_predator(i)) {
 			stop = true;
 		} else {
 			i++;
@@ -49,7 +49,7 @@ bool Herbivora::isTarget(MakhlukHidup M) {
 	int i = 0;
 	bool stop = false;
 	while (i < M.get_ukuran_predator() && !stop) {
-		if (get_DNA() == M.predator[i]) {
+		if (get_DNA() == M.get_predator(i)) {
 			stop = true;
 		} else {
 			i++;
