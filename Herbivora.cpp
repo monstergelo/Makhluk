@@ -1,13 +1,15 @@
 #include "Herbivora.h"
 
-Herbivora::Herbivora(int kec) {
+Herbivora::Herbivora(int kec) : Hewan() {
 	set_deltaKecepatan(kec);
-	set_ukuran_predator(4);
+	//set_ukuran_predator(4);
 }
 
-Herbivora::Herbivora(const Herbivora& H) {
-    this->set_deltaKecepatan(H.get_deltaKecepatan());
-    this->set_ukuran_predator(H.get_ukuran_predator());
+Herbivora::Herbivora(const Herbivora& H) : Hewan(H) {
+	Herbivora _H = H;
+	int _deltaKecepatan = _H.get_deltaKecepatan();
+	set_deltaKecepatan(_deltaKecepatan);
+	//set_ukuran_predator(H.get_ukuran_predator());
 }
 
 //services
@@ -35,27 +37,27 @@ void Herbivora::set_deltaKecepatan(int _deltaKecepatan) {
 bool Herbivora::isPredator(MakhlukHidup M) {
 	int i = 0;
 	bool stop = false;
-	while (i < M.get_ukuran_predator() && !stop) {
-		if (M.get_DNA() == get_predator(i)) {
+	while (i < M.getUkuranPredator() && !stop) {
+		if (M.get_DNA() == getPredator(i)) {
 			stop = true;
 		} else {
 			i++;
 		}
 	}
-	return (i < M.get_ukuran_predator());
+	return (i < M.getUkuranPredator());
 }
 
 bool Herbivora::isTarget(MakhlukHidup M) {
 	int i = 0;
 	bool stop = false;
-	while (i < M.get_ukuran_predator() && !stop) {
-		if (get_DNA() == M.get_predator(i)) {
+	while (i < M.getUkuranPredator() && !stop) {
+		if (get_DNA() == M.getPredator(i)) {
 			stop = true;
 		} else {
 			i++;
 		}
 	}
-	return (i < M.get_ukuran_predator());
+	return (i < M.getUkuranPredator());
 }
 
 bool Herbivora::Lapar(){
