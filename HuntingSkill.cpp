@@ -2,14 +2,14 @@
 
 
 //CTOR
-HuntingSkill::HuntingSkill(char* _Target) : ukuran_target(20) {
+HuntingSkill::HuntingSkill(char* _Target, bool _memburu) : ukuran_target(20) {
     if (_Target != NULL) {
         Target = new char[ukuran_target];
         for (int i=0; i<ukuran_target; i++)
             Target[i] = _Target[i];
     } else
         Target = _Target;
-    memburu = false;
+    memburu = _memburu;
 }
 
 //CCTOR

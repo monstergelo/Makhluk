@@ -6,7 +6,7 @@
 class HuntingSkill {
 public :
     //CTOR
-    HuntingSkill (char* Target = NULL);
+    HuntingSkill (char* Target = NULL, bool _memburu = false);
     //CCTOR
     HuntingSkill (const HuntingSkill&);
     //DTOR
