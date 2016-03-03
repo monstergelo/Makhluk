@@ -14,7 +14,7 @@ public :
     
     //getter-setter
     virtual int get_deltaKecepatan();
-    virtual void Herbivora::set_deltaKecepatan(int _deltaKecepatan);
+    virtual void set_deltaKecepatan(int _deltaKecepatan);
 
     //services
     void bergerak(MakhlukHidup M);
@@ -32,7 +32,11 @@ public :
     Menghasilkan nilai true jika MakhlukHidup M adalah predator dari Herbivora. Hal
     ini akan membantu penyadaran Herbivora terhadap MakhlukHidup yang berada di sekitarnya.
     */
-    bool berlari();
+    bool Lapar();
+    /*
+    Menghasilkan nilai true jika tingkat_kekenyangan dari Herbivora < 5
+    */
+    bool berlari(MakhlukHidup M);
     /*
     Menghasilkan nilai true jika herbivora menyadari predatornya ada di sekitarnya.
     Hal ini mengakibatkan kecepatan meningkat.
