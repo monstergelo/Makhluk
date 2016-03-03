@@ -8,7 +8,7 @@
 class Hewan : public MakhlukHidup, public HuntingSkill, public Gerak{
 public :
     //5 sekawan
-    Hewan(int _umur = 0, char _DNA = '*', int _ulangtahun = 0, Point P = PAwal, int kenyang = 0, int maks = 0);
+    Hewan(int _umur = 0, char _DNA = '*', int _ulangtahun = 0, Point P = PAwal, int kenyang = 0, int maks = 0, char* tar = NULL, int k = 0, int a = 0);
     //~Hewan();
     Hewan(const Hewan&);
     Hewan& operator=(const Hewan&);
