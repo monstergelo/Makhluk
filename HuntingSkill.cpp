@@ -3,21 +3,23 @@
 
 //CTOR
 HuntingSkill::HuntingSkill(char* _Target) : ukuran_target(20) {
-    Target = new char[ukuran_target];
-    if (Target != NULL) {
+    if (_Target != NULL) {
+        Target = new char[ukuran_target];
         for (int i=0; i<ukuran_target; i++)
             Target[i] = _Target[i];
-    }
+    } else
+        Target = _Target;
     memburu = false;
 }
 
 //CCTOR
 HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_target) {
-    Target = new char [ukuran_target];
-    if (Target != NULL) {
+    if (H.Target != NULL) {
+        Target = new char [ukuran_target];
         for (int i=0; i<ukuran_target; i++)
             Target[i] = H.Target[i];
-    }
+    } else
+        Target = H.Target;
     memburu = H.memburu;
 }
 
@@ -28,11 +30,12 @@ HuntingSkill::~HuntingSkill () {
 //OPERATOR =
 HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
     delete [] Target;
-    if (Target != NULL) {
+    if (H.Target != NULL) {
         Target = new char[ukuran_target];
         for (int i=0; i<ukuran_target; i++)
             Target[i] = H.Target[i];
-    }
+    } else
+        Target = H.Target;
     memburu = H.memburu;
 
 }
