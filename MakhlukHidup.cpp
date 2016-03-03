@@ -63,6 +63,10 @@ Point MakhlukHidup::getPosisi(){
     return posisi;
 }
 
+char MakhlukHidup::getPredator(int i){
+    return predator[i];
+}
+
 //setter
 void MakhlukHidup::set_umur(int i)
 {
@@ -81,4 +85,8 @@ void MakhlukHidup::set_DNA(char i)
 
 void MakhlukHidup::setPosisi(Point P){
     posisi = P;
+}
+
+void MakhlukHidup::setPredator(int i, char _predator){
+    predator[i] = _predator;
 }
