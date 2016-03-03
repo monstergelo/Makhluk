@@ -31,6 +31,7 @@ class MakhlukHidup {
         int get_batas_umur();
         Point getPosisi();
         char getPredator(int i);
+        int getUkuranPredator();
         /* i adalah indeks dan selalu valid */
         //setter
         void set_umur(int);

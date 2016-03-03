@@ -67,7 +67,11 @@ char MakhlukHidup::getPredator(int i){
     return predator[i];
 }
 
+int MakhlukHidup::getUkuranPredator(){
+    return ukuran_predator;
+}
 //setter
+
 void MakhlukHidup::set_umur(int i)
 {
     umur = i;
