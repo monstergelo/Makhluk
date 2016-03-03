@@ -42,8 +42,10 @@ menuju ke target
 }
 
 //GETTER
-char* getTarget(){
-
+char* HuntingSkill::getTarget(){
+    return Target;
 }
 
-bool memburu();
+bool HuntingSkill::getMemburu(){
+    return memburu;
+}
