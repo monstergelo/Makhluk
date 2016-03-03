@@ -1,26 +1,51 @@
 #include "HuntingSkill.h"
 
+
 //CTOR
-HuntingSkill::HuntingSkill(char* _Target){
-    Target = new char[20];
-    for (i=0; i<20; i++)
+HuntingSkill::HuntingSkill(char* _Target) : ukuran_target(20) {
+    Target = new char[ukuran_target];
+    for (int i=0; i<ukuran_target; i++)
         Target[i] = _Target[i];
     memburu = false;
 }
 
 //CCTOR
-HuntingSkill::HuntingSkill(const HuntingSkill& H){
-
+HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_target) {
+    Target = new char [ukuran_target];
+    for (int i=0; i<ukuran_target; i++)
+        Target[i] = H.Target[i];
+    memburu = H.memburu;
 }
 
 //DTOR
-~HuntingSkill ();
+virtual HuntingSkill::~HuntingSkill () {
+    delete [] Target;
+}
 //OPERATOR =
-HuntingSkill& operator= (const HuntingSkill&);
+HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
+    delete [] Target;
+    Target = new char[ukuran_target];
+    for (int i=0; i<ukuran_target; i++)
+        Target[i] = H.Target[i];
+    memburu = H.memburu;
 
-void setMemburu(bool M);
+}
+
+void HuntingSkill::setMemburu(bool M)
 /*
 Mengembalikan nilai true jika ada target di sekitar.
 Hal ini digunakan untuk menentukan gerak selanjutnya yaitu
 menuju ke target
 */
+{
+    memburu = M;
+}
+
+//GETTER
+char* HuntingSkill::getTarget(){
+    return Target;
+}
+
+bool HuntingSkill::getMemburu(){
+    return memburu;
+}
