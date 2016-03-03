@@ -30,13 +30,17 @@ class MakhlukHidup {
         char get_DNA();
         int get_batas_umur();
         Point getPosisi();
+        char getPredator(int i);
+        /* i adalah indeks dan selalu valid */
         //setter
         void set_umur(int);
         void set_ulang_tahun(int);
         void set_DNA(char);
         void setPosisi(Point);
+        void setPredator(int i, char _predator);
+        /* i adalah indeks dari predator dan selalu valid */
 
-    protected :
+    private :
         int umur;
         //Menyimpan umur dari makhluk hidup;
         int ulang_tahun;
