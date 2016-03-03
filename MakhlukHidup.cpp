@@ -28,6 +28,7 @@ MakhlukHidup::~MakhlukHidup(){
 
 MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
     delete [] predator;
+    umur = M.umur;
     DNA = M.DNA;
     ulang_tahun = M.ulang_tahun;
     predator = new char[ukuran_predator];
