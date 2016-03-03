@@ -12,8 +12,6 @@ public :
     ~Hewan();
     Hewan(const Hewan&);
     Hewan& operator=(const Hewan&);
-    ifstream operator>> (istream&);
-    ofstream operator<< (ostream&);
 
     virtual bool Lapar()=0;
     /*
@@ -33,7 +31,7 @@ private :
     Contoh : Tingkat kekenyangan = 3, berarti hewan akan mati jika selama 3 detik tidak mendapatkan makanan.
     */
 
-    int maks_tingkat_kekenyangan
+    int maks_tingkat_kekenyangan;
     /*
     Menyimpan nilai maksimum dari tingkat kekenyangan hewan.
     Hal ini digunakan untuk memberi batasan dari tingkat kekenyangan hewan tersebut.
