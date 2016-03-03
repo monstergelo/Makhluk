@@ -3,6 +3,7 @@
 MakhlukHidup::MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P) : ukuran_predator(20), batas_umur(_umur), posisi(P.getAbsis(),P.getOrdinat()), PPosisi(P.getAbsis(),P.getOrdinat()) {
     DNA = _DNA;
     ulang_tahun = _ulangtahun;
+    predator = new char[ukuran_predator];
 }
 
 MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(20), batas_umur(M.batas_umur){
@@ -18,7 +19,7 @@ MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(20), batas_u
     }
 }
 
-virtual MakhlukHidup::~MakhlukHidup(){
+MakhlukHidup::~MakhlukHidup(){
     delete [] predator;
 }
 
@@ -60,17 +61,17 @@ MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
     }
 
     //setter
-    void MakhlukHidup::get_umur(int i)
+    void MakhlukHidup::set_umur(int i)
     {
     	umur = i;
     }
 
-    void MakhlukHidup::get_ulang_tahun(int i)
+    void MakhlukHidup::set_ulang_tahun(int i)
     {
     	ulang_tahun = i;
     }
 
-    void MakhlukHidup::get_DNA(char i)
+    void MakhlukHidup::set_DNA(char i)
     {
     	DNA = i;
     }
