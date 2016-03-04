@@ -10,6 +10,8 @@ HuntingSkill::HuntingSkill(char* _Target, bool _memburu) : ukuran_target(20) {
     } else
         Target = _Target;
     memburu = _memburu;
+    posisiTarget.setAbsis(0);
+    posisiTarget.setOrdinat(0);
 }
 
 //CCTOR
@@ -21,6 +23,7 @@ HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_targe
     } else
         Target = H.Target;
     memburu = H.memburu;
+    posisiTarget = H.posisiTarget;
 }
 
 //DTOR
@@ -37,7 +40,7 @@ HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
     } else
         Target = H.Target;
     memburu = H.memburu;
-
+    posisiTarget = H.posisiTarget;
 }
 
 void HuntingSkill::setMemburu(bool M)
@@ -50,6 +53,10 @@ menuju ke target
     memburu = M;
 }
 
+void HuntingSkill::setPosisiTarget(Point Target){
+    posisiTarget = Target;
+}
+
 //GETTER
 char* HuntingSkill::getTarget(){
     return Target;
@@ -57,4 +64,8 @@ char* HuntingSkill::getTarget(){
 
 bool HuntingSkill::getMemburu(){
     return memburu;
+}
+
+Point HuntingSkill::getPosisiTarget(){
+    return posisiTarget;
 }
