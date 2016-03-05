@@ -1,3 +1,5 @@
+
+
 #include "konduktorMakhlukHidup.h"
 
 KonduktorMakhlukHidup::KonduktorMakhlukHidup()

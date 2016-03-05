@@ -1,3 +1,6 @@
+#ifndef ADMINISTRATOR_H
+#define ADMINISTRATOR_H
+
 #include <iostream>
 using namespace std;
 //class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
@@ -32,3 +35,5 @@ private:
 	//helper
 	void initDaftar();
 };
+
+#endif
