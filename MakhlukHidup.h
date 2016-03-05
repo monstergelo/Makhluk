@@ -30,6 +30,7 @@ class MakhlukHidup {
         char get_DNA();
         int get_batas_umur();
         Point getPosisi();
+        Point getPrecPosisi();
         char getPredator(int i);
         int getUkuranPredator();
         /* i adalah indeks dan selalu valid */
@@ -38,6 +39,7 @@ class MakhlukHidup {
         void set_ulang_tahun(int);
         void set_DNA(char);
         void setPosisi(Point);
+        void setPrecPosisi(Point);
         void setPredator(int i, char _predator);
         /* i adalah indeks dari predator dan selalu valid */
 

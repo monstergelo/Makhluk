@@ -28,6 +28,7 @@ MakhlukHidup::~MakhlukHidup(){
 
 MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
     delete [] predator;
+    umur = M.umur;
     DNA = M.DNA;
     ulang_tahun = M.ulang_tahun;
     predator = new char[ukuran_predator];
@@ -63,6 +64,10 @@ Point MakhlukHidup::getPosisi(){
     return posisi;
 }
 
+Point MakhlukHidup::getPrecPosisi(){
+    return PPosisi;
+}
+
 char MakhlukHidup::getPredator(int i){
     return predator[i];
 }
@@ -89,6 +94,10 @@ void MakhlukHidup::set_DNA(char i)
 
 void MakhlukHidup::setPosisi(Point P){
     posisi = P;
+}
+
+void MakhlukHidup::setPrecPosisi(Point P){
+    PPosisi = P;
 }
 
 void MakhlukHidup::setPredator(int i, char _predator){
