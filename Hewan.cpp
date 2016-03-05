@@ -3,7 +3,9 @@
 
 using namespace std;
 
-Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a) : MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a) {
+Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a) :
+    MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a)
+{
     tingkat_kekenyangan = kenyang;
     maks_tingkat_kekenyangan = maks;
 };
@@ -19,8 +21,8 @@ Hewan& Hewan::operator=(const Hewan& H){
     return *this;
 }
 
-void Hewan::setLapar(){
-    Lapar = true;
+void Hewan::setLapar(bool lap){
+    Lapar = lap;
 }
 /*
 Menghasilkan true jika tingkat kekenyangan rendah.

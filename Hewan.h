@@ -13,7 +13,7 @@ public :
     Hewan(const Hewan&);
     Hewan& operator=(const Hewan&);
 
-    void setLapar();
+    void setLapar(bool lap);
     /*
     Menghasilkan true jika tingkat kekenyangan rendah.
     Hal ini mengakitkan skill berburu dari hewan muncul.
