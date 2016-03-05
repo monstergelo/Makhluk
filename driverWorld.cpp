@@ -1,21 +1,29 @@
 #include "world.h"
+#include "Manusia.h"
 
 int main()
 {
+	Manusia m1;
+
 	World W;
-	Point P1;
-	Point P2(1,1);
+	cout << "mantap: " << W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi().getOrdinat() << endl; 
+	Point P2(15, 15);
 	Point P3(0,31);
+	Sleep(10000);
 	W.initDisplay();
-	W.draw(P1, '?');
+	W.ModeratorMakhlukHidup::get_daftar(0)->setPosisi(P2);
+	W.ModeratorMakhlukHidup::get_daftar(0)->setPrecPosisi(P2);
+	W.draw(W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi(), '?');
 	Sleep(3000);
 
-	for(int i=1; i<20 ;++i)
+	while(1)
 	{
-		W.draw(P1, P2, '?');
-		P1 = P2;
-		P2.setAbsis(P2.getAbsis() + 1);
-		P2.setOrdinat(P2.getOrdinat() + 1);
+		W.draw(W.ModeratorMakhlukHidup::get_daftar(0)->getPrecPosisi(), W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi(), '?');
+		W.draw(P3, '\n');
+		W.ModeratorMakhlukHidup::get_daftar(0)->setPrecPosisi(W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi());
+		W.ModeratorMakhlukHidup::get_daftar(0)->setPosisi(W.ModeratorMakhlukHidup::get_daftar(0)->gerak_bebas(W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi()));
+		cout << W.ModeratorMakhlukHidup::get_daftar(0)->getPrecPosisi().getOrdinat() << " " << W.ModeratorMakhlukHidup::get_daftar(0)->getPrecPosisi().getAbsis() << endl;
+		cout << W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi().getOrdinat() << " " << W.ModeratorMakhlukHidup::get_daftar(0)->getPosisi().getAbsis() << endl;
 		Sleep(1000);
 	}
 

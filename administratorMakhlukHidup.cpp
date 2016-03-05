@@ -4,7 +4,7 @@
 AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 {
 	size = 10;
-	daftar = new int[size];
+	//daftar = new MakhlukHidup[size];
 	initDaftar();
 	count = 0;
 
@@ -13,14 +13,14 @@ AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 
 AdministratorMakhlukHidup::~AdministratorMakhlukHidup()
 {
-	delete daftar;
+	//delete daftar;
 }
 
-void AdministratorMakhlukHidup::fill(int n)
+void AdministratorMakhlukHidup::fill(MakhlukHidup* n)
 {
 	for(int i=0; i<size; ++i)
 	{
-		if(daftar[i] != 999)
+		if(daftar[i] == NULL)
 		{
 			daftar[i] = n;
 			count++;
@@ -29,13 +29,13 @@ void AdministratorMakhlukHidup::fill(int n)
 	}
 }
 
-void AdministratorMakhlukHidup::pluck(int n)
+void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 {
 	for(int i=0; i<size; ++i)
 	{
 		if(daftar[i] == n)
 		{
-			daftar[i] = 999;
+			daftar[i] = NULL;
 			count--;
 			break;
 		}
@@ -43,24 +43,37 @@ void AdministratorMakhlukHidup::pluck(int n)
 }
 
 void AdministratorMakhlukHidup::creation()
-{/*
+{
+	cout << "masuk creation" << endl;
 	char opsi;
 	while(count < size)
 	{
 		cin >> opsi;
-		switch opsi
+		switch (opsi)
 		{
-			case
+			case '0' :
+			{
+				cout << "wawa" << endl;
+				break;
+			}
+
+			case '1' :
+			{
+				Manusia m1;
+				fill(&m1);
+			} 
+
 		}
+		break;
 	}
-*/	cout << "masuk creation" << endl;
+	
 }
 
 void AdministratorMakhlukHidup::initDaftar()
 {
 	for(int i=0; i<size; ++i)
 	{
-		daftar[i] = 999;
+		daftar[i] = NULL;
 	}
 }
 
@@ -74,12 +87,12 @@ int AdministratorMakhlukHidup::get_count()
 	return count;
 }
 
-int* AdministratorMakhlukHidup::get_daftar()
+MakhlukHidup** AdministratorMakhlukHidup::get_daftar()
 {
 	return daftar;
 }
 
-int AdministratorMakhlukHidup::get_daftar(int i)
+MakhlukHidup* AdministratorMakhlukHidup::get_daftar(int i)
 {
 	return daftar[i];
 }
