@@ -1,6 +1,8 @@
 #ifndef ADMINISTRATOR_H
 #define ADMINISTRATOR_H
 
+#include "Manusia.h"
+#include "MakhlukHidup.h"
 #include <iostream>
 using namespace std;
 //class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
@@ -12,15 +14,15 @@ public:
 	~AdministratorMakhlukHidup();
 
 	//method
-	void fill(int);//memasukkan makhluk ke dalam daftar
-	void pluck(int);//mengeluarkan makhluk dari daftar berdasarkan indeks
+	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
+	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
 	void creation();//memilih makhluk dan memasukkannya dalam daftar
 
 	//getter
 	int get_size();
 	int get_count();
-	int* get_daftar();
-	int get_daftar(int i);
+	MakhlukHidup** get_daftar();
+	MakhlukHidup* get_daftar(int i);
 
 	//setter
 	void set_size(int);
@@ -29,7 +31,7 @@ public:
 private:
 	int size; //banyak makhluk maksimal
 	int count; //banyak makhluk dalam daftar
-	int *daftar;  //array pointer objek makhluk
+	MakhlukHidup *daftar[10];  //array pointer objek makhluk
 
 
 	//helper
