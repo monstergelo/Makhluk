@@ -8,11 +8,13 @@ Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int ma
 {
     tingkat_kekenyangan = kenyang;
     maks_tingkat_kekenyangan = maks;
+    Lapar = false;
 };
 
 Hewan::Hewan(const Hewan& H){
     tingkat_kekenyangan = H.tingkat_kekenyangan;
     maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
+    Lapar = H.Lapar;
 }
 
 Hewan& Hewan::operator=(const Hewan& H){
@@ -46,4 +48,10 @@ int Hewan::get_maks_tingkat_kekenyangan(){
 
 bool Hewan::get_lapar(){
     return Lapar;
+}
+
+void Hewan::hewanMati(){
+    if ((tingkat_kekenyangan = ((8*tingkat_kekenyangan)/10)) || mati()){
+        delete this;
+    }
 }
