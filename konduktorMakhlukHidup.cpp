@@ -1,6 +1,10 @@
-
-
 #include "konduktorMakhlukHidup.h"
+
+
+//using namespace std;
+
+
+
 
 KonduktorMakhlukHidup::KonduktorMakhlukHidup()
 {
@@ -12,15 +16,11 @@ KonduktorMakhlukHidup::~KonduktorMakhlukHidup()
 
 }
 
-void KonduktorMakhlukHidup::hidup()
+void KonduktorMakhlukHidup::hidup(Manusia &m1)
 {
-	for(int i=0; i<get_size(); ++i)
-	{
-
-	}
+	//while(1)
+	
+		m1.setPosisi(m1.gerak_bebas(m1.getPosisi()));
+	
 }
 
-void KonduktorMakhlukHidup::hidup(int i)
-{
-
-}

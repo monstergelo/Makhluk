@@ -1,11 +1,12 @@
 #ifndef KONDUKTOR_H
 #define KONDUKTOR_H
 
+#include "Manusia.h"
 #include <thread>
-#include "administratorMakhlukHidup.h"
+
 
 //class untuk mengatur kehidupan makhluk hidup
-class KonduktorMakhlukHidup: public AdministratorMakhlukHidup
+class KonduktorMakhlukHidup
 {
 public:
 	//ctor, dtor
@@ -13,9 +14,7 @@ public:
 	~KonduktorMakhlukHidup();
 
 	//method
-	void hidup();//menghidupkan semua makhluk hidup
-	void hidup(int); //menghidupkan makhluk hidup pada indeks
-
+	void hidup(Manusia&);//menghidupkan semua makhluk hidup
 
 private:
 };
