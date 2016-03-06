@@ -1,6 +1,6 @@
 #include "konduktorMakhlukHidup.h"
 #include <iostream>
-#include <thread>
+//#include <thread>
 
 using namespace std;
 
@@ -15,8 +15,8 @@ int main()
 	cout << "m1 posisi: " << m1.getPosisi().getAbsis() << " " << 
 		     m1.getPosisi().getOrdinat() << endl;
 
-	//thread t(&KonduktorMakhlukHidup::hidup, &K, m1);
-	K.hidup(m1);
+	thread t(&KonduktorMakhlukHidup::hidup, &K, ref(m1));
+	//K.hidup(m1);
 
 	cout << "wawan" << endl;
 
@@ -28,6 +28,6 @@ int main()
 
 	}
 
-	//t.join();
+	t.join();
 	return 0;
 }
