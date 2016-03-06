@@ -1,5 +1,8 @@
+#ifndef KONDUKTOR_H
+#define KONDUKTOR_H
+
 #include <thread>
-#include "AdministratorMakhlukHidup.h"
+#include "administratorMakhlukHidup.h"
 
 //class untuk mengatur kehidupan makhluk hidup
 class KonduktorMakhlukHidup: public AdministratorMakhlukHidup
@@ -16,3 +19,5 @@ public:
 
 private:
 };
+
+#endif

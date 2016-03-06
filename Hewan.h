@@ -12,8 +12,7 @@ public :
     //~Hewan();
     Hewan(const Hewan&);
     Hewan& operator=(const Hewan&);
-
-    void setLapar();
+    void setLapar(bool lap);
     /*
     Menghasilkan true jika tingkat kekenyangan rendah.
     Hal ini mengakitkan skill berburu dari hewan muncul.
@@ -23,6 +22,7 @@ public :
     int get_tingkat_kekenyangan();
     int get_maks_tingkat_kekenyangan();
     bool get_lapar();
+    void hewanMati();
 
 private :
     int tingkat_kekenyangan;

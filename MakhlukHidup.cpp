@@ -39,6 +39,28 @@ MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
 }
 
 
+void MakhlukHidup::menua()
+//menambah umur dari makhluk hidup
+{
+    umur++;
+}
+
+bool MakhlukHidup::mati()
+//mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu
+{
+    if (umur = batas_umur){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+/* Tolong Isikan yang ini bimo */
+void MakhlukHidup::display(){
+}
+//menampilkan makhluk hidup ke layar
+
 //getter
 int MakhlukHidup::get_umur()
 {

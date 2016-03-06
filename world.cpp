@@ -4,11 +4,12 @@
 //public
 void World::initDisplay()
 {
-	   resetCursor();
+	cursorSwitch(false);
+	resetCursor();
     clear();
-    for(int i=0; i<n; ++i)
+    for(int i=0; i<30; ++i)
     {
-        for(int j=0; j<n; ++j)
+        for(int j=0; j<30; ++j)
         {
             cout << ".";
         }
@@ -48,6 +49,29 @@ void World::updateDisplay()
 	    }
 	}
 	*/
+}
+
+void World::draw(Point Px, Point Pc, char display)
+{
+	int ex_X = Px.getAbsis();
+	int ex_Y = Px.getOrdinat();
+	int x = Pc.getAbsis();
+	int y = Pc.getOrdinat();
+
+	moveCursor(ex_X, ex_Y);
+	cout << '.';
+
+	moveCursor(x,y);
+	cout << display;
+}
+
+void World::draw(Point Pc, char display)
+{
+	int x = Pc.getAbsis();
+	int y = Pc.getOrdinat();
+
+	moveCursor(x,y);
+	cout << display;
 }
 
 bool World::gameOver()

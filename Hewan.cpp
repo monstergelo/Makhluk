@@ -3,14 +3,18 @@
 
 using namespace std;
 
-Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a) : MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a) {
+Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a) :
+    MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a)
+{
     tingkat_kekenyangan = kenyang;
     maks_tingkat_kekenyangan = maks;
+    Lapar = false;
 };
 
 Hewan::Hewan(const Hewan& H){
     tingkat_kekenyangan = H.tingkat_kekenyangan;
     maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
+    Lapar = H.Lapar;
 }
 
 Hewan& Hewan::operator=(const Hewan& H){
@@ -19,8 +23,8 @@ Hewan& Hewan::operator=(const Hewan& H){
     return *this;
 }
 
-void Hewan::setLapar(){
-    Lapar = true;
+void Hewan::setLapar(bool lap){
+    Lapar = lap;
 }
 /*
 Menghasilkan true jika tingkat kekenyangan rendah.
@@ -44,4 +48,10 @@ int Hewan::get_maks_tingkat_kekenyangan(){
 
 bool Hewan::get_lapar(){
     return Lapar;
+}
+
+void Hewan::hewanMati(){
+    if ((tingkat_kekenyangan = ((8*tingkat_kekenyangan)/10)) || mati()){
+        delete this;
+    }
 }

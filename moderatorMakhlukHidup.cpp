@@ -12,9 +12,9 @@ ModeratorMakhlukHidup::~ModeratorMakhlukHidup()
 
 void ModeratorMakhlukHidup::signalPosition()
 {
-	for(int i=0, i<get_size; ++i)
+	for(int i=0; i<AdministratorMakhlukHidup::get_size(); ++i)
 	{
-		for(int j=i, j<get_size; ++j)
+		for(int j=i; j<AdministratorMakhlukHidup::get_size(); ++j)
 		{
 
 		}
