@@ -34,3 +34,26 @@ menjauh dari predator.
 bool Manusia::getMenghindar(){
     return menghindar;
 }
+
+void Manusia::gerak_memburu(Point Target)
+//Membuat gerakan dengan arah menuju suatu titik
+{
+    if (getMemburu()){
+        setPrecPosisi(getPosisi());
+        setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
+    }
+}
+void Manusia::gerak_menjauh(Point Predator)
+//Membuat gerakan dengan arah menjauhi suatu titik
+{
+    if (getMenghindar()){
+        setPrecPosisi(getPosisi());
+        setPosisi(Gerak::gerak_menjauh(getPosisi(),Predator));
+    }
+}
+void Manusia::gerak_berarah(int _arah)
+//Membuat gerakan arah yang ditentukan
+{
+    setPrecPosisi(getPosisi());
+    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+}

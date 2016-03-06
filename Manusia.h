@@ -25,11 +25,27 @@ public :
     menjauh dari predator.
     */
 
+    void setPosisiPredator(Point Pre);
+    /*
+    Mengeset posisi predator yang diketahui
+    */
+
     //GETTER
     bool getMenghindar ();
+    Point getPosisiPredator();
+
+    void gerak_memburu(Point Target);
+    //Membuat gerakan dengan arah menuju suatu titik
+    void gerak_menjauh(Point Predator);
+    //Membuat gerakan dengan arah menjauhi suatu titik;
+    void gerak_berarah(int _arah);
+    //Membuat gerakan arah yang ditentukan
 
 private :
     bool menghindar;
+    //Menyimpan kondisi manusia harus menghindar
+    Point PosisiPredator;
+    //Menyimpan posisi dari predator
 
 };
 //wawawawawawaw;
