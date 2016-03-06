@@ -115,6 +115,7 @@ void MakhlukHidup::set_DNA(char i)
 }
 
 void MakhlukHidup::setPosisi(Point P){
+    PPosisi = posisi;
     posisi = P;
 }
 
