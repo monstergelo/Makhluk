@@ -2,25 +2,20 @@
 #define HARIMAU_H_INCLUDED
 #include "Karnivora.h"
 
-class Harimau : public karnivora{
+class Harimau : public Karnivora{
     public :
-        Harimau(int x = 0, int y = 0);
-        Harimau (const Harimau&);
-        ~Harimau();
-        /* Karnivora */
-        bool melambat();
-        /* Mahluk Hidup */
-        void menua();
-        bool mati();
-        void display();
-        /* Dari hewan.h */
-        //ifstream operator>> (istream&);
-        //ofstream operator<< (ostream&);
-        bool Lapar();
-        void set_tingkat_kekenyangan();
-        void set_maks_tingkat_kekenyangan();
-        void get_tingkat_kekenyangan();
-        void get_maks_tingkat_kekenyangan();
+        Harimau(int _umur = batasumur_Harimau, char _DNA = 'h', int _ulangtahun = ulangtahun_Harimau,Point P = PAwal,
+                int kenyang = maksimum_tingkat_kekenyangan_Harimau, int maks = maksimum_tingkat_kekenyangan_Harimau
+                , char* tar = predatorHewan, int k = kecepatan_Harimau, int a = U, bool lambat = false,
+                int delta = deltaKecepatan_Harimau);
+        void setHarimauFromPoint(Point P);
+    private :
+        static char* predatorHewan;
+        const static int batasumur_Harimau = 10;
+        const static int ulangtahun_Harimau = 2;
+        const static int maksimum_tingkat_kekenyangan_Harimau = 10;
+        const static int kecepatan_Harimau = 5;
+        const static int deltaKecepatan_Harimau = 2;
 };
 
 
