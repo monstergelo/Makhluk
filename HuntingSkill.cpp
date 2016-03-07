@@ -3,12 +3,14 @@
 
 //CTOR
 HuntingSkill::HuntingSkill(char* _Target, bool _memburu) : ukuran_target(20) {
+    Target = new char[ukuran_target];
     if (_Target != NULL) {
-        Target = new char[ukuran_target];
         for (int i=0; i<ukuran_target; i++)
             Target[i] = _Target[i];
-    } else
-        Target = _Target;
+    } else {
+        for (int i=0; i<ukuran_target; i++)
+            Target[i] = ' ' ;
+    }
     memburu = _memburu;
     posisiTarget.setAbsis(0);
     posisiTarget.setOrdinat(0);
@@ -16,12 +18,9 @@ HuntingSkill::HuntingSkill(char* _Target, bool _memburu) : ukuran_target(20) {
 
 //CCTOR
 HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_target) {
-    if (H.Target != NULL) {
-        Target = new char [ukuran_target];
-        for (int i=0; i<ukuran_target; i++)
-            Target[i] = H.Target[i];
-    } else
-        Target = H.Target;
+    Target = new char [ukuran_target];
+    for (int i=0; i<ukuran_target; i++)
+        Target[i] = H.Target[i];
     memburu = H.memburu;
     posisiTarget = H.posisiTarget;
 }
@@ -33,12 +32,9 @@ HuntingSkill::~HuntingSkill () {
 //OPERATOR =
 HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
     delete [] Target;
-    if (H.Target != NULL) {
-        Target = new char[ukuran_target];
-        for (int i=0; i<ukuran_target; i++)
-            Target[i] = H.Target[i];
-    } else
-        Target = H.Target;
+    Target = new char[ukuran_target];
+    for (int i=0; i<ukuran_target; i++)
+        Target[i] = H.Target[i];
     memburu = H.memburu;
     posisiTarget = H.posisiTarget;
 }
@@ -68,4 +64,8 @@ bool HuntingSkill::getMemburu(){
 
 Point HuntingSkill::getPosisiTarget(){
     return posisiTarget;
+}
+
+void HuntingSkill::setTarget (int i, char _target){
+    Target[i] = _target;
 }

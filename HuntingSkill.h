@@ -7,7 +7,7 @@
 class HuntingSkill {
 public :
     //CTOR
-    HuntingSkill (char* Target = NULL, bool _memburu = false);
+    HuntingSkill (char* _Target = NULL, bool _memburu = false);
     //CCTOR
     HuntingSkill (const HuntingSkill&);
     //DTOR
@@ -22,6 +22,8 @@ public :
     menuju ke target
     */
     void setPosisiTarget(Point Target);
+
+    void setTarget (int i, char _target);
 
     //GETTER
     char* getTarget();
