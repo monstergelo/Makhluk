@@ -11,13 +11,16 @@ Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int ma
     Lapar = false;
 };
 
-Hewan::Hewan(const Hewan& H){
+Hewan::Hewan(const Hewan& H) : MakhlukHidup(H), Gerak(H), HuntingSkill(H){
     tingkat_kekenyangan = H.tingkat_kekenyangan;
     maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
     Lapar = H.Lapar;
 }
 
 Hewan& Hewan::operator=(const Hewan& H){
+    MakhlukHidup::operator=(H);
+    HuntingSkill::operator=(H);
+    Gerak::operator=(H);
     tingkat_kekenyangan = H.tingkat_kekenyangan;
     maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
     return *this;

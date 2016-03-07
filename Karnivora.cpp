@@ -12,7 +12,17 @@ Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang
     deltaKecepatan = delta;
 }
 
-Karnivora::Karnivora
+Karnivora::Karnivora(const Karnivora& K) : Hewan(K){
+    deltaKecepatan = K.deltaKecepatan;
+    melambat = K.melambat;
+}
+
+Karnivora& Karnivora::operator=(const Karnivora& K){
+    Hewan::operator=(K);
+    deltaKecepatan = K.deltaKecepatan;
+    melambat = K.melambat;
+}
+
 void Karnivora::setMelambat( bool lambat){
     melambat = lambat;
 }
@@ -27,4 +37,12 @@ bool Karnivora::getMelambat(){
 
 int Karnivora::getDeltaKecepatan(){
     return deltaKecepatan;
+}
+
+void Karnivora::prosesMelambat(){
+    if (get_tingkat_kekenyangan() < ((8*get_maks_tingkat_kekenyangan())/10)){
+        int newKecepatan = get_Kecepatan();
+        newKecepatan -= deltaKecepatan;
+        set_Kecepatan(newKecepatan);
+    }
 }

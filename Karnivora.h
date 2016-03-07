@@ -9,17 +9,20 @@ class Karnivora : public Hewan {
         Karnivora();
         Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a, bool lambat,
                 int delta);
+
         //CCTOR
-        Karnivora(Karnivora&);
+        Karnivora(const Karnivora&);
+        Karnivora& operator=(const Karnivora&);
         void setMelambat( bool lambat);
         /*
         kecepatan akan menurun jika tingkat kekenyangan
-        di atas 80% maksimal
+        di bawah 80% maksimal
         */
+        Karnivora& operator=(Karnivora&);
         void setDeltaKecepatan(int delta);
         bool getMelambat();
         int getDeltaKecepatan();
-        void virtual prosesMelambat() = 0;
+        void prosesMelambat();
     protected :
         int deltaKecepatan;
         /*
