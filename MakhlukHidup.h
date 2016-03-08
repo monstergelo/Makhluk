@@ -43,6 +43,10 @@ class MakhlukHidup {
         void setPredator(int i, char _predator);
         /* i adalah indeks dari predator dan selalu valid */
 
+        bool isPredator(char DNA_predator);
+
+        virtual void Reaction(const MakhlukHidup&)=0;
+
     private :
         int umur;
         //Menyimpan umur dari makhluk hidup;

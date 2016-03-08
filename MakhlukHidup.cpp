@@ -126,3 +126,16 @@ void MakhlukHidup::setPrecPosisi(Point P){
 void MakhlukHidup::setPredator(int i, char _predator){
     predator[i] = _predator;
 }
+
+bool isPredator(char DNA_predator){
+    int i = 0;
+    bool stopCheckingIsPredator = false;
+    while (i < getUkuranPredator()) {
+        if (getPredator(i) == DNA_predator) {
+            stopCheckingIsPredator = true;
+        } else {
+            i++;
+        }
+    }
+    return (i < getUkuranPredator());
+}
