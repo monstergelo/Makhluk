@@ -7,7 +7,7 @@ class Karnivora : public Hewan {
     public :
         //CTOR
         Karnivora();
-        Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a, bool lambat,
+        Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a, bool lambat,
                 int delta);
 
         //CCTOR

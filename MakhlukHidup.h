@@ -48,7 +48,7 @@ class MakhlukHidup {
 
         bool isRadius (int rad, Point p);
 
-        virtual void Reaction(const MakhlukHidup&)=0;
+        virtual void Reaction( MakhlukHidup&)=0;
 
     private :
         int umur;

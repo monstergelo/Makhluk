@@ -5,7 +5,7 @@ Karnivora::Karnivora() : Hewan(){
     melambat = false;
 }
 
-Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a, bool lambat,
+Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a, bool lambat,
                      int delta) : Hewan (_umur,_DNA,_ulangtahun,P,kenyang,maks,tar,k,a)
 {
     melambat = lambat;
@@ -21,6 +21,7 @@ Karnivora& Karnivora::operator=(const Karnivora& K){
     Hewan::operator=(K);
     deltaKecepatan = K.deltaKecepatan;
     melambat = K.melambat;
+    return *this;
 }
 
 void Karnivora::setMelambat( bool lambat){

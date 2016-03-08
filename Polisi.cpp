@@ -21,11 +21,12 @@ Polisi::Polisi(const Polisi& P) : Manusia(P) {
 
 Polisi& Polisi::operator= (const Polisi& P) {
     Manusia::operator=(P);
+    return *this;
 }
 
-Polisi::Reaction(const MakhlukHidup& M){
+void Polisi::Reaction(MakhlukHidup& M){
     if (M.getPosisi()== getPosisi()){
-        if (getDNA() == M.get_DNA()) {
+        if (get_DNA() == M.get_DNA()) {
             if (M.get_umur() > get_umur())
                 setMati(true);
             else if (M.get_umur() < get_umur())
@@ -35,15 +36,15 @@ Polisi::Reaction(const MakhlukHidup& M){
                 setMati(true);
             }
         } else {
-            if (M.isPredator(DNA))
+            if (M.isPredator(get_DNA()))
                 setMati(true);
             else
                 M.setMati(true);
         }
     } else if (isRadius(2,M.getPosisi())){
-        if (M.isPredator(DNA))
-            gerak_menjauh(M.getPosisi();
-        else if (M.isTarget(DNA))
+        if (M.isPredator(get_DNA()))
+            gerak_menjauh(M.getPosisi());
+        else if (isTarget(M.get_DNA()))
             gerak_memburu(M.getPosisi());
     }
 }
