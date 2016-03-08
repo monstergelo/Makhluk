@@ -35,6 +35,11 @@ bool Manusia::getMenghindar(){
     return menghindar;
 }
 
+void Manusia::gerak_bebas(){
+    setPrecPosisi(getPosisi());
+    setPosisi(Gerak::gerak_bebas(getPosisi()));
+}
+
 void Manusia::gerak_memburu(Point Target)
 //Membuat gerakan dengan arah menuju suatu titik
 {

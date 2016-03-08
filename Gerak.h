@@ -2,6 +2,8 @@
 #define GERAK_H
 
 #include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 #include "Point.h"
 
 #define U 1 //Utara

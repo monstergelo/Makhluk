@@ -34,6 +34,7 @@ public :
     bool getMenghindar ();
     Point getPosisiPredator();
 
+    void gerak_bebas();
     void gerak_memburu(Point Target);
     //Membuat gerakan dengan arah menuju suatu titik
     void gerak_menjauh(Point Predator);
