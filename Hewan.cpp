@@ -3,7 +3,7 @@
 using namespace std;
 
 Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a) :
-    MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a)
+    MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar,_memburu), Gerak(k,a)
 {
     tingkat_kekenyangan = kenyang;
     maks_tingkat_kekenyangan = maks;
