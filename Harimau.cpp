@@ -15,6 +15,7 @@ Harimau::Harimau(const Harimau& H) : Karnivora(H){
 
 Harimau& Harimau::operator=(const Harimau& H){
     Karnivora::operator=(H);
+    return *this;
 }
 
 Harimau::~Harimau(){

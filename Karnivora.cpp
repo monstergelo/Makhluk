@@ -21,6 +21,7 @@ Karnivora& Karnivora::operator=(const Karnivora& K){
     Hewan::operator=(K);
     deltaKecepatan = K.deltaKecepatan;
     melambat = K.melambat;
+    return *this;
 }
 
 void Karnivora::setMelambat( bool lambat){
