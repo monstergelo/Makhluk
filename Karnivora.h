@@ -13,6 +13,7 @@ class Karnivora : public Hewan {
         //CCTOR
         Karnivora(const Karnivora&);
         Karnivora& operator=(const Karnivora&);
+        virtual ~Karnivora() = 0;
         void setMelambat( bool lambat);
         /*
         kecepatan akan menurun jika tingkat kekenyangan

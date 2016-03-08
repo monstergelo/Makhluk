@@ -30,6 +30,8 @@ public :
     bool getMemburu();
     Point getPosisiTarget();
 
+    bool isTarget(char _target);
+
 private :
     char* Target;
     //Berisi DNA dari target
