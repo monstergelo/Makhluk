@@ -15,10 +15,6 @@ class Karnivora : public Hewan {
         Karnivora& operator=(const Karnivora&);
         virtual ~Karnivora() = 0;
         void setMelambat( bool lambat);
-        /*
-        kecepatan akan menurun jika tingkat kekenyangan
-        di bawah 80% maksimal
-        */
         Karnivora& operator=(Karnivora&);
         void setDeltaKecepatan(int delta);
         bool getMelambat();
