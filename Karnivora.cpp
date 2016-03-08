@@ -1,6 +1,6 @@
 #include "Karnivora.h"
 
-Karnivora::Karnivora(){
+Karnivora::Karnivora() : Hewan(){
     deltaKecepatan = 0;
     melambat = false;
 }
@@ -21,6 +21,7 @@ Karnivora& Karnivora::operator=(const Karnivora& K){
     Hewan::operator=(K);
     deltaKecepatan = K.deltaKecepatan;
     melambat = K.melambat;
+    return *this;
 }
 
 void Karnivora::setMelambat( bool lambat){

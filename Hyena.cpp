@@ -9,6 +9,15 @@ Hyena::Hyena(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int ma
     setPredator(0,'p');
     setPredator(1,'t');
 }
+Hyena::Hyena(const Hyena& H) : Karnivora(H){
+}
+
+Hyena& Hyena::operator=(const Hyena& H){
+    Karnivora::operator=(H);
+    return *this;
+}
+
+Hyena::~Hyena(){}
 
 void Hyena::setHyenaFromPoint(Point P){
     setPosisi(P);

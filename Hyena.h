@@ -10,6 +10,9 @@ class Hyena : public Karnivora{
                 , char* tar = predatorHyena, int k = kecepatan_Hyena, int a = U, bool lambat = false,
                 int delta = deltaKecepatan_Hyena);
         void setHyenaFromPoint(Point P);
+        Hyena(const Hyena&);
+        Hyena& operator=(const Hyena&);
+        ~Hyena();
     private :
         static char* predatorHyena;
         const static int batasumur_Hyena = 7;

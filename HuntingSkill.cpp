@@ -69,3 +69,14 @@ Point HuntingSkill::getPosisiTarget(){
 void HuntingSkill::setTarget (int i, char _target){
     Target[i] = _target;
 }
+
+bool HuntingSkill::isTarget(char _target){
+    int i = 0;
+    bool stop = false;
+    while ((i < ukuran_target) && (!stop)){
+        if (Target[i] == _target){
+            stop = true;
+        }
+    }
+    return (i < ukuran_target);
+}
