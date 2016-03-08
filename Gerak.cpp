@@ -1,6 +1,10 @@
 #include "Gerak.h"
 #include "Point.h"
 
+std::random_device rd;
+std::mt19937 mt(rd());
+std::uniform_int_distribution<int> dist(1, 8);
+
 //CTOR
 Gerak::Gerak(int k, int a)
 {
@@ -19,8 +23,7 @@ Point Gerak::gerak_bebas(Point Awal)
 //Membuat gerakan dengan kecepatan tertentu dan arah yang random
 //Arah awalnya terdefinisi
 {
-    srand(time(NULL));
-    int _arah = rand()%8 +1;
+    int _arah = dist(mt);
     Point temp = gerak_berarah(Awal,_arah);
     return temp;
 }
