@@ -7,5 +7,12 @@ world:
 konduktor:
 	g++ -std=c++11 -o driverKon konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp driverKonduktor.cpp Manusia.cpp Gerak.cpp MakhlukHidup.cpp Point.cpp HuntingSkill.cpp
 
+admin:
+	g++ -std=c++11 -o driverAdmin administratorMakhlukHidup.cpp administratorMakhlukHidup.h driverAdmin.cpp Herbivora.cpp Herbivora.h Hewan.cpp Gerak.cpp HuntingSkill.cpp MakhlukHidup.cpp Point.cpp
+
+karnivora :
+	g++ -std=c++11 -o driverKarnivora driverKarnivora.cpp Karnivora.cpp Hewan.cpp Gerak.cpp HuntingSkill.cpp MakhlukHidup.cpp Point.cpp
+
 herbivora:
 	g++ -std=c++11 -o driveHer driverHerbivora.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
+

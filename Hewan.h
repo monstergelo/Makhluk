@@ -13,7 +13,7 @@ public :
     Hewan(const Hewan&);
     Hewan& operator=(const Hewan&);
     void setLapar();
-    virtual ~Hewan() = 0;
+    ~Hewan();
     /*
     Menghasilkan true jika tingkat kekenyangan rendah.
     Hal ini mengakitkan skill berburu dari hewan muncul.

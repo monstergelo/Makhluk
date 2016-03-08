@@ -12,6 +12,7 @@ Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang
     deltaKecepatan = delta;
 }
 
+Karnivora::~Karnivora(){}
 Karnivora::Karnivora(const Karnivora& K) : Hewan(K){
     deltaKecepatan = K.deltaKecepatan;
     melambat = K.melambat;
@@ -54,3 +55,5 @@ void Karnivora::prosesMelambat(){
         }
     }
 }
+
+void Karnivora::Reaction(){}

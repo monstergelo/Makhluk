@@ -17,5 +17,4 @@ class Harimau : public Karnivora{
         const static int deltaKecepatan_Harimau = 2;
 };
 
-
 #endif // HARIMAU_H_INCLUDED
