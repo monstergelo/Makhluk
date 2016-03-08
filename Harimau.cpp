@@ -2,12 +2,17 @@
 
 char* Harimau::predatorHarimau = new char[2];
 
-Harimau::Harimau(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k,
-                 int a, bool lambat, int delta) : Karnivora(_umur,_DNA,_ulangtahun,P,kenyang,maks,tar,k,a,lambat,delta)
+Harimau::Harimau(Point P) : Karnivora(batasumur_Harimau,'h',ulangtahun_Harimau,P,0,maksimum_tingkat_kekenyangan_Harimau,NULL
+                ,false, kecepatan_Harimau,1,false,deltaKecepatan_Harimau)
 {
-    //Untuk sementara dibuat seperti ini dulu
     setPredator(0,'p');
     setPredator(1,'t');
+
+    setTarget(0,'u');
+    setTarget(1,'g');
+    setTarget(2,'b');
+    setTarget(3,'m');
+    setTarget(4,'y');
 }
 
 Harimau::Harimau(const Harimau& H) : Karnivora(H){
