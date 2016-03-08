@@ -1,8 +1,5 @@
 #include "Gerak.h"
 #include "Point.h"
-#include <iostream>
-
-using namespace std;
 
 //CTOR
 Gerak::Gerak(int k, int a)
@@ -22,6 +19,7 @@ Point Gerak::gerak_bebas(Point Awal)
 //Membuat gerakan dengan kecepatan tertentu dan arah yang random
 //Arah awalnya terdefinisi
 {
+    srand(time(NULL));
     int _arah = rand()%8 +1;
     Point temp = gerak_berarah(Awal,_arah);
     return temp;

@@ -2,8 +2,11 @@
 #define ADMINISTRATOR_H
 
 #include "Manusia.h"
+//#include "Herbivora.h"
+
 #include "MakhlukHidup.h"
 #include <iostream>
+
 using namespace std;
 //class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
 class AdministratorMakhlukHidup
@@ -17,6 +20,9 @@ public:
 	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
 	void creation();//memilih makhluk dan memasukkannya dalam daftar
+	void signal();
+	void activate();
+	void check();
 
 	//getter
 	int get_size();

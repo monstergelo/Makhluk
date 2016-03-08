@@ -74,6 +74,22 @@ void World::draw(Point Pc, char display)
 	cout << display;
 }
 
+void World::draw(MakhlukHidup &m1)
+{
+	Point P = m1.getPosisi();
+	draw(m1.getPrecPosisi(), P, m1.get_DNA());
+
+	m1.setPrecPosisi(P);
+}
+
+void World::initDraw(MakhlukHidup& m1)
+{
+	Point P = m1.getPosisi();
+	draw(P, m1.get_DNA());
+
+	m1.setPrecPosisi(P);
+}
+
 bool World::gameOver()
 {
 

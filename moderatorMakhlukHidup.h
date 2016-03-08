@@ -5,7 +5,7 @@
 #include "administratorMakhlukHidup.h"
 
 //class untuk memantau parameter makhluk dan memberi sinyal jika parameter memiliki nilai tertentu
-class ModeratorMakhlukHidup: public AdministratorMakhlukHidup
+class ModeratorMakhlukHidup
 {
 public:
 	//ctor, dtor
