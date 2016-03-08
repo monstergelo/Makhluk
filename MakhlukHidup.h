@@ -19,7 +19,7 @@ class MakhlukHidup {
         MakhlukHidup& operator=(const MakhlukHidup&);
         void menua();
         //menambah umur dari makhluk hidup
-        bool mati();
+        virtual bool isMati();
         //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
         void display();
         //menampilkan makhluk hidup ke layar
@@ -41,6 +41,7 @@ class MakhlukHidup {
         void setPosisi(Point);
         void setPrecPosisi(Point);
         void setPredator(int i, char _predator);
+        void setMati(bool _mati);
         /* i adalah indeks dari predator dan selalu valid */
 
         bool isPredator(char DNA_predator);
@@ -64,7 +65,8 @@ class MakhlukHidup {
         //Menyimpan posisi sebelumnya
         const int ukuran_predator;
         //meyimpan jumlah dari predator
-
+        bool mati;
+        //menyimpan kondisi mati
 };
 
 #endif // MAKHLUK_HIDUP_H
