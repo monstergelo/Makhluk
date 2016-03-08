@@ -13,6 +13,7 @@ Harimau::Harimau(Point P) : Karnivora(batasumur_Harimau,'h',ulangtahun_Harimau,P
     setTarget(2,'b');
     setTarget(3,'m');
     setTarget(4,'y');
+    setTarget(5,'r');
 }
 
 Harimau::Harimau(const Harimau& H) : Karnivora(H){
