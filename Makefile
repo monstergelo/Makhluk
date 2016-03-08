@@ -9,3 +9,6 @@ konduktor:
 
 admin:
 	g++ -std=c++11 -o driverAdmin administratorMakhlukHidup.cpp administratorMakhlukHidup.h driverAdmin.cpp Herbivora.cpp Herbivora.h Hewan.cpp Gerak.cpp HuntingSkill.cpp MakhlukHidup.cpp Point.cpp
+
+karnivora :
+	g++ -std=c++11 -o driverKarnivora driverKarnivora.cpp Karnivora.cpp Hewan.cpp Gerak.cpp HuntingSkill.cpp MakhlukHidup.cpp Point.cpp
