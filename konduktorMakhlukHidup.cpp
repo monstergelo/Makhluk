@@ -18,7 +18,7 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 {
 	while(1)
 	{
-		m1.setPosisi(m1.gerak_bebas(m1.getPosisi()));
+		m1.gerak_bebas();
 		sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 	}
 	
