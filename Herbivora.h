@@ -11,15 +11,15 @@ public :
                  bool _memburu, int k, int a, bool lambat, int delta);
 
         //CCTOR
-        Herbivora(const Karnivora&);
-        Herbivora& operator=(const Karnivora&);
-        virtual ~Herbivora() = 0;
+        Herbivora(const Herbivora&);
+        Herbivora& operator=(const Herbivora&);
+        virtual ~Herbivora();
         void set_percepat( bool cepat);
-        Karnivora& operator=(Karnivora&);
         void set_deltaKecepatan(int kec);
         bool get_percepat();
         int get_deltaKecepatan();
         void prosesMempercepat();
+         //void Reaction(MakhlukHidup&);
     //services
 private :
     int deltaKecepatan;
