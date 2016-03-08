@@ -18,7 +18,7 @@ public :
 
     //services
 private :
-    const int deltaKecepatan;
+    int deltaKecepatan;
     /*
     Menyimpan nilai peningkatan kecepatan
     */

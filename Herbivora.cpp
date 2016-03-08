@@ -11,7 +11,7 @@ Herbivora::Herbivora(const Herbivora& H) : Hewan(H) {
 	set_deltaKecepatan(_deltaKecepatan);
 	//set_ukuran_predator(H.get_ukuran_predator());
 }
-
+/*
 //services
 void Herbivora::bergerak(MakhlukHidup M){
 
@@ -81,3 +81,4 @@ bool Herbivora::berlari(MakhlukHidup M) {
 		return false;
 	}
 }
+*/
