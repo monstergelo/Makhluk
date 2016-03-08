@@ -53,7 +53,7 @@ bool Hewan::get_lapar(){
 }
 
 void Hewan::hewanMati(){
-    if (tingkat_kekenyangan == ((8*tingkat_kekenyangan)/10)) {
+    if (tingkat_kekenyangan == 0) {
         Lapar = true;
     }
 }
@@ -62,6 +62,7 @@ void Hewan::gerak_memburu(Point Target){
     if (getMemburu()){
         setPrecPosisi(getPosisi());
         setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
+        tingkat_kekenyangan -= 1;
     }
 }
 
