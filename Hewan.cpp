@@ -33,6 +33,8 @@ void Hewan::setLapar(){
         Lapar = false;
     }
 }
+
+Hewan::~Hewan(){}
 /*
 Menghasilkan true jika tingkat kekenyangan rendah.
 Hal ini mengakitkan skill berburu dari hewan muncul.
