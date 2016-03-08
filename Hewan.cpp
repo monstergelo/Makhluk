@@ -1,5 +1,4 @@
 #include "Hewan.h"
-#include <iostream>
 
 using namespace std;
 
@@ -54,7 +53,22 @@ bool Hewan::get_lapar(){
 }
 
 void Hewan::hewanMati(){
-    if ((tingkat_kekenyangan = ((8*tingkat_kekenyangan)/10)) || mati()){
-        delete this;
+    if (tingkat_kekenyangan == ((8*tingkat_kekenyangan)/10)) {
+        Lapar = true;
     }
 }
+
+void Hewan::gerak_memburu(Point Target){
+    if (getMemburu()){
+        setPrecPosisi(getPosisi());
+        setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
+    }
+}
+
+//Membuat gerakan dengan arah menjauhi suatu titik;
+
+void Hewan::gerak_berarah(int _arah){
+    setPrecPosisi(getPosisi());
+    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+}
+//Membuat gerakan arah yang ditentukan

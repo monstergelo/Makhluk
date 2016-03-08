@@ -7,6 +7,7 @@ MakhlukHidup::MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P) : uku
     predator = new char[ukuran_predator];
     for (int i=0; i<ukuran_predator; i++)
         predator[i] = ' ';
+    mati = false;
 }
 
 MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(M.ukuran_predator), batas_umur(M.batas_umur){
@@ -20,6 +21,7 @@ MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(M.ukuran_pre
     for (int i = 0; i < ukuran_predator; i++){
         predator[i] = M.predator[i];
     }
+    mati = M.mati;
 }
 
 MakhlukHidup::~MakhlukHidup(){
@@ -35,6 +37,7 @@ MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
     for (int i = 0; i < ukuran_predator; i++){
         predator[i] = M.predator[i];
     }
+    mati = M.mati;
     return *this;
 }
 
@@ -43,17 +46,15 @@ void MakhlukHidup::menua()
 //menambah umur dari makhluk hidup
 {
     umur++;
+    if (umur > batas_umur){
+        mati = true;
+    }
 }
 
-bool MakhlukHidup::mati()
+bool MakhlukHidup::isMati()
 //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu
 {
-    if (umur = batas_umur){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return mati;
 }
 
 /* Tolong Isikan yang ini bimo */
@@ -125,4 +126,32 @@ void MakhlukHidup::setPrecPosisi(Point P){
 
 void MakhlukHidup::setPredator(int i, char _predator){
     predator[i] = _predator;
+}
+
+void MakhlukHidup::setMati(bool _mati){
+    mati = _mati;
+}
+
+bool MakhlukHidup::isPredator(char DNA_predator){
+    int i = 0;
+    bool stopCheckingIsPredator = false;
+    while (i < getUkuranPredator() && (!stopCheckingIsPredator) ) {
+        if (getPredator(i) == DNA_predator) {
+            stopCheckingIsPredator = true;
+        } else {
+            i++;
+        }
+    }
+    return (i < getUkuranPredator());
+}
+
+bool MakhlukHidup::isRadius(int rad, Point p){
+    int _x, _y;
+    _x = posisi.getAbsis() - p.getAbsis();
+    if (_x < 0)
+        _x = 0 - _x;
+    _y = posisi.getOrdinat() - p.getOrdinat();
+    if (_y < 0)
+        _y = 0 - _y;
+    return ((_y <= rad) &&(_x <= rad));
 }
