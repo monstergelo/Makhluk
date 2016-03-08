@@ -30,4 +30,4 @@ private :
     int y; //Menyimpan Oordinat
 };
 
-#endif // POINT_H
+#endif
