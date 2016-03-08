@@ -2,23 +2,19 @@
 #define HARIMAU_H_INCLUDED
 #include "Karnivora.h"
 
-class Harimau : public karnivora{
+class Harimau : public Karnivora{
     public :
-        /* ctor, dtor, operator=, cctor */
-        Harimau(int _umur, char *_predator, char _DNA, int _ulangtahun, Point P);
-        Harimau (const Harimau&);
+        Harimau(Point P = PAwal);
+        Harimau(const Harimau&);
+        Harimau& operator=(const Harimau&);
         ~Harimau();
-        /* Karnivora */
-        bool melambat();
-        /* Mahluk Hidup */
-        void menua();
-        bool mati();
-        void display();
-        /* Dari hewan.h */
-        //ifstream operator>> (istream&);
-        //ofstream operator<< (ostream&);
-        bool Lapar();
+        void Reaction(MakhlukHidup&);
+    private :
+        const static int batasumur_Harimau = 10;
+        const static int ulangtahun_Harimau = 2;
+        const static int maksimum_tingkat_kekenyangan_Harimau = 10;
+        const static int kecepatan_Harimau = 5;
+        const static int deltaKecepatan_Harimau = 2;
 };
-
 
 #endif // HARIMAU_H_INCLUDED
