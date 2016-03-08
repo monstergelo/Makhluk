@@ -13,36 +13,12 @@ public :
     Herbivora& operator=(const Herbivora&);
     
     //getter-setter
-    virtual int get_deltaKecepatan();
-    virtual void set_deltaKecepatan(int _deltaKecepatan);
+    int get_deltaKecepatan();
+    void set_deltaKecepatan(int _deltaKecepatan);
 
     //services
-    void bergerak(MakhlukHidup M);
-    /*
-    Mengubah posisi dari Herbivora ke posisi M jika Herbivora merupakan predator dari M.
-    Mengubah posisi secara acak apabila Herbivora bukan predator dari M.
-    */
-    bool isTarget(MakhlukHidup M);
-    /*
-    Menghasilkan nilai true jika MakhlukHidup M mempunyai predator Herbivora. Hal ini
-    akan membantu Herbivora dalam mencari makanan (berburu).
-    */
-    bool isPredator(MakhlukHidup M);
-    /*
-    Menghasilkan nilai true jika MakhlukHidup M adalah predator dari Herbivora. Hal
-    ini akan membantu penyadaran Herbivora terhadap MakhlukHidup yang berada di sekitarnya.
-    */
-    bool Lapar();
-    /*
-    Menghasilkan nilai true jika tingkat_kekenyangan dari Herbivora < 5
-    */
-    bool berlari(MakhlukHidup M);
-    /*
-    Menghasilkan nilai true jika herbivora menyadari predatornya ada di sekitarnya.
-    Hal ini mengakibatkan kecepatan meningkat.
-    */
 private :
-    int deltaKecepatan;
+    const int deltaKecepatan;
     /*
     Menyimpan nilai peningkatan kecepatan
     */

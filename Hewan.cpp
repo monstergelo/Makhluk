@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a) :
+Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a) :
     MakhlukHidup(_umur,_DNA,_ulangtahun,P), HuntingSkill(tar), Gerak(k,a)
 {
     tingkat_kekenyangan = kenyang;
@@ -25,8 +25,13 @@ Hewan& Hewan::operator=(const Hewan& H){
     return *this;
 }
 
-void Hewan::setLapar(bool lap){
-    Lapar = lap;
+void Hewan::setLapar(){
+    if (tingkat_kekenyangan <= (8 * maks_tingkat_kekenyangan/10)){
+        Lapar = true;
+    }
+    else{
+        Lapar = false;
+    }
 }
 /*
 Menghasilkan true jika tingkat kekenyangan rendah.
@@ -54,7 +59,7 @@ bool Hewan::get_lapar(){
 
 void Hewan::hewanMati(){
     if (tingkat_kekenyangan == 0) {
-        Lapar = true;
+        setMati(true);
     }
 }
 
@@ -62,7 +67,17 @@ void Hewan::gerak_memburu(Point Target){
     if (getMemburu()){
         setPrecPosisi(getPosisi());
         setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
-        tingkat_kekenyangan -= 1;
+        tingkat_kekenyangan--;
+        hewanMati();
+        if (!isMati()){
+            setLapar();
+            if (Lapar){
+                setMemburu(true);
+            }
+            else{
+                setMemburu(false);
+            }
+        }
     }
 }
 
@@ -71,5 +86,16 @@ void Hewan::gerak_memburu(Point Target){
 void Hewan::gerak_berarah(int _arah){
     setPrecPosisi(getPosisi());
     setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+    tingkat_kekenyangan--;
+    hewanMati();
+    if (!isMati()){
+        setLapar();
+        if (Lapar){
+            setMemburu(true);
+        }
+        else{
+            setMemburu(false);
+        }
+    }
 }
 //Membuat gerakan arah yang ditentukan
