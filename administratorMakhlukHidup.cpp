@@ -53,6 +53,7 @@ void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 
 void AdministratorMakhlukHidup::creation()
 {
+	/*
 	cout << "masuk creation" << endl;
 	char opsi;
 	while((count < size) && (opsi != '0'))
@@ -99,7 +100,7 @@ void AdministratorMakhlukHidup::creation()
 			
 		}
 		//break;
-	}	
+	}	*/
 }
 
 void AdministratorMakhlukHidup::signal()

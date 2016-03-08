@@ -2,7 +2,7 @@
 #define ADMINISTRATOR_H
 
 #include "Manusia.h"
-#include "Herbivora.h"
+//#include "Herbivora.h"
 
 #include "MakhlukHidup.h"
 #include <iostream>
