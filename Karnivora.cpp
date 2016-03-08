@@ -5,8 +5,8 @@ Karnivora::Karnivora() : Hewan(){
     melambat = false;
 }
 
-Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a, bool lambat,
-                     int delta) : Hewan (_umur,_DNA,_ulangtahun,P,kenyang,maks,tar,k,a)
+Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k,
+                     int a, bool lambat, int delta) : Hewan (_umur,_DNA,_ulangtahun,P,kenyang,maks,tar,_memburu,k,a)
 {
     melambat = lambat;
     deltaKecepatan = delta;

@@ -1,6 +1,6 @@
 #include "Hyena.h"
 
-Hyena::Hyena(Point P) : Karnivora(batasumur_Hyena,'h',ulangtahun_Hyena,P,0,maksimum_tingkat_kekenyangan_Hyena,NULL
+Hyena::Hyena(Point P) : Karnivora(batasumur_Hyena,'y',ulangtahun_Hyena,P,maksimum_tingkat_kekenyangan_Hyena,maksimum_tingkat_kekenyangan_Hyena,NULL
                 ,false, kecepatan_Hyena,1,false,deltaKecepatan_Hyena)
 {
     setPredator(0,'p');

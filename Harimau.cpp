@@ -1,6 +1,6 @@
 #include "Harimau.h"
 
-Harimau::Harimau(Point P) : Karnivora(batasumur_Harimau,'h',ulangtahun_Harimau,P,0,maksimum_tingkat_kekenyangan_Harimau,NULL
+Harimau::Harimau(Point P) : Karnivora(batasumur_Harimau,'h',ulangtahun_Harimau,P,maksimum_tingkat_kekenyangan_Harimau,maksimum_tingkat_kekenyangan_Harimau,NULL
                 ,false, kecepatan_Harimau,1,false,deltaKecepatan_Harimau)
 {
     setPredator(0,'p');
