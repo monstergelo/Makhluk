@@ -4,13 +4,12 @@
 
 class Harimau : public Karnivora{
     public :
-        Harimau(Point P);
-        void setHarimauFromPoint(Point P);
+        Harimau(Point P = PAwal);
         Harimau(const Harimau&);
         Harimau& operator=(const Harimau&);
         ~Harimau();
+        void Reaction(MakhlukHidup&);
     private :
-        static char* predatorHarimau;
         const static int batasumur_Harimau = 10;
         const static int ulangtahun_Harimau = 2;
         const static int maksimum_tingkat_kekenyangan_Harimau = 10;

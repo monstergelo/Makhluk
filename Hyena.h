@@ -5,16 +5,12 @@
 
 class Hyena : public Karnivora{
     public :
-        Hyena(int _umur = batasumur_Hyena, char _DNA = 'y', int _ulangtahun = ulangtahun_Hyena,Point P = PAwal,
-                int kenyang = maksimum_tingkat_kekenyangan_Hyena, int maks = maksimum_tingkat_kekenyangan_Hyena
-                , char* tar = predatorHyena, int k = kecepatan_Hyena, int a = U, bool lambat = false,
-                int delta = deltaKecepatan_Hyena);
-        void setHyenaFromPoint(Point P);
+        Hyena(Point P = PAwal);
         Hyena(const Hyena&);
         Hyena& operator=(const Hyena&);
         ~Hyena();
+        void Reaction(MakhlukHidup&);
     private :
-        static char* predatorHyena;
         const static int batasumur_Hyena = 7;
         const static int ulangtahun_Hyena = 2;
         const static int maksimum_tingkat_kekenyangan_Hyena = 8;
