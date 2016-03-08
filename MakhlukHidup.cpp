@@ -132,7 +132,7 @@ void MakhlukHidup::setMati(bool _mati){
     mati = _mati;
 }
 
-bool isPredator(char DNA_predator){
+bool MakhlukHidup::isPredator(char DNA_predator){
     int i = 0;
     bool stopCheckingIsPredator = false;
     while (i < getUkuranPredator() && (!stopCheckingIsPredator) ) {
@@ -143,4 +143,15 @@ bool isPredator(char DNA_predator){
         }
     }
     return (i < getUkuranPredator());
+}
+
+bool MakhlukHidup::isRadius(int rad, Point p){
+    int _x, _y;
+    _x = posisi.getAbsis() - p.getAbsis();
+    if (_x < 0)
+        _x = 0 - _x;
+    _y = posisi.getOrdinat() - p.getOrdinat();
+    if (_y < 0)
+        _y = 0 - _y;
+    return ((_y <= rad) &&(_x <= rad));
 }

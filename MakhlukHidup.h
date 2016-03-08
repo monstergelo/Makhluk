@@ -46,6 +46,8 @@ class MakhlukHidup {
 
         bool isPredator(char DNA_predator);
 
+        bool isRadius (int rad, Point p);
+
         virtual void Reaction(const MakhlukHidup&)=0;
 
     private :
