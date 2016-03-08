@@ -1,5 +1,8 @@
 #include "administratorMakhlukHidup.h"
 
+#include <iostream>
+using namespace std;
+
 //ctor,  dtor
 AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 {
@@ -8,24 +11,30 @@ AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 	initDaftar();
 	count = 0;
 
-	creation();
+	//creation();
 }
 
 AdministratorMakhlukHidup::~AdministratorMakhlukHidup()
 {
-	//delete daftar;
+	for(int i=0; i<10; ++i)
+	{
+		delete daftar[i];
+	}
 }
 
 void AdministratorMakhlukHidup::fill(MakhlukHidup* n)
 {
-	for(int i=0; i<size; ++i)
+	int i = 0;
+	while(i<size)
 	{
 		if(daftar[i] == NULL)
 		{
+			cout << "sup" << endl;
 			daftar[i] = n;
 			count++;
 			break;
 		}
+		++i;
 	}
 }
 
@@ -44,10 +53,12 @@ void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 
 void AdministratorMakhlukHidup::creation()
 {
+	/*
 	cout << "masuk creation" << endl;
 	char opsi;
-	while(count < size)
+	while((count < size) && (opsi != '0'))
 	{
+		cout << "count sekarang " << get_count() << endl;
 		cin >> opsi;
 		switch (opsi)
 		{
@@ -59,14 +70,61 @@ void AdministratorMakhlukHidup::creation()
 
 			case '1' :
 			{
-				Manusia m1;
-				fill(&m1);
+				cout << "wiwi" << endl;
+				MakhlukHidup *m = new Herbivora;
+				Point P(4,6);
+				m->setPosisi(P);
+				fill(m);
+				break;
 			} 
 
+			case '2' :
+			{
+				cout << "wewe" << endl;
+				MakhlukHidup *m = new Herbivora;
+				Point P(2,2);
+				m->setPosisi(P);
+				fill(m);
+				break;
+			} 
+
+			case '3' :
+			{
+				cout << "wowo" << endl;
+				MakhlukHidup *m = new Herbivora;
+				Point P(9,8);
+				m->setPosisi(P);
+				fill(m);
+				break;
+			} 
+			
 		}
-		break;
+		//break;
+	}	*/
+}
+
+void AdministratorMakhlukHidup::signal()
+{
+	for(int i=0; i<size; ++i)
+	{
+		for(int j=i+1; j<size; ++j)
+		{
+//			daftar[i]->Reaksi(*daftar[j]);
+		}
 	}
-	
+}
+
+void AdministratorMakhlukHidup::activate()
+{
+
+}
+
+void AdministratorMakhlukHidup::check()
+{
+	for(int i=0; i<count; ++i)
+	{
+		cout << i << " " << daftar[i]->getPosisi().getAbsis() << " " << daftar[i]->getPosisi().getOrdinat	() << endl; 
+	}	
 }
 
 void AdministratorMakhlukHidup::initDaftar()

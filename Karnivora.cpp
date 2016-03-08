@@ -5,7 +5,7 @@ Karnivora::Karnivora() : Hewan(){
     melambat = false;
 }
 
-Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, int k, int a, bool lambat,
+Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar, bool _memburu, int k, int a, bool lambat,
                      int delta) : Hewan (_umur,_DNA,_ulangtahun,P,kenyang,maks,tar,k,a)
 {
     melambat = lambat;
@@ -41,9 +41,16 @@ int Karnivora::getDeltaKecepatan(){
 }
 
 void Karnivora::prosesMelambat(){
-    if (get_tingkat_kekenyangan() < ((8*get_maks_tingkat_kekenyangan())/10)){
-        int newKecepatan = get_Kecepatan();
-        newKecepatan -= deltaKecepatan;
-        set_Kecepatan(newKecepatan);
+    int newKecepatan;
+    if (!getMelambat()){
+        if (get_tingkat_kekenyangan() <= ((8*get_maks_tingkat_kekenyangan())/10)){
+            newKecepatan = get_Kecepatan() - deltaKecepatan;
+            set_Kecepatan(newKecepatan);
+            setMelambat(true);
+        }
+        else{
+            newKecepatan = get_Kecepatan() + deltaKecepatan;
+            set_Kecepatan(newKecepatan);
+        }
     }
 }
