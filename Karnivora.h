@@ -13,13 +13,14 @@ class Karnivora : public Hewan {
         //CCTOR
         Karnivora(const Karnivora&);
         Karnivora& operator=(const Karnivora&);
-        virtual ~Karnivora() = 0;
+        ~Karnivora();
         void setMelambat( bool lambat);
         Karnivora& operator=(Karnivora&);
         void setDeltaKecepatan(int delta);
         bool getMelambat();
         int getDeltaKecepatan();
         void prosesMelambat();
+        virtual void Reaction();
     protected :
         int deltaKecepatan;
         /*
