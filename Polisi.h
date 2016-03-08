@@ -5,13 +5,13 @@
 
 class Polisi : public Manusia {
 public :
-    void Polisi();
+    Polisi(Point P);
 
     Polisi(const Polisi&);
 
     Polisi& operator= (const Polisi&);
 
-    ostream& operator<< (ostream&, const Polisi&);
+    void Reaction(MakhlukHidup&);
 
 };
 
