@@ -11,17 +11,17 @@ Hewan::Hewan(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int ma
 };
 
 Hewan::Hewan(const Hewan& H) : MakhlukHidup(H), Gerak(H), HuntingSkill(H){
-    tingkat_kekenyangan = H.get_tingkat_kekenyangan();
-    maks_tingkat_kekenyangan = H.get_maks_tingkat_kekenyangan();
-    Lapar = H.get_Lapar();
+    tingkat_kekenyangan = H.tingkat_kekenyangan;
+    maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
+    Lapar = H.Lapar;
 }
 
 Hewan& Hewan::operator=(const Hewan& H){
     MakhlukHidup::operator=(H);
     HuntingSkill::operator=(H);
     Gerak::operator=(H);
-    tingkat_kekenyangan = H.get_tingkat_kekenyangan();
-    maks_tingkat_kekenyangan = H.get_maks_tingkat_kekenyangan();
+    tingkat_kekenyangan = H.tingkat_kekenyangan;
+    maks_tingkat_kekenyangan = H.maks_tingkat_kekenyangan;
     return *this;
 }
 
@@ -53,7 +53,22 @@ bool Hewan::get_lapar(){
 }
 
 void Hewan::hewanMati(){
-    if ((tingkat_kekenyangan = ((8*tingkat_kekenyangan)/10)) || mati()){
-        delete this;
+    if (tingkat_kekenyangan == ((8*tingkat_kekenyangan)/10)) {
+        Lapar = true;
     }
 }
+
+void Hewan::gerak_memburu(Point Target){
+    if (getMemburu()){
+        setPrecPosisi(getPosisi());
+        setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
+    }
+}
+
+//Membuat gerakan dengan arah menjauhi suatu titik;
+
+void Hewan::gerak_berarah(int _arah){
+    setPrecPosisi(getPosisi());
+    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+}
+//Membuat gerakan arah yang ditentukan
