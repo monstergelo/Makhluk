@@ -9,6 +9,8 @@ class Harimau : public Karnivora{
                 , char* tar = predatorHarimau, int k = kecepatan_Harimau, int a = U, bool lambat = false,
                 int delta = deltaKecepatan_Harimau);
         void setHarimauFromPoint(Point P);
+        Harimau(const Harimau&);
+        Harimau& operator=(const Harimau&);
         ~Harimau();
     private :
         static char* predatorHarimau;
