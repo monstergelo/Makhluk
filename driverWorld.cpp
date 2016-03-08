@@ -23,6 +23,7 @@ int main()
 	W.initDraw(*W.get_daftar(1));
 	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
 	thread t1(&KonduktorMakhlukHidup::hidup, &W, ref(m2));
+	thread t2(&AdministratorMakhlukHidup::signal, &W);
 
 
 	while(1)

@@ -105,11 +105,14 @@ void AdministratorMakhlukHidup::creation()
 
 void AdministratorMakhlukHidup::signal()
 {
-	for(int i=0; i<size; ++i)
+	while(1)
 	{
-		for(int j=i+1; j<size; ++j)
+		for(int i=0; i<count; ++i)
 		{
-//			daftar[i]->Reaksi(*daftar[j]);
+			for(int j=i+1; j<count; ++j)
+			{
+				daftar[i]->Reaction(*daftar[j]);
+			}
 		}
 	}
 }
