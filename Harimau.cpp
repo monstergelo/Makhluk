@@ -10,6 +10,9 @@ Harimau::Harimau(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, in
     setPredator(1,'t');
 }
 
+Harimau::~Harimau(){
+
+}
 void Harimau::setHarimauFromPoint(Point P){
     setPosisi(P);
 }

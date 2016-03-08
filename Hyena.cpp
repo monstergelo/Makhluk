@@ -10,6 +10,8 @@ Hyena::Hyena(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int ma
     setPredator(1,'t');
 }
 
+Hyena::~Hyena(){}
+
 void Hyena::setHyenaFromPoint(Point P){
     setPosisi(P);
 }

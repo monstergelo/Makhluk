@@ -1,6 +1,6 @@
 #include "Karnivora.h"
 
-Karnivora::Karnivora(){
+Karnivora::Karnivora() : Hewan(){
     deltaKecepatan = 0;
     melambat = false;
 }
