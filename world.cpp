@@ -21,7 +21,8 @@ void World::initDisplay()
 //=======================================================================================
 void World::updateDisplay()
 {
-	while(1)
+	bool end = false;
+	while(!end)
 	{
 		for(int i=0; i<get_size(); ++i)
 		{
@@ -37,6 +38,10 @@ void World::updateDisplay()
 					draw(get_daftar(i));
 					Sleep(100);
 				}
+			}
+			else 
+			{
+				if(isGameOver()) end = true;
 			}
 		}
 	}
@@ -97,9 +102,12 @@ void World::endDraw(MakhlukHidup& m1)
 	draw(m1.getPrecPosisi(), '.');
 }
 
-bool World::gameOver()
+bool World::isGameOver()
 {
 
+	if(get_count() <= 0) return true;
+	else				 return false;
+	
 }
 
 

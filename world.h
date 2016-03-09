@@ -24,7 +24,7 @@ public:
 	void draw(MakhlukHidup*);						//menggambarkan posisi makhluk sekarang pada layar
 	void initDraw(MakhlukHidup&);					//menggambar saat makhluk hidup
 	void endDraw(MakhlukHidup&);					//menggambar saat makhluk mati
-	bool gameOver();						 		//cek apakah sudah tidak ada makhluk di dalam area
+	bool isGameOver();					 		    //cek apakah sudah tidak ada makhluk di dalam area
 
 
 

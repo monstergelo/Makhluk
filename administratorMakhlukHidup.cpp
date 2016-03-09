@@ -111,7 +111,8 @@ void AdministratorMakhlukHidup::creation()
 
 void AdministratorMakhlukHidup::signal()
 {
-	while(1)
+	bool end = false;
+	while(!end)
 	{
 		for(int i=0; i<size; ++i)
 		{
@@ -120,6 +121,10 @@ void AdministratorMakhlukHidup::signal()
 				if(daftar[i]!=NULL)
 				{
 					//daftar[i]->Reaction(*daftar[j]);
+				}
+				else
+				{
+					if(count <= 0) end = true;
 				}
 			}
 		}

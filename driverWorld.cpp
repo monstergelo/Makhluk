@@ -17,20 +17,18 @@ int main()
 	Sleep(5000);
 	W.initDisplay();
 	W.get_daftar(0)->setPosisi(P2);
-	//W.get_daftar(0)->setPosisi(P2);
-	//W.get_daftar(0)->setPrecPosisi(P2);
-	//W.initDraw(*W.get_daftar(0));
-	//W.initDraw(*W.get_daftar(1));
 	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
 	thread t1(&KonduktorMakhlukHidup::hidup, &W, ref(m2));
 	thread t2(&AdministratorMakhlukHidup::signal, &W);
 
 
 	W.updateDisplay();
-	
 
 	W.draw(P3, '.');
-
+	cout << "GameOver";
+	t0.join();
+	t1.join();
+	t2.join();
 
 	return 0;
 }
