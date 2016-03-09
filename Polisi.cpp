@@ -29,9 +29,7 @@ void Polisi::Reaction(MakhlukHidup& M){
         if (get_DNA() == M.get_DNA()) {
             if (M.get_umur() >= get_umur())
                 setMati(true);
-            }
-        } else {
-            if (M.isPredator(get_DNA()))
+        } else if (M.isPredator(get_DNA())) {
                 setMati(true);
         }
     } else if (isRadius(2,M.getPosisi())){
