@@ -101,3 +101,5 @@ void Hewan::gerak_berarah(int _arah){
     }
 }
 //Membuat gerakan arah yang ditentukan
+
+void Hewan::Reaction(MakhlukHidup &M){}

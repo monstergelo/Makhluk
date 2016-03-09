@@ -27,19 +27,12 @@ Polisi& Polisi::operator= (const Polisi& P) {
 void Polisi::Reaction(MakhlukHidup& M){
     if (M.getPosisi()== getPosisi()){
         if (get_DNA() == M.get_DNA()) {
-            if (M.get_umur() > get_umur())
-                setMati(true);
-            else if (M.get_umur() < get_umur())
-                M.setMati(true);
-            else {
-                M.setMati(true);
+            if (M.get_umur() >= get_umur())
                 setMati(true);
             }
         } else {
             if (M.isPredator(get_DNA()))
                 setMati(true);
-            else
-                M.setMati(true);
         }
     } else if (isRadius(2,M.getPosisi())){
         if (M.isPredator(get_DNA()))

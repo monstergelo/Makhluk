@@ -24,27 +24,3 @@ Hyena& Hyena::operator=(const Hyena& H){
 
 Hyena::~Hyena(){
 }
-
-void Hyena::Reaction(MakhlukHidup& M){
-    prosesMelambat();
-    if (M.getPosisi()== getPosisi()){
-        if (get_DNA() == M.get_DNA()) {
-            if (M.get_umur() > get_umur())
-                setMati(true);
-            else if (M.get_umur() < get_umur())
-                M.setMati(true);
-            else {
-                M.setMati(true);
-                setMati(true);
-            }
-        } else {
-            if (M.isPredator(get_DNA()))
-                setMati(true);
-            else
-                M.setMati(true);
-        }
-    } else if (isRadius(2,M.getPosisi())){
-        if (isTarget(M.get_DNA()))
-            gerak_memburu(M.getPosisi());
-    }
-}
