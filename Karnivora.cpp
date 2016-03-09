@@ -66,7 +66,7 @@ void Karnivora::Reaction(MakhlukHidup& M){
         } else if (M.isPredator(get_DNA())) {
                 setMati(true);
         }
-    } else if (isRadius(2,M.getPosisi())){
+    } else if (isRadius(1,M.getPosisi())){
         if (M.isPredator(get_DNA()))
             gerak_menjauh(M.getPosisi());
         else if (isTarget(M.get_DNA()))
