@@ -76,7 +76,8 @@ bool HuntingSkill::isTarget(char _target){
     while ((i < ukuran_target) && (!stop)){
         if (Target[i] == _target){
             stop = true;
-        }
+        } else
+            i++;
     }
     return (i < ukuran_target);
 }
