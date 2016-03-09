@@ -28,3 +28,7 @@ burung:
 	g++ -std=c++11 -o driverBurung driverBurungUnta.cpp BurungUnta.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
 tumbuhan:
 	g++ -std=c++11 -o driverT driverTumbuhan.cpp Tumbuhan.cpp Point.cpp MakhlukHidup.cpp
+rumput:
+	g++ -std=c++11 -o driverr driverRumput.cpp Rumput.cpp Tumbuhan.cpp Point.cpp MakhlukHidup.cpp
+pohon:
+	g++ -std=c++11 -o driverp driverPohon.cpp Pohon.cpp Tumbuhan.cpp Point.cpp MakhlukHidup.cpp
