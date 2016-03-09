@@ -40,5 +40,9 @@ int Herbivora::get_deltaKecepatan() {
 	return deltaKecepatan;
 }
 void Herbivora::prosesMempercepat() {
-	setPosisi(gerak_bebas(getPosisi()));
+
+}
+
+void Herbivora::Reaction(MakhlukHidup&) {
+	
 }

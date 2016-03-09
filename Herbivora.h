@@ -5,10 +5,14 @@
 
 //Catatan : Hewan inherit ke MakhlukHidup, Gerak, dan HuntingSkill
 class Herbivora : public Hewan {
-public :
+public:
         Herbivora();
-        Herbivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char* tar,
-                 bool _memburu, int k, int a, bool lambat, int delta);
+        Herbivora(int _umur, char _DNA, 
+                  int _ulangtahun, Point P, 
+                  int kenyang, int maks, 
+                  char* tar, bool _memburu, 
+                  int k, int a, 
+                  bool lambat, int delta);
 
         //CCTOR
         Herbivora(const Herbivora&);
@@ -19,9 +23,9 @@ public :
         bool get_percepat();
         int get_deltaKecepatan();
         void prosesMempercepat();
-         //void Reaction(MakhlukHidup&);
+        virtual void Reaction(MakhlukHidup&);
     //services
-private :
+private:
     int deltaKecepatan;
     /*
     Menyimpan nilai peningkatan kecepatan

@@ -1,7 +1,7 @@
 #include "Herbivora.h"
 
 class Gajah : public Herbivora {
-public :
+public:
   //4 sekawan
   Gajah();
   ~Gajah();
@@ -24,4 +24,5 @@ public :
   
   
   void berlari();
+private:
 };
