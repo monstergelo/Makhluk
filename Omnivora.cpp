@@ -18,7 +18,7 @@ Omnivora& Omnivora::operator=(const Omnivora& K){
 }
 
 bool Omnivora::isTumbuhan(MakhlukHidup& M){
-    if ((M.get_DNA() == 'p') || (M.get_DNA() == 't')){
+    if ((M.get_DNA() == 'r') || (M.get_DNA() == 't')){
         return true;
     }
     else{

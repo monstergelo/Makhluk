@@ -1,4 +1,6 @@
 #include "Omnivora.h"
+#include <iostream>
+using namespace std;
 
 int main(){
     Point P(1,0);
@@ -19,4 +21,11 @@ int main(){
         P1 = K1.getPosisi();
         printf("%d %d ", P1.getAbsis(), P1.getOrdinat());
     }
+
+    K1.set_umur(10);
+    int umurAwal = K1.get_umur();
+    cout << "Reaction :" << endl;
+    MakhlukHidup M(10,'t',9,P1);
+    K1.Reaction(M);
+    printf("umur sekarang (umur sebelumnya %d) : %d", umurAwal, K1.get_umur());
 }
