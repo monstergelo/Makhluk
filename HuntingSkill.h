@@ -31,6 +31,7 @@ public :
     Point getPosisiTarget();
 
     bool isTarget(char _target);
+    //Mengembailkan nilai true jika _target berada di tabel Tarhet this
 
 private :
     char* Target;

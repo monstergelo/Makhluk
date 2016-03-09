@@ -45,6 +45,7 @@ class MakhlukHidup {
         /* i adalah indeks dari predator dan selalu valid */
 
         bool isPredator(char DNA_predator);
+        //Mengembalikan nilai true jika DNA_predator berada pada tabel predator this
 
         bool isRadius (int rad, Point p);
 
