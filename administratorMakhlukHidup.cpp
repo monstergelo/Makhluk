@@ -116,11 +116,14 @@ void AdministratorMakhlukHidup::signal()
 	{
 		for(int i=0; i<size; ++i)
 		{
-			for(int j=i+1; j<size; ++j)
+			for(int j=0; j<size; ++j)
 			{
 				if(daftar[i]!=NULL)
 				{
-					//daftar[i]->Reaction(*daftar[j]);
+					//if((daftar[j]!=NULL) && (i != j))
+					//	daftar[i]->Reaction(*daftar[j]);
+					daftar[0]->Reaction(*(daftar[1]));
+					//daftar[1]->Reaction(*(daftar[0]));
 				}
 				else
 				{
