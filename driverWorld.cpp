@@ -1,6 +1,6 @@
 #include "world.h"
 #include "Polisi.h"
-#include <thread>
+#include
 
 int main()
 {
@@ -12,10 +12,10 @@ int main()
 	World W;
 	W.fill(&m1);
 	W.fill(&m2);
-	cout << "m1 tes: " << W.get_daftar(0)->getPosisi().getOrdinat() << endl; 
-	cout << "m2 tes: " << W.get_daftar(1)->getPosisi().getOrdinat() << endl; 
+	cout << "m1 tes: " << W.get_daftar(0)->getPosisi().getOrdinat() << endl;
+	cout << "m2 tes: " << W.get_daftar(1)->getPosisi().getOrdinat() << endl;
 	W.get_daftar(0)->Reaction(*W.get_daftar(1));
-	
+
 	Point P3(0,31);
 	Sleep(5000);
 	W.initDisplay();
