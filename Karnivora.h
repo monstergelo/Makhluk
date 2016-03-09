@@ -30,7 +30,7 @@ class Karnivora : public Hewan {
         bool getMelambat();
         int getDeltaKecepatan();
         void prosesMelambat();
-        virtual void Reaction();
+        void Reaction(MakhlukHidup&);
     protected :
         int deltaKecepatan;
         /*
