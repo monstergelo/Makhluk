@@ -24,11 +24,11 @@ public :
     int get_maks_tingkat_kekenyangan();
     bool get_lapar();
     void hewanMati();
+    void gerak_bebas();
     void gerak_memburu(Point Target);
     //Membuat gerakan dengan arah menuju suatu titik
     void gerak_berarah(int _arah);
     //Membuat gerakan arah yang ditentukan
-    virtual void Reaction(MakhlukHidup &M);
 private :
     int tingkat_kekenyangan;
     /*
