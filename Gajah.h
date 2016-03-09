@@ -3,7 +3,7 @@
 class Gajah : public Herbivora {
 public:
   //4 sekawan
-  Gajah();
+  Gajah(Point P);
   ~Gajah();
   Gajah(const Gajah&);
   Gajah& operator= (const Gajah&);
