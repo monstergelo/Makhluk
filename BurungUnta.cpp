@@ -14,11 +14,11 @@ BurungUnta::BurungUnta(Point P) : Herbivora(batasumur_BurungUnta,DNA_BurungUnta,
 	setTarget(0,'!');
 	setTarget(1,'^');
 }
-BurungUnta::BurungUnta(const BurungUnta& G) : Herbivora(G) {
+BurungUnta::BurungUnta(const BurungUnta& Burung) : Herbivora(Burung) {
 
 }
-BurungUnta& BurungUnta::operator= (const BurungUnta& G) {
-	Herbivora::operator=(G);
+BurungUnta& BurungUnta::operator= (const BurungUnta& Burung) {
+	Herbivora::operator=(Burung);
 	return *this;
 }
 BurungUnta::~BurungUnta() {
@@ -29,23 +29,12 @@ BurungUnta::~BurungUnta() {
 void BurungUnta::Reaction(MakhlukHidup& M) {
 	if (getPosisi() == M.getPosisi()) {
 		if (get_DNA() == M.get_DNA()) {
-			if (get_umur() >= M.get_umur()) {
-				if (get_umur() == M.get_umur()) {
-					M.setMati(true);
-					setMati(true);
-				} else {
-					M.setMati(true);
-				}
-			} else {
-				setMati(true);
-			}
+			setMati(true);
 		} else {
-			if (M.isPredator(get_DNA())) {
-				M.setMati(true);
-			} else {
-				if (isPredator(M.get_DNA())) {
-					setMati(true);
-				}
+			if (isPredator(M.get_DNA())) {
+				setMati(true);
+			} else if (isTarget(M.get_DNA())) {
+				set_tingkat_kekenyangan(get_maks_tingkat_kekenyangan());
 			}
 		}
 	} else {
@@ -53,11 +42,10 @@ void BurungUnta::Reaction(MakhlukHidup& M) {
 			if (isPredator(M.get_DNA())) {
 				prosesMempercepat();
 				gerak_bebas(getPosisi());
-			} else if (M.isPredator(get_DNA())) {
-				gerak_memburu(M.getPosisi());
 			}
 		} else {
 			set_Kecepatan(kecepatan_BurungUnta);
 		}
 	}
+
 }
