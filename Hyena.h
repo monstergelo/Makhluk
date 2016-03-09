@@ -9,7 +9,6 @@ class Hyena : public Karnivora{
         Hyena(const Hyena&);
         Hyena& operator=(const Hyena&);
         ~Hyena();
-        void Reaction(MakhlukHidup&);
     private :
         const static int batasumur_Hyena = 7;
         const static int ulangtahun_Hyena = 2;

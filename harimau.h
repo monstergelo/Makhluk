@@ -8,7 +8,7 @@ class Harimau: public Karnivora{
         Harimau(const Harimau&);
         Harimau& operator=(const Harimau&);
         ~Harimau();
-        void Reaction(MakhlukHidup&);
+
     private :
         const static int batasumur_Harimau = 10;
         const static int ulangtahun_Harimau = 2;
