@@ -24,3 +24,7 @@ omnivora:
 
 gajah:
 	g++ -std=c++11 -o driverGajah driverGajah.cpp Gajah.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
+burung:
+	g++ -std=c++11 -o driverBurung driverBurungUnta.cpp BurungUnta.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
+tumbuhan:
+	g++ -std=c++11 -o driverT driverTumbuhan.cpp Tumbuhan.cpp Point.cpp MakhlukHidup.cpp
