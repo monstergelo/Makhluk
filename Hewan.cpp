@@ -65,6 +65,11 @@ void Hewan::hewanMati(){
     }
 }
 
+void Hewan::gerak_bebas(){
+    setPrecPosisi(getPosisi());
+    setPosisi(Gerak::gerak_bebas(getPosisi()));
+}
+
 void Hewan::gerak_memburu(Point Target){
     if (getMemburu()){
         setPrecPosisi(getPosisi());
@@ -82,7 +87,6 @@ void Hewan::gerak_memburu(Point Target){
         }
     }
 }
-
 //Membuat gerakan dengan arah menjauhi suatu titik;
 
 void Hewan::gerak_berarah(int _arah){
@@ -101,5 +105,3 @@ void Hewan::gerak_berarah(int _arah){
     }
 }
 //Membuat gerakan arah yang ditentukan
-
-void Hewan::Reaction(MakhlukHidup &M){}

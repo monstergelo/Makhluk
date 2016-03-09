@@ -1,6 +1,6 @@
 #include "Polisi.h"
 
-Polisi::Polisi(Point P) : Manusia(8,'a',5,P,NULL,true,3,1) {
+Polisi::Polisi(Point P) : Manusia(8,'C',5,P,NULL,true,3,1) {
     //setPredator
     setPredator(0,'u');
     setPredator(1,'g');
@@ -29,19 +29,14 @@ void Polisi::Reaction(MakhlukHidup& M){
         if (get_DNA() == M.get_DNA()) {
             if (M.get_umur() >= get_umur())
                 setMati(true);
-        } else if (M.isPredator(get_DNA())) {
+        } else if (isPredator(M.get_DNA())) {
                 setMati(true);
         }
-    } else if (isRadius(2,M.getPosisi())){
-        if (M.isPredator(get_DNA()))
+    } else if(isRadius(2,M.getPosisi())) {
+        if (isPredator(M.get_DNA()))
             gerak_menjauh(M.getPosisi());
-        else if (isTarget(M.get_DNA()))
+    }else if (isRadius(4,M.getPosisi())){
+        if (isTarget(M.get_DNA()) && (M.get_DNA() != '^'))
             gerak_memburu(M.getPosisi());
     }
 }
-/*
-ostream& Polisi::operator<< (ostream& out, const Polisi& P){
-    out << P.getDNA();
-    return out;
-} */
-
