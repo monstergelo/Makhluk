@@ -19,7 +19,7 @@ herbivora:
 MakhlukKarnivora :
 	g++ -std=c++11 -o MakhlukKarnivora driverMakhlukKarnivora.cpp Harimau.cpp Hyena.cpp Karnivora.cpp Hewan.cpp Gerak.cpp HuntingSkill.cpp MakhlukHidup.cpp Point.cpp
 	
-herbivora:
+omnivora:
 	g++ -std=c++11 -o driverOmnivora driverOmnivora.cpp Omnivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp	
 
 gajah:
