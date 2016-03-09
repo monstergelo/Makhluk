@@ -28,11 +28,11 @@ void Pemburu::Reaction(MakhlukHidup& M){
         if (get_DNA() == M.get_DNA()) {
             if (M.get_umur() >= get_umur())
                 setMati(true);
-        } else if (M.isPredator(get_DNA())) {
+        } else if (isPredator(M.get_DNA())) {
                 setMati(true);
         }
     } else if (isRadius(2,M.getPosisi())){
-        if (M.isPredator(get_DNA()))
+        if (isPredator(M.get_DNA()))
             gerak_menjauh(M.getPosisi());
         else if (isTarget(M.get_DNA()))
             gerak_memburu(M.getPosisi());
