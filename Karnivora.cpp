@@ -13,6 +13,7 @@ Karnivora::Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang
 }
 
 Karnivora::~Karnivora(){}
+
 Karnivora::Karnivora(const Karnivora& K) : Hewan(K){
     deltaKecepatan = K.deltaKecepatan;
     melambat = K.melambat;
@@ -60,22 +61,15 @@ void Karnivora::Reaction(MakhlukHidup& M){
     prosesMelambat();
     if (M.getPosisi()== getPosisi()){
         if (get_DNA() == M.get_DNA()) {
-            if (M.get_umur() > get_umur())
+            if (M.get_umur() >= get_umur())
                 setMati(true);
-            else if (M.get_umur() < get_umur())
-                M.setMati(true);
-            else {
-                M.setMati(true);
+        } else if (M.isPredator(get_DNA())) {
                 setMati(true);
-            }
-        } else {
-            if (M.isPredator(get_DNA()))
-                setMati(true);
-            else
-                M.setMati(true);
         }
     } else if (isRadius(2,M.getPosisi())){
-        if (isTarget(M.get_DNA()))
+        if (M.isPredator(get_DNA()))
+            gerak_menjauh(M.getPosisi());
+        else if (isTarget(M.get_DNA()))
             gerak_memburu(M.getPosisi());
     }
 }

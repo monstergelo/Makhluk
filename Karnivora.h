@@ -25,7 +25,6 @@ class Karnivora : public Hewan {
         Karnivora& operator=(const Karnivora&);
         ~Karnivora();
         void setMelambat( bool lambat);
-        Karnivora& operator=(Karnivora&);
         void setDeltaKecepatan(int delta);
         bool getMelambat();
         int getDeltaKecepatan();
