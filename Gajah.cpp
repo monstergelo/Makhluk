@@ -1,35 +1,20 @@
 #include "Gajah.h"
 
-Gajah::Gajah() {
-  set_deltaKecepatan(2);
-}
+Gajah::Gajah(Point P) : Herbivora(batasumur_Gajah,DNA_Gajah,ulangtahun_Gajah,
+									) {
 
+}
 Gajah::~Gajah() {
-  // delete var yang ...*
+
+}
+Gajah::Gajah(const Gajah&) {
+
+}
+Gajah& Gajah::operator= (const Gajah&) {
+
 }
 
-Gajah::Gajah(const Gajah& G) {
-  
-}
+//services
+void Gajah::Reaction(MakhlukHidup&) {
 
-Gajah& Gajah::operator= (const Gajah& G) {
-  
-}
-
-void Gajah::menua() {
-  set_umur(get_umur());
-}
-void Gajah::gerak() {
-  
-}
-bool Gajah::mati() {
-  
-}
-
-void Gajah::display() {
-  
-}
-
-bool Gajah::berlari() {
-  
 }

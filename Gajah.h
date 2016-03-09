@@ -7,22 +7,14 @@ public:
   ~Gajah();
   Gajah(const Gajah&);
   Gajah& operator= (const Gajah&);
-  ifstream operator>> (istream&);
-  ofstream operator<< (ostream&);
   
   //services
-  void menua();
-  //menambah umur dari makhluk hidup
-  void gerak();
-  //mengbah posisi makhluk hidup sesuai arah dan kecepatan
-  bool mati();
-  //mengembalikan nilai true jika umur makhluk hidup sudah mencapai batas umur atau kondisi tertentu;
-  void display();
-  //menampilkan makhluk hidup ke layar
-  bool Lapar();
-  bool memburu();
-  
-  
-  void berlari();
+  void Reaction(MakhlukHidup&);
 private:
+  const static int batasumur_Gajah = 10;
+  const static int ulangtahun_Gajah = 2;
+  const static int maksimum_tingkat_kekenyangan_Gajah = 9;
+  const static int kecepatan_Gajah = 5;
+  const static int deltaKecepatan_Gajah = 2;
+  const static char DNA_Gajah = 'g';
 };
