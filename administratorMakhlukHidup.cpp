@@ -109,22 +109,28 @@ void AdministratorMakhlukHidup::creation()
 	}	*/
 }
 
-void AdministratorMakhlukHidup::signal()
+void AdministratorMakhlukHidup::sinyal()
 {
 	bool end = false;
 	while(!end)
 	{
 		for(int i=0; i<size; ++i)
 		{
-			for(int j=i+1; j<size; ++j)
+			for(int j=0; j<size; ++j)
 			{
 				if(daftar[i]!=NULL)
 				{
-					//daftar[i]->Reaction(*daftar[j]);
+					if((daftar[j]!=NULL) && (i != j))
+					{
+						daftar[i]->Reaction(*daftar[j]);
+					}
 				}
 				else
 				{
-					if(count <= 0) end = true;
+					if(count <= 0)
+					{
+						end = true;
+					}
 				}
 			}
 		}
