@@ -5,7 +5,7 @@
 int main()
 {
 	Point P(20,20);
-	Point P2(10, 10);
+	Point P2(20, 20);
 	Polisi m1(P2);
 	Polisi m2(P);
 
