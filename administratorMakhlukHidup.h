@@ -21,7 +21,7 @@ public:
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
 	void pluck(int);
 	void creation();//memilih makhluk dan memasukkannya dalam daftar
-	void signal();
+	void sinyal();
 	void activate();
 	void check();
 

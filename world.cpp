@@ -30,7 +30,6 @@ void World::updateDisplay()
 			{
 				if(get_daftar(i)->isMati())
 				{
-					cout << "98765";
 					endDraw(*get_daftar(i));
 					pluck(i);
 				}
