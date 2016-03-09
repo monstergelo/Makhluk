@@ -1,6 +1,6 @@
 #include "Mandril.h"
 
-Mandril::Mandril(Point P) : Omnivora(batasumur_Mandril,'h',ulangtahun_Mandril,P,maksimum_tingkat_kekenyangan_Mandril,maksimum_tingkat_kekenyangan_Mandril,NULL
+Mandril::Mandril(Point P) : Omnivora(batasumur_Mandril,'m',ulangtahun_Mandril,P,maksimum_tingkat_kekenyangan_Mandril,maksimum_tingkat_kekenyangan_Mandril,NULL
                 ,false, kecepatan_Mandril,1)
 {
     setPredator(0,'h');

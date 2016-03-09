@@ -1,6 +1,6 @@
 #include "Beruang.h"
 
-Beruang::Beruang(Point P) : Omnivora(batasumur_Beruang,'h',ulangtahun_Beruang,P,maksimum_tingkat_kekenyangan_Beruang,maksimum_tingkat_kekenyangan_Beruang,NULL
+Beruang::Beruang(Point P) : Omnivora(batasumur_Beruang,'b',ulangtahun_Beruang,P,maksimum_tingkat_kekenyangan_Beruang,maksimum_tingkat_kekenyangan_Beruang,NULL
                 ,false, kecepatan_Beruang,1)
 {
     setPredator(0,'h');
