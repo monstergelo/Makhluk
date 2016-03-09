@@ -28,6 +28,7 @@ public :
     //Membuat gerakan dengan arah menuju suatu titik
     void gerak_berarah(int _arah);
     //Membuat gerakan arah yang ditentukan
+    virtual void Reaction(MakhlukHidup &M);
 private :
     int tingkat_kekenyangan;
     /*
