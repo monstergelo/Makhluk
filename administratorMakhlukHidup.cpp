@@ -51,6 +51,12 @@ void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 	}
 }
 
+void AdministratorMakhlukHidup::pluck(int i)
+{
+	daftar[i] = NULL;
+	count--;
+}
+
 void AdministratorMakhlukHidup::creation()
 {
 	/*
@@ -107,11 +113,14 @@ void AdministratorMakhlukHidup::signal()
 {
 	while(1)
 	{
-		for(int i=0; i<count; ++i)
+		for(int i=0; i<size; ++i)
 		{
-			for(int j=i+1; j<count; ++j)
+			for(int j=i+1; j<size; ++j)
 			{
-				daftar[i]->Reaction(*daftar[j]);
+				if(daftar[i]!=NULL)
+				{
+					//daftar[i]->Reaction(*daftar[j]);
+				}
 			}
 		}
 	}

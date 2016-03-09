@@ -20,9 +20,11 @@ public:
 	void updateDisplay();							//pindah posisi makhluk
 	void draw(Point Px, Point Pc, char display);	//menggeser gambar pada point Px ke point Pc
 	void draw(Point Pc, char display);				//menggambar display pada point Pc
-	void draw(MakhlukHidup&);						//menggambarkan posisi makhluk sekarang pada layar
-	void initDraw(MakhlukHidup&);
-	bool gameOver();								//cek apakah sudah tidak ada makhluk di dalam area
+	void draw(MakhlukHidup&);	
+	void draw(MakhlukHidup*);						//menggambarkan posisi makhluk sekarang pada layar
+	void initDraw(MakhlukHidup&);					//menggambar saat makhluk hidup
+	void endDraw(MakhlukHidup&);					//menggambar saat makhluk mati
+	bool gameOver();						 		//cek apakah sudah tidak ada makhluk di dalam area
 
 
 

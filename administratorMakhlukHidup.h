@@ -19,6 +19,7 @@ public:
 	//method
 	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
+	void pluck(int);
 	void creation();//memilih makhluk dan memasukkannya dalam daftar
 	void signal();
 	void activate();

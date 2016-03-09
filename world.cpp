@@ -16,39 +16,30 @@ void World::initDisplay()
         cout << endl;
     }
 }
+
+
 //=======================================================================================
 void World::updateDisplay()
 {
-	//belom jadi
-	/*
-	void falling()
+	while(1)
 	{
-	    int x =0;
-	    int y =0;
-	    int ex_X = x;
-	    int ex_Y = y;
-
-	    while(1)
-	    {
-	        moveCursor(ex_X, ex_Y);
-	        cout << ".";
-	        moveCursor(x, y);
-	        ex_X = x;
-	        ex_Y = y;
-	        if(( x < 100) || (y < 100))
-	        {
-	            cout << "5";
-	            x++;
-	            y++;
-	            Sleep(300);
-	        }
-	        else
-	        {
-	            break;
-	        }
-	    }
+		for(int i=0; i<get_size(); ++i)
+		{
+			if(get_daftar(i) != NULL)
+			{
+				if(get_daftar(i)->isMati())
+				{
+					endDraw(*get_daftar(i));
+					pluck(i);
+				}
+				else
+				{
+					draw(get_daftar(i));
+					Sleep(100);
+				}
+			}
+		}
 	}
-	*/
 }
 
 void World::draw(Point Px, Point Pc, char display)
@@ -82,12 +73,28 @@ void World::draw(MakhlukHidup &m1)
 	m1.setPrecPosisi(P);
 }
 
+void World::draw(MakhlukHidup *m1)
+{
+	if(m1 != NULL)
+	{
+		Point P = m1->getPosisi();
+		draw(m1->getPrecPosisi(), P, m1->get_DNA());
+
+		m1->setPrecPosisi(P);
+	}
+}
+
 void World::initDraw(MakhlukHidup& m1)
 {
 	Point P = m1.getPosisi();
 	draw(P, m1.get_DNA());
 
 	m1.setPrecPosisi(P);
+}
+
+void World::endDraw(MakhlukHidup& m1)
+{
+	draw(m1.getPrecPosisi(), '.');
 }
 
 bool World::gameOver()
