@@ -17,3 +17,5 @@ herbivora:
 	g++ -std=c++11 -o driveHer driverHerbivora.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
 gajah:
 	g++ -std=c++11 -o driverGajah driverGajah.cpp Gajah.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
+burung:
+	g++ -std=c++11 -o driverBurungUnta.cpp BurungUnta.cpp Herbivora.cpp MakhlukHidup.cpp Hewan.cpp HuntingSkill.cpp Gerak.cpp Point.cpp
