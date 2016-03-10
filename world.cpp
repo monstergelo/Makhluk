@@ -28,15 +28,15 @@ void World::updateDisplay()
 		{
 			if(get_daftar(i) != NULL)
 			{
-				if(get_daftar(i)->isMati())
+				if(!get_daftar(i)->isMati())
 				{
-					endDraw(*get_daftar(i));
-					pluck(i);
+					draw(get_daftar(i));
+					Sleep(1000);
 				}
 				else
 				{
-					draw(get_daftar(i));
-					Sleep(100);
+					endDraw(*get_daftar(i));
+					pluck(i);
 				}
 			}
 			else 
@@ -55,7 +55,7 @@ void World::draw(Point Px, Point Pc, char display)
 	int y = Pc.getOrdinat();
 
 	moveCursor(ex_X, ex_Y);
-	cout << '.';
+	cout << '_';
 
 	moveCursor(x,y);
 	cout << display;
@@ -72,8 +72,9 @@ void World::draw(Point Pc, char display)
 
 void World::draw(MakhlukHidup &m1)
 {
-	Point P = m1.getPosisi();
-	draw(m1.getPrecPosisi(), P, m1.get_DNA());
+	Point P  = m1.getPosisi();
+	Point PP = m1.getPrecPosisi(); 
+	draw(PP, P, m1.get_DNA());
 
 	m1.setPrecPosisi(P);
 }
@@ -82,8 +83,9 @@ void World::draw(MakhlukHidup *m1)
 {
 	if(m1 != NULL)
 	{
-		Point P = m1->getPosisi();
-		draw(m1->getPrecPosisi(), P, m1->get_DNA());
+		Point P  = m1->getPosisi();
+		Point PP = m1->getPrecPosisi(); 
+		draw(PP, P, m1->get_DNA());
 
 		m1->setPrecPosisi(P);
 	}

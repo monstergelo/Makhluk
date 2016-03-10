@@ -25,6 +25,7 @@ public:
 	void sinyal(MakhlukHidup &, MakhlukHidup &);
 	void activate();
 	void check();
+	void wa();
 
 	//getter
 	int get_size();

@@ -226,3 +226,7 @@ void AdministratorMakhlukHidup::set_count(int c)
 	count = c;
 }
 
+void AdministratorMakhlukHidup::wa()
+{
+	
+}
