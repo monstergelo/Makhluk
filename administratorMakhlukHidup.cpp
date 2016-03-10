@@ -112,7 +112,6 @@ void AdministratorMakhlukHidup::creation()
 
 void AdministratorMakhlukHidup::sinyal()
 {
-	typedef void (AdministratorMakhlukHidup::*my_sinyal)(int);
 	for(int index=0; index<size; ++index)
 	{
 		sinyal(index);
@@ -126,7 +125,7 @@ void AdministratorMakhlukHidup::sinyal(int index)
 	{
 		for(int i=0; i<size; ++i)
 		{
-			if((daftar[i]) != NULL)
+			if(((daftar[i]) != NULL) && (i != index)) 
 			{
 				pemantauObjek[index][i] = new thread((my_sinyal)(&AdministratorMakhlukHidup::sinyal), 
 							   this, ref(*daftar[index]), ref(*daftar[i]));
@@ -224,9 +223,4 @@ void AdministratorMakhlukHidup::set_size(int s)
 void AdministratorMakhlukHidup::set_count(int c)
 {
 	count = c;
-}
-
-void AdministratorMakhlukHidup::wa()
-{
-	
 }

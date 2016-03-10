@@ -31,7 +31,7 @@ void World::updateDisplay()
 				if(!get_daftar(i)->isMati())
 				{
 					draw(get_daftar(i));
-					Sleep(1000);
+					Sleep(100);
 				}
 				else
 				{
@@ -55,7 +55,7 @@ void World::draw(Point Px, Point Pc, char display)
 	int y = Pc.getOrdinat();
 
 	moveCursor(ex_X, ex_Y);
-	cout << '_';
+	cout << '.';
 
 	moveCursor(x,y);
 	cout << display;

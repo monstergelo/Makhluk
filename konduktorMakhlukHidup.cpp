@@ -1,6 +1,8 @@
 #include "konduktorMakhlukHidup.h"
 #include <chrono>
+#include <iostream>
 
+using namespace std;
 using namespace std::chrono;
 using namespace std::this_thread;
 
@@ -18,9 +20,9 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 {
 	while(1)
 	{
-		if(m1.get_Kecepatan() == 0)
+		if(m1.get_Kecepatan() != 0)
 		{		
-			m1.gerak_bebas();
+			m1.Manusia::gerak_bebas();
 			m1.menua();
 			sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 
