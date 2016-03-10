@@ -1,6 +1,7 @@
 #include "administratorMakhlukHidup.h"
 
 #include <iostream>
+#include <thread>
 using namespace std;
 
 //ctor,  dtor
@@ -111,31 +112,62 @@ void AdministratorMakhlukHidup::creation()
 
 void AdministratorMakhlukHidup::sinyal()
 {
-	bool end = false;
-	while(!end)
+	typedef void (AdministratorMakhlukHidup::*my_sinyal)(int);
+	for(int index=0; index<size; ++index)
+	{
+		sinyal(index);
+	}
+}
+
+void AdministratorMakhlukHidup::sinyal(int index)
+{
+	typedef void (AdministratorMakhlukHidup::*my_sinyal)(MakhlukHidup&, MakhlukHidup&);
+	if((daftar[index]) != NULL)
 	{
 		for(int i=0; i<size; ++i)
 		{
-			for(int j=0; j<size; ++j)
+			if((daftar[i]) != NULL)
 			{
-				if(daftar[i]!=NULL)
-				{
-					if((daftar[j]!=NULL) && (i != j))
-					{
-						daftar[i]->Reaction(*daftar[j]);
-					}
-				}
-				else
-				{
-					if(count <= 0)
-					{
-						end = true;
-					}
-				}
+				pemantauObjek[index][i] = new thread((my_sinyal)(&AdministratorMakhlukHidup::sinyal), 
+							   this, ref(*daftar[index]), ref(*daftar[i]));
+			}
+			else
+			{
+				pemantauObjek[index][i] = NULL;
 			}
 		}
 	}
+	else
+	{
+		for(int i=0; i<size; ++i)
+		{
+			pemantauObjek[index][i] = NULL;
+		}
+	}
 }
+
+void AdministratorMakhlukHidup::sinyal(MakhlukHidup &m1, MakhlukHidup &m2)
+{
+	bool end = false;
+	while(!end)
+	{
+		if((&m2!=NULL) && (&m1!=NULL))
+		{
+			if(&m2 != &m1)
+			{
+				m1.Reaction(m2);
+			}
+		}
+
+		//cek kematian
+		if((m1.isMati()) || (&m1!=NULL))
+		{
+			end = true;
+		}
+
+	}
+}
+
 
 void AdministratorMakhlukHidup::activate()
 {
@@ -178,6 +210,11 @@ MakhlukHidup* AdministratorMakhlukHidup::get_daftar(int i)
 	return daftar[i];
 }
 
+thread* AdministratorMakhlukHidup::get_pemantau(int index, int i)
+{
+	return pemantauObjek[index][i];
+}
+
 //setter
 void AdministratorMakhlukHidup::set_size(int s)
 {
@@ -188,3 +225,4 @@ void AdministratorMakhlukHidup::set_count(int c)
 {
 	count = c;
 }
+

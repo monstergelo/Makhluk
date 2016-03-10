@@ -1,11 +1,10 @@
 #ifndef ADMINISTRATOR_H
 #define ADMINISTRATOR_H
 
-#include "Manusia.h"
-//#include "Herbivora.h"
 
 #include "MakhlukHidup.h"
 #include <iostream>
+#include <thread>
 
 using namespace std;
 //class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
@@ -22,6 +21,8 @@ public:
 	void pluck(int);
 	void creation();//memilih makhluk dan memasukkannya dalam daftar
 	void sinyal();
+	void sinyal(int);
+	void sinyal(MakhlukHidup &, MakhlukHidup &);
 	void activate();
 	void check();
 
@@ -30,6 +31,7 @@ public:
 	int get_count();
 	MakhlukHidup** get_daftar();
 	MakhlukHidup* get_daftar(int i);
+	thread* get_pemantau(int index, int i);	
 
 	//setter
 	void set_size(int);
@@ -38,7 +40,9 @@ public:
 private:
 	int size; //banyak makhluk maksimal
 	int count; //banyak makhluk dalam daftar
-	MakhlukHidup *daftar[10];  //array pointer objek makhluk
+	MakhlukHidup *daftar[10];  		//array pointer objek makhluk
+	thread *pemantauObjek[10][10];   //masing-masing memantau reaksi objek terhadap
+									   //satu objek lainnya
 
 
 	//helper
