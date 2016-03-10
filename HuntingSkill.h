@@ -4,44 +4,81 @@
 #include <stdlib.h>
 #include "Point.h"
 
+/**
+* HuntingSkill Class. Kelas yang memberikan kemampuan memburu pada Makhluk Hidup.
+*/
 class HuntingSkill {
 public :
-    //CTOR
+    /**
+    * A Constructor.
+    * Konstruktor dari HuntingSkill dengan signature berupa default parameter
+    * @param _Target , parameter pertama yang menyimpan tabel DNA dari target
+    * @param _memburu , paramter kedua yang meyimpan kondisi akan berburu atau tidak
+    */
     HuntingSkill (char* _Target = NULL, bool _memburu = false);
-    //CCTOR
+
+    /**
+    * A Copy Constructor.
+    */
     HuntingSkill (const HuntingSkill&);
-    //DTOR
+
+    /**
+    * A Destructor.
+    */
     virtual ~HuntingSkill ();
-    //OPERATOR =
+
+    /**
+    * An Operator =.
+    */
     HuntingSkill& operator= (const HuntingSkill&);
 
-    void setMemburu(bool M);
-    /*
-    Mengembalikan nilai true jika ada target di sekitar.
-    Hal ini digunakan untuk menentukan gerak selanjutnya yaitu
-    menuju ke target
+    /**
+    * Prosedur setter untuk atribut Memburu
+    * @param M , parameter pertama yang menyimpan kondisi yang akan diubah
     */
-    void setPosisiTarget(Point Target);
+    void setMemburu(bool M);
 
+    /**
+    * Prosedur setter untuk atribut tabel Target
+    * @param i , parameter pertama yang menyimpan nilai indeks tabel
+    * @param _target , parameter kedua yang menyimpan DNA target
+    */
     void setTarget (int i, char _target);
 
-    //GETTER
+    /**
+    * Fungsi getter untuk atribut tabel Target
+    * @return Mengembalikan atribut tabel Target
+    */
     char* getTarget();
-    bool getMemburu();
-    Point getPosisiTarget();
 
+    /**
+    * Fungsi getter untuk atribut Memburu
+    * @return Mengembalikan atribut Memburu
+    */
+    bool getMemburu();
+
+    /**
+    * Fungsi mencari anggota untuk atribut tabel Target
+    * @param _target , parameter pertama yang menyimpan DNA yang akan dicari
+    * @return Mengembalikan nilai true jika _target berada pada tabel Target
+    */
     bool isTarget(char _target);
-    //Mengembailkan nilai true jika _target berada di tabel Tarhet this
 
 private :
+    /**
+    * Private Attribute yang menyimpan DNA target
+    */
     char* Target;
-    //Berisi DNA dari target
+
+    /**
+    * Private Attribute yang menyimpan kondisi akan berburu atau tidak
+    */
     bool memburu;
-    //Menyimpan kondisi untuk berburu
-    Point posisiTarget;
-    //Meyimpan posisi dari target
+
+    /**
+    * Constant Private Attribute yang menyimpan ukuran dari tabel Target
+    */
     const int ukuran_target;
-    //Konstanta dari ukuran target
 
 };
 
