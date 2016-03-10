@@ -8,11 +8,11 @@ Polisi::Polisi(Point P) : Manusia(8,'C',5,P,NULL,true,3,1) {
     setPredator(3,'b');
     setPredator(4,'h');
     setPredator(5,'y');
-    setPredator(6,'t');
+    setPredator(6,'!');
 
     //setTarget
-    setTarget(0,'p');
-    setTarget(1,'r');
+    setTarget(0,'H');
+    setTarget(1,'^');
 }
 
 Polisi::Polisi(const Polisi& P) : Manusia(P) {
