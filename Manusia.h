@@ -44,14 +44,14 @@ public :
     bool getMenghindar ();
 
 	/**
-     * A procedure changes posisi attribute and PPosisi atrribute.
+     * A procedure changes posisi attribute.
      * It uses random direction.
      * @see Gerak#gerak_bebas()
      */
     void gerak_bebas();
 
     /**
-     * A procedure changes posisi attribute and PPosisi atrribute.
+     * A procedure changes posisi attribute.
      * It uses direction that away from Predator.
      * @param Predator A parameter that passing the predator position.
      * @see Gerak#gerak_menjauh()
@@ -59,7 +59,7 @@ public :
     void gerak_menjauh(Point Predator);
 
     /**
-     * A procedure changes posisi attribute and PPosisi atrribute.
+     * A procedure changes posisi attribute.
      * It uses direction that close to Target.
      * @param Target A parameter that passing the target position.
      * @see Gerak#gerak_memburu()
@@ -67,12 +67,11 @@ public :
     void gerak_memburu(Point Target);
 
     /**
-     * A procedure changes posisi attribute and PPosisi atrribute.
+     * A procedure changes posisi attribute.
      * It uses direction that assigned by _arah.
-     * @param _arah A parameter that passing the direction.
      * @see Gerak#gerak_berarah()
      */
-    void gerak_berarah(int _arah);
+    void gerak_berarah();
 
 private :
     /**

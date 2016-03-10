@@ -25,14 +25,12 @@ bool Manusia::getMenghindar(){
 }
 
 void Manusia::gerak_bebas(){
-    setPrecPosisi(getPosisi());
     setPosisi(Gerak::gerak_bebas(getPosisi()));
 }
 
 void Manusia::gerak_memburu(Point Target)
 {
     if (getMemburu()){
-        setPrecPosisi(getPosisi());
         setPosisi(Gerak::gerak_memburu(getPosisi(),Target));
     }
 }
@@ -40,13 +38,11 @@ void Manusia::gerak_memburu(Point Target)
 void Manusia::gerak_menjauh(Point Predator)
 {
     if (getMenghindar()){
-        setPrecPosisi(getPosisi());
         setPosisi(Gerak::gerak_menjauh(getPosisi(),Predator));
     }
 }
 
-void Manusia::gerak_berarah(int _arah)
+void Manusia::gerak_berarah()
 {
-    setPrecPosisi(getPosisi());
-    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+    setPosisi(Gerak::gerak_berarah(getPosisi()));
 }
