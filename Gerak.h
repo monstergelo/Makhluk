@@ -32,12 +32,15 @@ public :
     //Membuat gerakan dengan arah menuju suatu titik
     Point gerak_menjauh(Point Awal, Point Predator);
     //Membuat gerakan dengan arah menjauhi suatu titik;
-    Point gerak_berarah(Point Awal, int _arah);
+    Point gerak_berarah(Point Awal);
     //Membuat gerakan arah yang ditentukan
 
     //SETTER
     void set_Kecepatan(int _kecepatan);
     void set_Arah(int _arah);
+    void set_Arah_Bebas();
+    void set_Arah_Memburu(Point Awal, Point Target);
+    void set_Arah_Menjauh(Point Awal, Point Predator);
 
     //GETTER
     int get_Kecepatan();

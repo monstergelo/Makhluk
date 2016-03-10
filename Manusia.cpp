@@ -45,8 +45,8 @@ void Manusia::gerak_menjauh(Point Predator)
     }
 }
 
-void Manusia::gerak_berarah(int _arah)
+void Manusia::gerak_berarah()
 {
     setPrecPosisi(getPosisi());
-    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+    setPosisi(Gerak::gerak_berarah(getPosisi()));
 }

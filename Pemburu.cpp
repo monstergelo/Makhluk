@@ -33,8 +33,8 @@ void Pemburu::Reaction(MakhlukHidup& M){
         }
     } else if (isRadius(2,M.getPosisi())){
         if (isPredator(M.get_DNA()))
-            gerak_menjauh(M.getPosisi());
+            set_Arah_Menjauh(posisi,M.getPosisi());
         else if (isTarget(M.get_DNA()))
-            gerak_memburu(M.getPosisi());
+            set_Arah_Memburu(posisi,M.getPosisi());
     }
 }

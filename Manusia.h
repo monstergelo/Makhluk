@@ -69,10 +69,9 @@ public :
     /**
      * A procedure changes posisi attribute and PPosisi atrribute.
      * It uses direction that assigned by _arah.
-     * @param _arah A parameter that passing the direction.
      * @see Gerak#gerak_berarah()
      */
-    void gerak_berarah(int _arah);
+    void gerak_berarah();
 
 private :
     /**
