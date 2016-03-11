@@ -2,7 +2,7 @@
 
 Tumbuhan::Tumbuhan(int _umur, char _DNA, int _ulangtahun, Point P, char* predators) : MakhlukHidup(_umur, _DNA, _ulangtahun, P) {
 
-};
+}
 Tumbuhan::~Tumbuhan() {
 
 }
