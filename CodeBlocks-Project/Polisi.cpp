@@ -1,6 +1,9 @@
 #include "Polisi.h"
+#include <iostream>
 
-Polisi::Polisi(Point P) : Manusia(8,'C',5,P,NULL,true,3,1) {
+using namespace std;
+
+Polisi::Polisi(Point P) : Manusia(80,'C',5,P,NULL,true,3,1) {
     //setPredator
     setPredator(0,'u');
     setPredator(1,'g');

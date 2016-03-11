@@ -1,15 +1,17 @@
 #include "world.h"
 #include "Polisi.h"
 
+
+
 int main()
 {
-	Point P1(5,5);
+	Point P1(17,18);
 	Polisi m1(P1);
-	Point P2(5,5);
+	Point P2(17,17);
 	Polisi m2(P2);
-	Point P5(3,13);
+	Point P5(17,16);
 	Polisi m3(P5);
-	Point P4(20,25);
+	Point P4(18,17);
 	Polisi m4(P4);
 
 	World W;
@@ -18,15 +20,20 @@ int main()
 	W.fill(&m3);
 	W.fill(&m4);
 
-
-
 	Point P3(0,31);
 
 
 	//tes gambar
 	W.initDisplay();
 	Sleep(2000);
+
+
 	//hidupkan makhluk
+	W.draw(m1);
+	W.draw(m2);
+	W.draw(m3);
+	W.draw(m4);
+
 	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
 	thread t1(&KonduktorMakhlukHidup::hidup, &W, ref(m2));
 	thread t2(&KonduktorMakhlukHidup::hidup, &W, ref(m3));
@@ -36,6 +43,7 @@ int main()
 	//pantau makhluk
 	W.sinyal();
 
+	W.draw(P3, '.');
 	cout << "mantap";
 	cout << W.get_daftar(0)->getPosisi().getOrdinat() << endl;
 

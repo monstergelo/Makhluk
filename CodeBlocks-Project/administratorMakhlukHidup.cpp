@@ -159,7 +159,7 @@ void AdministratorMakhlukHidup::sinyal(MakhlukHidup &m1, MakhlukHidup &m2)
 		}
 
 		//cek kematian
-		if((m1.isMati()) || (&m1!=NULL))
+		if((m1.isMati()) || (&m1==NULL) || (m2.isMati()) || (&m2==NULL))
 		{
 			end = true;
 		}
@@ -177,7 +177,8 @@ void AdministratorMakhlukHidup::check()
 {
 	for(int i=0; i<count; ++i)
 	{
-		cout << i << " " << daftar[i]->getPosisi().getAbsis() << " " << daftar[i]->getPosisi().getOrdinat	() << endl; 
+		if(daftar[i]!=NULL)
+			cout << i << " " << daftar[i]->getPosisi().getAbsis() << " " << daftar[i]->getPosisi().getOrdinat	() << endl; 
 	}	
 }
 
