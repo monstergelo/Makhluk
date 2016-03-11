@@ -1,14 +1,33 @@
 #include "Herbivora.h"
 
+/**
+ *  A BurungUnta class.
+ */
+
 class BurungUnta : public Herbivora {
 public:
-    BurungUnta(Point);
-    ~BurungUnta();
-    BurungUnta(const BurungUnta&);
-    BurungUnta& operator=(const BurungUnta&);
+  /**
+   *  A constructor.
+   */
+  BurungUnta(Point);
+  /**
+   *  A destructor.
+   */
+  ~BurungUnta();
+  /**
+   *  A copy constructor.
+   */
+  BurungUnta(const BurungUnta&);
+  /**
+   *  An operator =
+   */
+  BurungUnta& operator=(const BurungUnta&);
 
-    //services
-    void Reaction(MakhlukHidup&);
+  /**
+   *  A Reaction Procedure of BurungUnta.
+   *  @param MakhlukHidup A first parameter used for analyzing DNA of MakhlukHidup and Position around BurungUnta.
+   */
+  void Reaction(MakhlukHidup&);
 private:
   const static int batasumur_BurungUnta = 10;
   const static int ulangtahun_BurungUnta = 2;
