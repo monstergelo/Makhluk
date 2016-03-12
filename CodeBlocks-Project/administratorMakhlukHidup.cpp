@@ -152,14 +152,11 @@ void AdministratorMakhlukHidup::sinyal(MakhlukHidup &m1, MakhlukHidup &m2)
 	{
 		if((&m2!=NULL) && (&m1!=NULL))
 		{
-			if(&m2 != &m1)
-			{
 				m1.Reaction(m2);
-			}
 		}
 
 		//cek kematian
-		if((m1.isMati()) || (&m1==NULL) || (m2.isMati()) || (&m2==NULL))
+		else
 		{
 			end = true;
 		}
@@ -224,4 +221,18 @@ void AdministratorMakhlukHidup::set_size(int s)
 void AdministratorMakhlukHidup::set_count(int c)
 {
 	count = c;
+}
+
+int AdministratorMakhlukHidup::pemantau_count()
+{
+	int t = 0;
+	for(int i=0; i<size; ++i)
+	{
+		for(int j=0; j<size; ++j)
+		{
+			if(get_pemantau(i,j) != NULL) t++;
+		}
+	}
+
+	return t;
 }

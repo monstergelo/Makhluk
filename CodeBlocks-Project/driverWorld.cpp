@@ -5,13 +5,13 @@
 
 int main()
 {
-	Point P1(17,18);
+	Point P1(10,10);
 	Polisi m1(P1);
-	Point P2(17,17);
+	Point P2(10,20);
 	Polisi m2(P2);
-	Point P5(17,16);
+	Point P5(20,10);
 	Polisi m3(P5);
-	Point P4(18,17);
+	Point P4(20,20);
 	Polisi m4(P4);
 
 	World W;
@@ -28,25 +28,25 @@ int main()
 	Sleep(2000);
 
 
-	//hidupkan makhluk
-	W.draw(m1);
-	W.draw(m2);
-	W.draw(m3);
-	W.draw(m4);
+	
+	W.initDraw(m1);
+	W.initDraw(m2);
+	W.initDraw(m3);
+	W.initDraw(m4);
 
+	//pantau makhluk
+	W.sinyal();
+	W.draw(P3, '.');
+	cout << W.pemantau_count();
+
+	//hidupkan makhluk
 	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
 	thread t1(&KonduktorMakhlukHidup::hidup, &W, ref(m2));
 	thread t2(&KonduktorMakhlukHidup::hidup, &W, ref(m3));
 	thread t3(&KonduktorMakhlukHidup::hidup, &W, ref(m4));
 
 
-	//pantau makhluk
-	W.sinyal();
-
-	W.draw(P3, '.');
-	cout << "mantap";
-	cout << W.get_daftar(0)->getPosisi().getOrdinat() << endl;
-
+	//tampilkan dunia
 	W.updateDisplay();
 
 

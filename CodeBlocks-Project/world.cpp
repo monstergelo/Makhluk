@@ -11,7 +11,7 @@ void World::initDisplay()
     {
         for(int j=0; j<30; ++j)
         {
-            cout << ".";
+            cout << '.';
         }
         cout << endl;
     }
@@ -31,7 +31,7 @@ void World::updateDisplay()
 				if(!get_daftar(i)->isMati())
 				{
 					draw(get_daftar(i));
-					Sleep(50);
+					Sleep(100);
 				}
 				else
 				{
@@ -39,10 +39,8 @@ void World::updateDisplay()
 					pluck(i);
 				}
 			}
-			else
-			{
-				if(isGameOver()) end = true;
-			}
+			
+			if(isGameOver()) end = true;
 		}
 	}
 }
@@ -101,7 +99,7 @@ void World::initDraw(MakhlukHidup& m1)
 
 void World::endDraw(MakhlukHidup& m1)
 {
-	draw(m1.getPrecPosisi(), '.');
+	draw(m1.getPrecPosisi(), '_');
 }
 
 bool World::isGameOver()

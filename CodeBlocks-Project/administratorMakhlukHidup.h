@@ -7,6 +7,10 @@
 #include <thread>
 
 using namespace std;
+
+/**
+ *  Class for monitoring interaction between object within the world
+ */
 //class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
 class AdministratorMakhlukHidup
 {
@@ -25,6 +29,7 @@ public:
 	void sinyal(MakhlukHidup &, MakhlukHidup &);
 	void activate();
 	void check();
+	int pemantau_count();
 
 	//getter
 	int get_size();
@@ -43,6 +48,8 @@ private:
 	MakhlukHidup *daftar[10];  		//array pointer objek makhluk
 	thread *pemantauObjek[10][10];   //masing-masing memantau reaksi objek terhadap
 									   //satu objek lainnya
+
+
 
 
 	//helper
