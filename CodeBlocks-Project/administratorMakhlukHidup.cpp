@@ -12,7 +12,6 @@ AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 	initDaftar();
 	count = 0;
 
-	//creation();
 }
 
 AdministratorMakhlukHidup::~AdministratorMakhlukHidup()
@@ -58,15 +57,10 @@ void AdministratorMakhlukHidup::pluck(int i)
 	count--;
 }
 
-void AdministratorMakhlukHidup::creation()
+void AdministratorMakhlukHidup::creation(Point P, char opsi)
 {
-	/*
-	cout << "masuk creation" << endl;
-	char opsi;
-	while((count < size) && (opsi != '0'))
+	if((count < size) && (opsi != '0'))
 	{
-		cout << "count sekarang " << get_count() << endl;
-		cin >> opsi;
 		switch (opsi)
 		{
 			case '0' :
@@ -78,18 +72,15 @@ void AdministratorMakhlukHidup::creation()
 			case '1' :
 			{
 				cout << "wiwi" << endl;
-				MakhlukHidup *m = new Herbivora;
-				Point P(4,6);
-				m->setPosisi(P);
+				MakhlukHidup *m = new Polisi(P);
 				fill(m);
 				break;
 			} 
-
+/*
 			case '2' :
 			{
 				cout << "wewe" << endl;
 				MakhlukHidup *m = new Herbivora;
-				Point P(2,2);
 				m->setPosisi(P);
 				fill(m);
 				break;
@@ -99,15 +90,13 @@ void AdministratorMakhlukHidup::creation()
 			{
 				cout << "wowo" << endl;
 				MakhlukHidup *m = new Herbivora;
-				Point P(9,8);
 				m->setPosisi(P);
 				fill(m);
 				break;
 			} 
-			
+*/			
 		}
-		//break;
-	}	*/
+	}	
 }
 
 void AdministratorMakhlukHidup::sinyal()
@@ -160,7 +149,7 @@ void AdministratorMakhlukHidup::sinyal(MakhlukHidup &m1, MakhlukHidup &m2)
 		{
 			end = true;
 		}
-
+		Sleep(100);
 	}
 }
 

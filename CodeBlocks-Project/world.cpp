@@ -1,5 +1,5 @@
 #include "world.h"
-
+#include <mutex>
 
 //public
 void World::initDisplay()
@@ -36,12 +36,36 @@ void World::updateDisplay()
 				else
 				{
 					endDraw(*get_daftar(i));
+					Sleep(3000);
 					pluck(i);
 				}
 			}
 			
 			if(isGameOver()) end = true;
 		}
+	}
+}
+
+void World::updateMakhluk(int i)
+{
+	bool end = false;
+	while(!end)
+	{
+		if(get_daftar(i) != NULL)
+		{
+			if(!get_daftar(i)->isMati())
+			{
+				draw(get_daftar(i));
+				Sleep(100);
+			}
+			else
+			{
+				endDraw(*get_daftar(i));
+				Sleep(3000);
+				pluck(i);
+				end = true;
+			}
+		}		
 	}
 }
 
@@ -52,11 +76,13 @@ void World::draw(Point Px, Point Pc, char display)
 	int x = Pc.getAbsis();
 	int y = Pc.getOrdinat();
 
+	d.lock();
 	moveCursor(ex_X, ex_Y);
 	cout << '.';
 
 	moveCursor(x,y);
 	cout << display;
+	d.unlock();
 }
 
 void World::draw(Point Pc, char display)
@@ -64,8 +90,21 @@ void World::draw(Point Pc, char display)
 	int x = Pc.getAbsis();
 	int y = Pc.getOrdinat();
 
+	d.lock();
 	moveCursor(x,y);
 	cout << display;
+	d.unlock();
+}
+
+void World::draw(Point Pc, int display)
+{
+	int x = Pc.getAbsis();
+	int y = Pc.getOrdinat();
+
+	d.lock();
+	moveCursor(x,y);
+	cout << display;
+	d.unlock();
 }
 
 void World::draw(MakhlukHidup &m1)
@@ -99,7 +138,8 @@ void World::initDraw(MakhlukHidup& m1)
 
 void World::endDraw(MakhlukHidup& m1)
 {
-	draw(m1.getPrecPosisi(), '_');
+	draw(m1.getPrecPosisi(), '.');
+	draw(m1.getPosisi(), '_');
 }
 
 bool World::isGameOver()
@@ -108,6 +148,31 @@ bool World::isGameOver()
 	if(get_count() <= 0) return true;
 	else				 return false;
 
+}
+
+void World::tangkapLayar()
+{
+	bool found = false;
+	ofstream out("out.txt");
+
+	for(int i=0; i<30; ++i)
+	{
+		for(int j=0; j<30; ++j)
+		{
+			found = false;
+			for(int k=0; k<get_size(); ++k)
+			{
+				if((get_daftar(k) != NULL) && (get_daftar(k)->getPosisi().getAbsis()==i) && (get_daftar(k)->getPosisi().getOrdinat()==j))
+				{
+					out << get_daftar(k)->get_DNA();
+					found = true;
+					break;
+				}
+			}
+			if(!found) out << ".";
+		}
+		out << "\n";
+	}
 }
 
 

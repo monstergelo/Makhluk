@@ -5,6 +5,8 @@
 #include "MakhlukHidup.h"
 #include <iostream>
 #include <thread>
+#include <windows.h>
+#include "Polisi.h"
 
 using namespace std;
 
@@ -23,7 +25,7 @@ public:
 	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
 	void pluck(int);
-	void creation();//memilih makhluk dan memasukkannya dalam daftar
+	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
 	void sinyal();
 	void sinyal(int);
 	void sinyal(MakhlukHidup &, MakhlukHidup &);

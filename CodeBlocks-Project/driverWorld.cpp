@@ -1,5 +1,4 @@
 #include "world.h"
-#include "Polisi.h"
 
 
 
@@ -7,11 +6,11 @@ int main()
 {
 	Point P1(10,10);
 	Polisi m1(P1);
-	Point P2(10,20);
+	Point P2(10,15);
 	Polisi m2(P2);
-	Point P5(20,10);
+	Point P5(15,10);
 	Polisi m3(P5);
-	Point P4(20,20);
+	Point P4(15,15);
 	Polisi m4(P4);
 
 	World W;
@@ -34,10 +33,10 @@ int main()
 	W.initDraw(m3);
 	W.initDraw(m4);
 
+	W.tangkapLayar();
+
 	//pantau makhluk
 	W.sinyal();
-	W.draw(P3, '.');
-	cout << W.pemantau_count();
 
 	//hidupkan makhluk
 	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
@@ -47,7 +46,19 @@ int main()
 
 
 	//tampilkan dunia
-	W.updateDisplay();
+	//W.updateDisplay();
+
+	thread *d[W.get_size()];
+
+	for(int i=0; i<W.get_size(); ++i)
+	{
+		if(W.get_daftar(i) != NULL)
+			d[i] = new thread(&World::updateMakhluk, &W, i);
+	}
+	while(!W.isGameOver())
+	{
+			W.draw(P3, W.get_count());
+	}
 
 
 	W.draw(P3, '.');
