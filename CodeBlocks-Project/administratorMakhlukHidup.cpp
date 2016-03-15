@@ -109,7 +109,7 @@ void AdministratorMakhlukHidup::sinyal()
 
 void AdministratorMakhlukHidup::sinyal(int index)
 {
-	typedef void (AdministratorMakhlukHidup::*my_sinyal)(MakhlukHidup&, MakhlukHidup&);
+	typedef void (AdministratorMakhlukHidup::*my_sinyal)(int, int);
 	if((daftar[index]) != NULL)
 	{
 		for(int i=0; i<size; ++i)
@@ -117,7 +117,7 @@ void AdministratorMakhlukHidup::sinyal(int index)
 			if(((daftar[i]) != NULL) && (i != index)) 
 			{
 				pemantauObjek[index][i] = new thread((my_sinyal)(&AdministratorMakhlukHidup::sinyal), 
-							   this, ref(*daftar[index]), ref(*daftar[i]));
+							   this, index, i);
 			}
 			else
 			{
@@ -134,14 +134,14 @@ void AdministratorMakhlukHidup::sinyal(int index)
 	}
 }
 
-void AdministratorMakhlukHidup::sinyal(MakhlukHidup &m1, MakhlukHidup &m2)
+void AdministratorMakhlukHidup::sinyal(int i1, int i2)
 {
 	bool end = false;
 	while(!end)
 	{
-		if((&m2!=NULL) && (&m1!=NULL))
+		if((daftar[i1]!=NULL) && (daftar[i2]!=NULL))
 		{
-				m1.Reaction(m2);
+				daftar[i1]->Reaction(*daftar[i2]);
 		}
 
 		//cek kematian

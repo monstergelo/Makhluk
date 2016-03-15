@@ -33,8 +33,6 @@ int main()
 	W.initDraw(m3);
 	W.initDraw(m4);
 
-	W.tangkapLayar();
-
 	//pantau makhluk
 	W.sinyal();
 
@@ -46,7 +44,6 @@ int main()
 
 
 	//tampilkan dunia
-	//W.updateDisplay();
 
 	thread *d[W.get_size()];
 
@@ -55,11 +52,22 @@ int main()
 		if(W.get_daftar(i) != NULL)
 			d[i] = new thread(&World::updateMakhluk, &W, i);
 	}
+	
+	Sleep(2000);
+	//pause & tangkap layar
+	W.pause();
+	W.tangkapLayar();
+	Sleep(2000);
+	W.resume();
+	/*for(int i=0; i<W.get_size(); ++i)
+	{
+		if(W.get_daftar(i) != NULL)
+			d[i] = new thread(&World::updateMakhluk, &W, i);
+	}*/
 	while(!W.isGameOver())
 	{
 			W.draw(P3, W.get_count());
 	}
-
 
 	W.draw(P3, '.');
 	cout << "GameOver";
@@ -67,7 +75,8 @@ int main()
 	t1.join();
 	t2.join();
 	t3.join();
-
+	W.draw(P3, '.');
+	cout << "Mati Semua";
 
 	for(int i=0; i<10; ++i)
 	{

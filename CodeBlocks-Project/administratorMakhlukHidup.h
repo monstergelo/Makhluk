@@ -22,15 +22,39 @@ public:
 	~AdministratorMakhlukHidup();
 
 	//method
+	/**
+ 	*  put in a MakhlukHidup in the monitored list
+ 	*/
 	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
+	/**
+ 	*  put out a MakhlukHidup in the monitored list with certain pointer
+ 	*/	
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
+	/**
+ 	*  put out a MakhlukHidup in the monitored list with certain index
+ 	*/		
 	void pluck(int);
+	/**
+ 	*  create a new MakhlukHidup and put it in monitored list
+ 	*/	
 	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
+	/**
+ 	*  create a thread to monitor each pair of MakhlukHidup
+ 	*/	
 	void sinyal();
+	/**
+ 	*  create a thread to monitor a MakhlukHidup to rest of it's peers
+ 	*/	
 	void sinyal(int);
-	void sinyal(MakhlukHidup &, MakhlukHidup &);
+	/**
+ 	*  create a thread to monitor a MakhlukHidup with another
+ 	*/	
+	void sinyal(int, int);
 	void activate();
 	void check();
+	/**
+ 	*  return number of thread that monitors interaction between MakhlukHidup
+ 	*/	
 	int pemantau_count();
 
 	//getter

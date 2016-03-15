@@ -13,10 +13,18 @@ public:
 	KonduktorMakhlukHidup();
 	~KonduktorMakhlukHidup();
 
+	
+
 	//method
+	/**
+ 	* 	Told Manusia to do it's behaviour
+ 	*/	
 	void hidup(Manusia&);//menghidupkan semua makhluk hidup
+	void pause();
+	void resume();
 
 private:
+	int lifeState;
 };
 
 #endif
