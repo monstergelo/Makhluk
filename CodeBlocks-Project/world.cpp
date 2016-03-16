@@ -175,6 +175,56 @@ void World::tangkapLayar()
 	}
 }
 
+void World::creation(Point P, char opsi)
+{
+	if((get_count() < get_size()) && (opsi != '0'))
+	{
+		switch (opsi)
+		{
+			case '0' :
+			{
+				cout << "wawa" << endl;
+				break;
+			}
+
+			case '1' :
+			{
+				Polisi *m = new Polisi(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Manusia&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::sinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+/*
+			case '2' :
+			{
+				cout << "wewe" << endl;
+				MakhlukHidup *m = new Herbivora;
+				m->setPosisi(P);
+				fill(m);
+				break;
+			} 
+
+			case '3' :
+			{
+				cout << "wowo" << endl;
+				MakhlukHidup *m = new Herbivora;
+				m->setPosisi(P);
+				fill(m);
+				break;
+			} 
+*/			
+		}
+	}	
+}
+
 
 //private//=======================================================================================
 void World::resetCursor()

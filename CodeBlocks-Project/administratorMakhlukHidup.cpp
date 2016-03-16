@@ -29,7 +29,6 @@ void AdministratorMakhlukHidup::fill(MakhlukHidup* n)
 	{
 		if(daftar[i] == NULL)
 		{
-			cout << "sup" << endl;
 			daftar[i] = n;
 			count++;
 			break;
@@ -55,48 +54,6 @@ void AdministratorMakhlukHidup::pluck(int i)
 {
 	daftar[i] = NULL;
 	count--;
-}
-
-void AdministratorMakhlukHidup::creation(Point P, char opsi)
-{
-	if((count < size) && (opsi != '0'))
-	{
-		switch (opsi)
-		{
-			case '0' :
-			{
-				cout << "wawa" << endl;
-				break;
-			}
-
-			case '1' :
-			{
-				cout << "wiwi" << endl;
-				MakhlukHidup *m = new Polisi(P);
-				fill(m);
-				break;
-			} 
-/*
-			case '2' :
-			{
-				cout << "wewe" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
-				fill(m);
-				break;
-			} 
-
-			case '3' :
-			{
-				cout << "wowo" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
-				fill(m);
-				break;
-			} 
-*/			
-		}
-	}	
 }
 
 void AdministratorMakhlukHidup::sinyal()
@@ -156,7 +113,7 @@ void AdministratorMakhlukHidup::sinyal(int i1, int i2)
 
 void AdministratorMakhlukHidup::activate()
 {
-
+	
 }
 
 void AdministratorMakhlukHidup::check()
@@ -224,4 +181,17 @@ int AdministratorMakhlukHidup::pemantau_count()
 	}
 
 	return t;
+}
+
+int AdministratorMakhlukHidup::searchDaftar(MakhlukHidup* m1)
+{
+	for(int i=0; i<get_size(); i++)
+	{
+		if(m1 == get_daftar(i))
+		{
+			return i;
+		}
+	}
+
+	return 999;
 }

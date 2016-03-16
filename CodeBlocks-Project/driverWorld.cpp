@@ -12,6 +12,7 @@ int main()
 	Polisi m3(P5);
 	Point P4(15,15);
 	Polisi m4(P4);
+	Point P9(13,13);
 
 	World W;
 	W.fill(&m1);
@@ -52,8 +53,11 @@ int main()
 		if(W.get_daftar(i) != NULL)
 			d[i] = new thread(&World::updateMakhluk, &W, i);
 	}
-	
-	Sleep(2000);
+
+	Sleep(1000);
+	thread t4(&World::creation, &W, P9, '1');
+	Sleep(4000);
+
 	//pause & tangkap layar
 	W.pause();
 	W.tangkapLayar();
@@ -75,6 +79,7 @@ int main()
 	t1.join();
 	t2.join();
 	t3.join();
+	t4.detach();
 	W.draw(P3, '.');
 	cout << "Mati Semua";
 

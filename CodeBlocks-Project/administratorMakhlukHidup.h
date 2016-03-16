@@ -35,10 +35,6 @@ public:
  	*/		
 	void pluck(int);
 	/**
- 	*  create a new MakhlukHidup and put it in monitored list
- 	*/	
-	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
-	/**
  	*  create a thread to monitor each pair of MakhlukHidup
  	*/	
 	void sinyal();
@@ -56,6 +52,7 @@ public:
  	*  return number of thread that monitors interaction between MakhlukHidup
  	*/	
 	int pemantau_count();
+	int searchDaftar(MakhlukHidup*);
 
 	//getter
 	int get_size();

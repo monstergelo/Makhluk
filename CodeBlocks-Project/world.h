@@ -41,6 +41,9 @@ public:
 	 *  Draw display at Pc and without removing the drawing at Px
 	 */
 	void draw(Point Pc, char display);				//menggambar display pada point Pc
+	/**
+	 *  Alternate version of above that display integer instead of char
+	 */
 	void draw(Point Pc, int display);
 	/**
 	 *  Draw Makhlukhidup at it's current position and remove it's previous drawing
@@ -62,8 +65,14 @@ public:
 	 *  Check wether game-over condition is met
 	 */
 	bool isGameOver();					 		    //cek apakah sudah tidak ada makhluk di dalam area
-
+	/**
+	 *  Save current world in txt format
+	 */
 	void tangkapLayar();
+	/**
+ 	*  create a new MakhlukHidup and put it in monitored list
+ 	*/	
+	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
 
 	mutex d;
 
