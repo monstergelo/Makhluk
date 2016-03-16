@@ -46,6 +46,7 @@ public:
  	*  create a thread to monitor a MakhlukHidup with another
  	*/	
 	void sinyal(int, int);
+	void newSinyal(int);
 	void activate();
 	void check();
 	/**

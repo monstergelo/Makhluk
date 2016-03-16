@@ -110,6 +110,35 @@ void AdministratorMakhlukHidup::sinyal(int i1, int i2)
 	}
 }
 
+void AdministratorMakhlukHidup::newSinyal(int index)
+{
+	typedef void (AdministratorMakhlukHidup::*my_sinyal)(int, int);
+	if((daftar[index]) != NULL)
+	{
+		for(int i=0; i<size; ++i)
+		{
+			if(((daftar[i]) != NULL) && (i != index)) 
+			{
+				pemantauObjek[index][i] = new thread((my_sinyal)(&AdministratorMakhlukHidup::sinyal), 
+							   this, index, i);
+				pemantauObjek[i][index] = new thread((my_sinyal)(&AdministratorMakhlukHidup::sinyal), 
+							   this, i, index);
+			}
+			else
+			{
+				pemantauObjek[index][i] = NULL;
+				pemantauObjek[i][index] = NULL;
+			}
+		}
+	}
+	else
+	{
+		for(int i=0; i<size; ++i)
+		{
+			pemantauObjek[index][i] = NULL;
+		}
+	}
+}
 
 void AdministratorMakhlukHidup::activate()
 {

@@ -196,7 +196,7 @@ void World::creation(Point P, char opsi)
 				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
 				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
 				thread t1(&World::updateMakhluk, this, i);
-				thread t2((mySinyal)(&AdministratorMakhlukHidup::sinyal), this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
 				t.join();
 				t1.join();
 				t2.join();
