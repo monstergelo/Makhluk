@@ -1,4 +1,5 @@
 #include "world.h"
+#include "Gajah.h"
 
 int GetKey() {
 	int i;
@@ -28,6 +29,10 @@ int GetKey() {
 
 int main()
 {
+	typedef void (KonduktorMakhlukHidup::*hidup_herbivora)(Herbivora&);
+	typedef void (KonduktorMakhlukHidup::*hidup_manusia)(Manusia&);
+
+
 	Point P1(5,5);
 	Polisi m1(P1);
 	Point P2(5,20);
@@ -64,10 +69,10 @@ int main()
 	W.sinyal();
 
 	//hidupkan makhluk
-	thread t0(&KonduktorMakhlukHidup::hidup, &W, ref(m1));
-	thread t1(&KonduktorMakhlukHidup::hidup, &W, ref(m2));
-	thread t2(&KonduktorMakhlukHidup::hidup, &W, ref(m3));
-	thread t3(&KonduktorMakhlukHidup::hidup, &W, ref(m4));
+	thread t0((hidup_manusia)&KonduktorMakhlukHidup::hidup, &W, ref(m1));
+	thread t1((hidup_manusia)&KonduktorMakhlukHidup::hidup, &W, ref(m2));
+	thread t2((hidup_manusia)&KonduktorMakhlukHidup::hidup, &W, ref(m3));
+	thread t3((hidup_herbivora)&KonduktorMakhlukHidup::hidup, &W, ref(m4));
 
 
 	//tampilkan dunia
