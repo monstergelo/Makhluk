@@ -2,7 +2,10 @@
 #define KONDUKTOR_H
 
 #include "Manusia.h"
+#include "Hewan.h"
 #include "Herbivora.h"
+#include "Karnivora.h"
+#include "Omnivora.h"
 #include <thread>
 
 
@@ -22,6 +25,8 @@ public:
  	*/	
 	void hidup(Manusia&);//menghidupkan semua makhluk hidup
 	void hidup(Herbivora&);
+	void hidup(Karnivora&);
+	void hidup(Omnivora&);
 	void pause();
 	void resume();
 
