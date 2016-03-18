@@ -52,12 +52,12 @@ Point Gerak::gerak_berarah(Point Awal)
 {
     Point temp = Awal;
     switch (get_Arah()) {
-        case 1 : temp.geser(0,1); break;
-        case 2 : temp.geser(1,1); break;
+        case 1 : temp.geser(0,-1); break;
+        case 2 : temp.geser(1,-1); break;
         case 3 : temp.geser(1,0); break;
-        case 4 : temp.geser(1,-1); break;
-        case 5 : temp.geser(0,-1); break;
-        case 6 : temp.geser(-1,-1); break;
+        case 4 : temp.geser(1,1); break;
+        case 5 : temp.geser(0,1); break;
+        case 6 : temp.geser(-1,1); break;
         case 7 : temp.geser(-1,0); break;
         case 8 : temp.geser(-1,1); break;
     }
