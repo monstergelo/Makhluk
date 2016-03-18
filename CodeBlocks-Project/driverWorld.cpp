@@ -1,6 +1,30 @@
 #include "world.h"
 
+int GetKey() {
+	int i;
 
+	while (1) {
+		for(i = 8; i < 48; i++){
+		        if (GetAsyncKeyState(i) == -32767)
+		        	if (i == 13) // ENTER
+		        		return i;
+		    }
+	    
+	    //Looping untuk karakter hruruf dan angka
+	    for(i = 48; i <= 90; i++){
+	        if (GetAsyncKeyState(i) == -32767)
+				if (i == '1' || i == '2' || i == '3' || i == '4' || i=='5' || i=='6' || i=='7' || i=='8' || i=='9' || i=='0' || i == 'P')
+					return i;
+	    }
+	    
+		for(i = 91; i <= 222; i++){
+	        if (GetAsyncKeyState(i) == -32767)
+				if (i == '1' || i == '2' || i == '3' || i == '4' || i=='5' || i=='6' || i=='7' || i=='8' || i=='9' || i=='0' || i == 'P')
+					return i;
+	    }
+		    
+	}
+}
 
 int main()
 {
@@ -11,7 +35,7 @@ int main()
 	Point P5(20,5);
 	Polisi m3(P5);
 	Point P4(15,29);
-	Polisi m4(P4);
+	Gajah m4(P4);
 	Point P9(13,13);
 
 	World W;
@@ -19,6 +43,8 @@ int main()
 	W.fill(&m2);
 	W.fill(&m3);
 	W.fill(&m4);
+
+
 
 	Point P3(0,31);
 
