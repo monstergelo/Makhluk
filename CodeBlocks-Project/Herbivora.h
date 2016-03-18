@@ -23,7 +23,7 @@ public:
         bool get_percepat();
         int get_deltaKecepatan();
         void prosesMempercepat();
-        void Reaction(MakhlukHidup&);
+        virtual void Reaction(MakhlukHidup&);
     //services
 private:
     int deltaKecepatan;

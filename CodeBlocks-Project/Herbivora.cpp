@@ -1,6 +1,6 @@
 #include "Herbivora.h"
 
-Herbivora::Herbivora() {
+Herbivora::Herbivora() : Hewan() {
 	set_deltaKecepatan(0);
 	set_percepat(false);
 }
@@ -42,3 +42,4 @@ int Herbivora::get_deltaKecepatan() {
 void Herbivora::prosesMempercepat() {
 	set_Kecepatan(get_Kecepatan()+get_deltaKecepatan());
 }
+void Herbivora::Reaction(MakhlukHidup& M) {}

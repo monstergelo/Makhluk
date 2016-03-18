@@ -40,7 +40,7 @@ void Gajah::Reaction(MakhlukHidup& M) {
 		if (isRadius(2,M.getPosisi())) {
 			if (isPredator(M.get_DNA())) {
 				prosesMempercepat();
-				gerak_bebas(getPosisi());
+				gerak_bebas();
 			}
 		} else {
 			set_Kecepatan(kecepatan_Gajah);

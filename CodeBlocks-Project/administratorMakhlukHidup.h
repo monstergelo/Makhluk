@@ -6,6 +6,7 @@
 #include <iostream>
 #include <thread>
 #include <windows.h>
+#include "Gajah.h"
 #include "Polisi.h"
 
 using namespace std;
