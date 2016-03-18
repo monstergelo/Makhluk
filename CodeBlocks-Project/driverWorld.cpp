@@ -4,13 +4,13 @@
 
 int main()
 {
-	Point P1(10,10);
+	Point P1(5,5);
 	Polisi m1(P1);
-	Point P2(10,15);
+	Point P2(5,20);
 	Polisi m2(P2);
-	Point P5(15,10);
+	Point P5(20,5);
 	Polisi m3(P5);
-	Point P4(15,15);
+	Point P4(15,29);
 	Polisi m4(P4);
 	Point P9(13,13);
 
