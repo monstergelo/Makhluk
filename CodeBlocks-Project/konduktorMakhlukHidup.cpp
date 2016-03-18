@@ -39,7 +39,7 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 					m1.set_Arah(8);
 
 					m1.Manusia::gerak_berarah();
-				}	
+				}
 				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
 				{
 					m1.set_Arah(2);
@@ -51,9 +51,9 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 					m1.set_Arah(6);
 
 					m1.Manusia::gerak_berarah();
-				}	
+				}
 				else if(m1.getPosisi() == Point(0,0))//kiri-atas
-				{ 
+				{
 					m1.set_Arah(4);
 
 					m1.Manusia::gerak_berarah();
@@ -63,29 +63,29 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 					m1.set_Arah(7);
 
 					m1.Manusia::gerak_berarah();
-				}	
+				}
 				else if(m1.getPosisi().getAbsis() == 0)//kiri
 				{
 					m1.set_Arah(3);
 
 					m1.Manusia::gerak_berarah();
-				}	
+				}
 				else if(m1.getPosisi().getOrdinat() == 29)
-				{
-					m1.set_Arah(5);
-
-					m1.Manusia::gerak_berarah();
-				}	
-				else if(m1.getPosisi().getOrdinat() == 0)
 				{
 					m1.set_Arah(1);
 
 					m1.Manusia::gerak_berarah();
-				}	
+				}
+				else if(m1.getPosisi().getOrdinat() == 0)
+				{
+					m1.set_Arah(5);
+
+					m1.Manusia::gerak_berarah();
+				}
 				else
 				{
 					m1.Manusia::gerak_berarah();
-				}	
+				}
 				m1.menua();
 				sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 
@@ -102,7 +102,7 @@ void KonduktorMakhlukHidup::hidup(Manusia &m1)
 		}
 		else if(lifeState == 0)
 		{
-			
+
 		}
 	}
 }
