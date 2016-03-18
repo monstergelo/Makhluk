@@ -91,7 +91,8 @@ void Hewan::gerak_memburu(Point Target){
 
 void Hewan::gerak_berarah(int _arah){
     setPrecPosisi(getPosisi());
-    setPosisi(Gerak::gerak_berarah(getPosisi(),_arah));
+    Gerak::set_Arah(_arah);
+    setPosisi(Gerak::gerak_berarah(getPosisi()));
     tingkat_kekenyangan--;
     hewanMati();
     if (!isMati()){
