@@ -29,6 +29,7 @@ public:
 	void hidup(Omnivora&);
 	void pause();
 	void resume();
+	void aging(MakhlukHidup&);
 
 private:
 	int lifeState;

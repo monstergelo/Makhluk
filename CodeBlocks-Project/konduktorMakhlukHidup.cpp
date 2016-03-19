@@ -16,6 +16,15 @@ KonduktorMakhlukHidup::~KonduktorMakhlukHidup()
 
 }
 
+void KonduktorMakhlukHidup::aging(MakhlukHidup& m1)
+{
+	while(1)
+	{
+		m1.menua();
+		sleep_for(nanoseconds(1000000000));
+	}
+}
+
 void KonduktorMakhlukHidup::pause()
 {
 	lifeState = 0;
@@ -28,6 +37,8 @@ void KonduktorMakhlukHidup::resume()
 
 void KonduktorMakhlukHidup::hidup(Manusia& m1)
 {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(m1));
+
 	while(1)
 	{
 		if(lifeState == 1) //cek pause atau tidak
@@ -86,7 +97,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 				{
 					m1.Manusia::gerak_berarah();
 				}
-				m1.menua();
+				
 				sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 
 				if(m1.isMati())
@@ -105,10 +116,12 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 
 		}
 	}
+	t.detach();
 }
 
 void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(m1));
 	while(1)
 	{
 		if(lifeState == 1) //cek pause atau tidak
@@ -186,9 +199,11 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 
 		}
 	}
+	t.detach();
 }
 
 void KonduktorMakhlukHidup::hidup(Karnivora& k1) {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(k1));
 	while(1)
 	{
 		if(lifeState == 1) //cek pause atau tidak
@@ -266,8 +281,10 @@ void KonduktorMakhlukHidup::hidup(Karnivora& k1) {
 
 		}
 	}
+	t.detach();
 }
 void KonduktorMakhlukHidup::hidup(Omnivora& o1) {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(o1));
 	while(1)
 	{
 		if(lifeState == 1) //cek pause atau tidak
@@ -345,4 +362,5 @@ void KonduktorMakhlukHidup::hidup(Omnivora& o1) {
 
 		}
 	}
+	t.detach();
 }
