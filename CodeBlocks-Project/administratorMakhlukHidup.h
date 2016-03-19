@@ -8,6 +8,8 @@
 #include <windows.h>
 #include "Gajah.h"
 #include "Polisi.h"
+#include "Hyena.h"
+#include "Beruang.h"
 
 using namespace std;
 

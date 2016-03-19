@@ -1,7 +1,4 @@
 #include "world.h"
-#include "Hyena.h"
-#include "Beruang.h"
-#include "Gajah.h"
 
 int GetKey() {
 	int i;
