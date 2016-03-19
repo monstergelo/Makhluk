@@ -1,6 +1,7 @@
 #include "world.h"
 #include "Hyena.h"
 #include "Beruang.h"
+#include "Gajah.h"
 
 int GetKey() {
 	int i;
@@ -73,10 +74,10 @@ int main()
 	W.sinyal();
 
 	//hidupkan makhluk
-	thread t0((hidup_manusia)&KonduktorMakhlukHidup::hidup, &W, ref(m1));
-	thread t1((hidup_karnivora)&KonduktorMakhlukHidup::hidup, &W, ref(m2));
-	thread t2((hidup_omnivora)&KonduktorMakhlukHidup::hidup, &W, ref(m3));
-	thread t3((hidup_herbivora)&KonduktorMakhlukHidup::hidup, &W, ref(m4));
+	thread t0((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m1));
+	thread t1((hidup_karnivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m2));
+	thread t2((hidup_omnivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m3));
+	thread t3((hidup_herbivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m4));
 
 
 	//tampilkan dunia
