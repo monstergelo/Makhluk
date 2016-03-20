@@ -180,7 +180,6 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 				{
 					m1.Herbivora::gerak_berarah(m1.get_Arah());
 				}
-				m1.menua();
 				sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 
 				if(m1.isMati())
@@ -202,70 +201,71 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 	t.detach();
 }
 
-void KonduktorMakhlukHidup::hidup(Karnivora& k1) {
-	thread t(&KonduktorMakhlukHidup::aging, this, ref(k1));
+void KonduktorMakhlukHidup::hidup(Karnivora& m1) {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(m1));
+
 	while(1)
 	{
 		if(lifeState == 1) //cek pause atau tidak
 		{
-			if(k1.get_Kecepatan() != 0)
+			if(m1.get_Kecepatan() != 0)
 			{
-				if(k1.getPosisi() == Point(29,29))//ujung kanan-bawah
+				if(m1.getPosisi() == Point(29,29))//ujung kanan-bawah
 				{
-					k1.set_Arah(8);
+					m1.set_Arah(8);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi() == Point(0,29))//kiri-bawah
+				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
 				{
-					k1.set_Arah(2);
+					m1.set_Arah(2);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi() == Point(29,0))//kanan-atas
+				else if(m1.getPosisi() == Point(29,0))//kanan-atas
 				{
-					k1.set_Arah(6);
+					m1.set_Arah(6);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi() == Point(0,0))//kiri-atas
+				else if(m1.getPosisi() == Point(0,0))//kiri-atas
 				{
-					k1.set_Arah(4);
+					m1.set_Arah(4);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi().getAbsis() == 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= 29)//kanan
 				{
-					k1.set_Arah(7);
+					m1.set_Arah(7);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi().getAbsis() == 0)//kiri
+				else if(m1.getPosisi().getAbsis() == 0)//kiri
 				{
-					k1.set_Arah(3);
+					m1.set_Arah(3);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi().getOrdinat() == 29)
+				else if(m1.getPosisi().getOrdinat() >= 29)
 				{
-					k1.set_Arah(1);
+					m1.set_Arah(1);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				else if(k1.getPosisi().getOrdinat() == 0)
+				else if(m1.getPosisi().getOrdinat() == 0)
 				{
-					k1.set_Arah(5);
+					m1.set_Arah(5);
 
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
 				else
 				{
-					k1.Karnivora::gerak_berarah(k1.get_Arah());
+					m1.Hewan::gerak_berarah(m1.get_Arah());
 				}
-				k1.menua();
-				sleep_for(nanoseconds(1000000000/k1.get_Kecepatan()));
 
-				if(k1.isMati())
+				sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
+
+				if(m1.isMati())
 				{
 					sleep_for(nanoseconds(3000000000));
 					break;
@@ -365,7 +365,7 @@ void KonduktorMakhlukHidup::hidup(Omnivora& o1) {
 	t.detach();
 }
 
-void hidup(Tumbuhan& t1) {
+void KonduktorMakhlukHidup::hidup(Tumbuhan& t1) {
 	thread t(&KonduktorMakhlukHidup::aging, this, ref(t1));
 	while (1) {
 		if (lifeState == 1) {
@@ -377,7 +377,7 @@ void hidup(Tumbuhan& t1) {
 				break;
 			}
 		} else if (lifeState == 0) {
-			
+
 		}
 	}
 	t.detach();

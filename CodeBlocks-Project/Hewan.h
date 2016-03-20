@@ -27,7 +27,7 @@ public :
     void gerak_bebas();
     void gerak_memburu(Point Target);
     //Membuat gerakan dengan arah menuju suatu titik
-    void gerak_berarah(int _arah);
+    void gerak_berarah();
     //Membuat gerakan arah yang ditentukan
 private :
     int tingkat_kekenyangan;
