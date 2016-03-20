@@ -11,6 +11,7 @@ HuntingSkill::HuntingSkill(char* _Target, bool _memburu) : ukuran_target(20) {
             Target[i] = ' ' ;
     }
     memburu = _memburu;
+    sedangMemburu = false;
 }
 
 HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_target) {
@@ -18,6 +19,7 @@ HuntingSkill::HuntingSkill(const HuntingSkill& H) : ukuran_target(H.ukuran_targe
     for (int i=0; i<ukuran_target; i++)
         Target[i] = H.Target[i];
     memburu = H.memburu;
+    sedangMemburu = H.sedangMemburu;
 }
 
 HuntingSkill::~HuntingSkill () {
@@ -30,6 +32,7 @@ HuntingSkill& HuntingSkill::operator= (const HuntingSkill& H) {
     for (int i=0; i<ukuran_target; i++)
         Target[i] = H.Target[i];
     memburu = H.memburu;
+    sedangMemburu = H.sedangMemburu;
 }
 
 void HuntingSkill::setMemburu(bool M)
@@ -37,6 +40,13 @@ void HuntingSkill::setMemburu(bool M)
     memburu = M;
 }
 
+void HuntingSkill::setSedangMemburu(bool s){
+    sedangMemburu = s;
+}
+
+bool HuntingSkill::getSedangMemburu(){
+    return sedangMemburu;
+}
 
 //GETTER
 char* HuntingSkill::getTarget(){

@@ -1,6 +1,6 @@
 #include "Pemburu.h"
 
-Pemburu::Pemburu(Point P) : Manusia(7,'H',5,P,NULL,true,2,2) {
+Pemburu::Pemburu(Point P) : Manusia(70,'H',5,P,NULL,true,2,2) {
     setPredator(0,'C');
     setPredator(1,'!');
 

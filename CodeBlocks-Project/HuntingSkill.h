@@ -38,6 +38,9 @@ public :
     */
     void setMemburu(bool M);
 
+    void setSedangMemburu(bool s);
+
+    bool getSedangMemburu();
     /**
     * Prosedur setter untuk atribut tabel Target
     * @param i , parameter pertama yang menyimpan nilai indeks tabel
@@ -80,6 +83,10 @@ private :
     */
     const int ukuran_target;
 
+    /**
+    * Private Attribute yang menyimpan kondisi sedang berburu atau tidak
+    */
+    bool sedangMemburu;
 };
 
 #endif // HUNTING_SKILL
