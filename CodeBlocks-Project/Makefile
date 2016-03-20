@@ -28,7 +28,8 @@ world:
 	g++ -std=c++11 -c Pemburu.h Pemburu.cpp
 	g++ -std=c++11 -c Pohon.h Pohon.cpp
 	g++ -std=c++11 -c Rumput.h Rumput.cpp
-	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.h Point.cpp moderatorMakhlukHidup.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp
+	g++ -std=c++11 -c Point.h Point.cpp
+	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.cpp moderatorMakhlukHidup.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp
 	
 konduktor:
 	g++ -std=c++11 -o driverKon konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp driverKonduktor.cpp Manusia.cpp Gerak.cpp MakhlukHidup.cpp Point.cpp HuntingSkill.cpp
