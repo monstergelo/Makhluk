@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Tugas Besar OOP (Konkurensi)" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Tugas Besar OOP (Konkurensi)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Tugas Besar OOP (Konkurensi)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Gerak.cpp" />
+		<Unit filename="Gerak.h" />
+		<Unit filename="HuntingSkill.cpp" />
+		<Unit filename="HuntingSkill.h" />
+		<Unit filename="MakhlukHidup.cpp" />
+		<Unit filename="MakhlukHidup.h" />
+		<Unit filename="Manusia.cpp" />
+		<Unit filename="Manusia.h" />
+		<Unit filename="Point.cpp" />
+		<Unit filename="Point.h" />
+		<Unit filename="Polisi.cpp" />
+		<Unit filename="Polisi.h" />
+		<Unit filename="administratorMakhlukHidup.cpp" />
+		<Unit filename="administratorMakhlukHidup.h" />
+		<Unit filename="driverWorld.cpp" />
+		<Unit filename="konduktorMakhlukHidup.cpp" />
+		<Unit filename="konduktorMakhlukHidup.h" />
+		<Unit filename="world.cpp" />
+		<Unit filename="world.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

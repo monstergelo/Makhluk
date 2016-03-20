@@ -1,0 +1,344 @@
+\hypertarget{class_makhluk_hidup}{}\section{Makhluk\+Hidup Class Reference}
+\label{class_makhluk_hidup}\index{Makhluk\+Hidup@{Makhluk\+Hidup}}
+Inheritance diagram for Makhluk\+Hidup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.488889cm]{class_makhluk_hidup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_makhluk_hidup_aa2b7d6507df43a37523592ae194cc30f}{Makhluk\+Hidup} (int \+\_\+umur=0, char \+\_\+\+D\+NA= \textquotesingle{}$\ast$\textquotesingle{}, int \+\_\+ulangtahun=0, \hyperlink{class_point}{Point} P=P\+Awal)
+\item 
+\hyperlink{class_makhluk_hidup_ab4caed894c2ae2ab388ce59b0b5311d9}{Makhluk\+Hidup} (const \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)
+\item 
+virtual \hyperlink{class_makhluk_hidup_a4287f254bb19dc249032215f4a8ad82d}{$\sim$\+Makhluk\+Hidup} ()
+\item 
+\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \& \hyperlink{class_makhluk_hidup_a372abdbd24705c1edd3661436947fe22}{operator=} (const \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)
+\item 
+void \hyperlink{class_makhluk_hidup_ae06db2e59854f4cd51aae77ea177405e}{menua} ()
+\item 
+virtual bool \hyperlink{class_makhluk_hidup_a221406dd7a16071d7e74ef2e10b7fc4b}{is\+Mati} ()
+\item 
+void \hyperlink{class_makhluk_hidup_a5f680398fc4ad2f630b317695e9d4a4f}{display} ()
+\item 
+int \hyperlink{class_makhluk_hidup_a05e688885d0a194c53412ef8c8f04890}{get\+\_\+umur} ()
+\item 
+int \hyperlink{class_makhluk_hidup_a4077d7a2a0f0a84858b15dadd181d945}{get\+\_\+ulang\+\_\+tahun} ()
+\item 
+char \hyperlink{class_makhluk_hidup_a67f74ca50e81ff549d6b2c6a7cfcbba7}{get\+\_\+\+D\+NA} ()
+\item 
+int \hyperlink{class_makhluk_hidup_a78cd2c91aba52d11f2e7606b52a706d4}{get\+\_\+batas\+\_\+umur} ()
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_makhluk_hidup_a555874bb0b80f95157a7e2746ea36f35}{get\+Posisi} ()
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_makhluk_hidup_ace4363c8d92287af608d67e94a2f6c45}{get\+Prec\+Posisi} ()
+\item 
+char \hyperlink{class_makhluk_hidup_a97bc5cca37bfa18311e99ce63e39a009}{get\+Predator} (int i)
+\item 
+int \hyperlink{class_makhluk_hidup_ad12076a7c63dde29e90b1f4ca48aaff1}{get\+Ukuran\+Predator} ()
+\item 
+void \hyperlink{class_makhluk_hidup_adc7715c1915723fdf42ff205458923e7}{set\+\_\+umur} (int)
+\item 
+void \hyperlink{class_makhluk_hidup_a9db02ead4d61096dbd8f7a9e26901e71}{set\+\_\+ulang\+\_\+tahun} (int)
+\item 
+void \hyperlink{class_makhluk_hidup_a816be4a8a08a2daccab170b99fb26ce9}{set\+\_\+\+D\+NA} (char)
+\item 
+void \hyperlink{class_makhluk_hidup_a62cb644f5defd2cc68783f52ef954b57}{set\+Posisi} (\hyperlink{class_point}{Point})
+\item 
+void \hyperlink{class_makhluk_hidup_a57c79d6367c021752d85599ea6edf6da}{set\+Prec\+Posisi} (\hyperlink{class_point}{Point})
+\item 
+void \hyperlink{class_makhluk_hidup_add4f38ec95f2c1e5b715a7184105288a}{set\+Predator} (int i, char \+\_\+predator)
+\item 
+void \hyperlink{class_makhluk_hidup_a0946620dcf0255e00953f815c976bd4b}{set\+Mati} (bool \+\_\+mati)
+\item 
+bool \hyperlink{class_makhluk_hidup_aa1b9047625c71988c79bb451622f3218}{is\+Predator} (char D\+N\+A\+\_\+predator)
+\item 
+bool \hyperlink{class_makhluk_hidup_a2c7cb45ed87a2dab9fd279c528a6d478}{is\+Radius} (int rad, \hyperlink{class_point}{Point} p)
+\item 
+virtual void \hyperlink{class_makhluk_hidup_a7aafd6122203f48a43b384a9d8175396}{Reaction} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{Makhluk\+Hidup(int \+\_\+umur=0, char \+\_\+\+D\+N\+A= \textquotesingle{}$\ast$\textquotesingle{}, int \+\_\+ulangtahun=0, Point P=\+P\+Awal)}{MakhlukHidup(int _umur=0, char _DNA= '*', int _ulangtahun=0, Point P=PAwal)}}]{\setlength{\rightskip}{0pt plus 5cm}Makhluk\+Hidup\+::\+Makhluk\+Hidup (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+umur = {\ttfamily 0}, }
+\item[{char}]{\+\_\+\+D\+NA = {\ttfamily \textquotesingle{}$\ast$\textquotesingle{}}, }
+\item[{int}]{\+\_\+ulangtahun = {\ttfamily 0}, }
+\item[{{\bf Point}}]{P = {\ttfamily PAwal}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_aa2b7d6507df43a37523592ae194cc30f}{}\label{class_makhluk_hidup_aa2b7d6507df43a37523592ae194cc30f}
+A constructor Making an organism with a default value in every parameter \index{Makhluk\+Hidup@{Makhluk\+Hidup}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{Makhluk\+Hidup(const Makhluk\+Hidup \&)}{MakhlukHidup(const MakhlukHidup &)}}]{\setlength{\rightskip}{0pt plus 5cm}Makhluk\+Hidup\+::\+Makhluk\+Hidup (
+\begin{DoxyParamCaption}
+\item[{const {\bf Makhluk\+Hidup} \&}]{M}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_ab4caed894c2ae2ab388ce59b0b5311d9}{}\label{class_makhluk_hidup_ab4caed894c2ae2ab388ce59b0b5311d9}
+A copy constructor \index{Makhluk\+Hidup@{Makhluk\+Hidup}!````~Makhluk\+Hidup@{$\sim$\+Makhluk\+Hidup}}
+\index{````~Makhluk\+Hidup@{$\sim$\+Makhluk\+Hidup}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{$\sim$\+Makhluk\+Hidup()}{~MakhlukHidup()}}]{\setlength{\rightskip}{0pt plus 5cm}Makhluk\+Hidup\+::$\sim$\+Makhluk\+Hidup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_makhluk_hidup_a4287f254bb19dc249032215f4a8ad82d}{}\label{class_makhluk_hidup_a4287f254bb19dc249032215f4a8ad82d}
+A destructor Virtual destructor to destruct an organism 
+
+\subsection{Member Function Documentation}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!display@{display}}
+\index{display@{display}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{display()}{display()}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a5f680398fc4ad2f630b317695e9d4a4f}{}\label{class_makhluk_hidup_a5f680398fc4ad2f630b317695e9d4a4f}
+A normal member procedure A procedure to display the D\+NA of the organism \index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+\_\+batas\+\_\+umur@{get\+\_\+batas\+\_\+umur}}
+\index{get\+\_\+batas\+\_\+umur@{get\+\_\+batas\+\_\+umur}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+\_\+batas\+\_\+umur()}{get_batas_umur()}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+Hidup\+::get\+\_\+batas\+\_\+umur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a78cd2c91aba52d11f2e7606b52a706d4}{}\label{class_makhluk_hidup_a78cd2c91aba52d11f2e7606b52a706d4}
+A getter for age limit of organism \begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+\_\+\+D\+NA@{get\+\_\+\+D\+NA}}
+\index{get\+\_\+\+D\+NA@{get\+\_\+\+D\+NA}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+D\+N\+A()}{get_DNA()}}]{\setlength{\rightskip}{0pt plus 5cm}char Makhluk\+Hidup\+::get\+\_\+\+D\+NA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a67f74ca50e81ff549d6b2c6a7cfcbba7}{}\label{class_makhluk_hidup_a67f74ca50e81ff549d6b2c6a7cfcbba7}
+A getter for organism\textquotesingle{}s D\+NA \begin{DoxyReturn}{Returns}
+a char 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+\_\+ulang\+\_\+tahun@{get\+\_\+ulang\+\_\+tahun}}
+\index{get\+\_\+ulang\+\_\+tahun@{get\+\_\+ulang\+\_\+tahun}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+\_\+ulang\+\_\+tahun()}{get_ulang_tahun()}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+Hidup\+::get\+\_\+ulang\+\_\+tahun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a4077d7a2a0f0a84858b15dadd181d945}{}\label{class_makhluk_hidup_a4077d7a2a0f0a84858b15dadd181d945}
+A getter for ulangtahun attribute ( the birthday of organism ) \begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+\_\+umur@{get\+\_\+umur}}
+\index{get\+\_\+umur@{get\+\_\+umur}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+\_\+umur()}{get_umur()}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+Hidup\+::get\+\_\+umur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a05e688885d0a194c53412ef8c8f04890}{}\label{class_makhluk_hidup_a05e688885d0a194c53412ef8c8f04890}
+A getter for umur attribute \begin{DoxyReturn}{Returns}
+an integer, the age of organism 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+Posisi@{get\+Posisi}}
+\index{get\+Posisi@{get\+Posisi}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+Posisi()}{getPosisi()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Makhluk\+Hidup\+::get\+Posisi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a555874bb0b80f95157a7e2746ea36f35}{}\label{class_makhluk_hidup_a555874bb0b80f95157a7e2746ea36f35}
+A getter for organism Position \begin{DoxyReturn}{Returns}
+a point, a coordinate of organism 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+Prec\+Posisi@{get\+Prec\+Posisi}}
+\index{get\+Prec\+Posisi@{get\+Prec\+Posisi}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+Prec\+Posisi()}{getPrecPosisi()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Makhluk\+Hidup\+::get\+Prec\+Posisi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_ace4363c8d92287af608d67e94a2f6c45}{}\label{class_makhluk_hidup_ace4363c8d92287af608d67e94a2f6c45}
+A getter for organism Previous Position \begin{DoxyReturn}{Returns}
+a point 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+Predator@{get\+Predator}}
+\index{get\+Predator@{get\+Predator}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+Predator(int i)}{getPredator(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}char Makhluk\+Hidup\+::get\+Predator (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a97bc5cca37bfa18311e99ce63e39a009}{}\label{class_makhluk_hidup_a97bc5cca37bfa18311e99ce63e39a009}
+A getter for what is the \char`\"{}i\char`\"{}th predator in predator table 
+\begin{DoxyParams}{Parameters}
+{\em i} & an integer argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a char in Predator\mbox{[}i\mbox{]} 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!get\+Ukuran\+Predator@{get\+Ukuran\+Predator}}
+\index{get\+Ukuran\+Predator@{get\+Ukuran\+Predator}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{get\+Ukuran\+Predator()}{getUkuranPredator()}}]{\setlength{\rightskip}{0pt plus 5cm}int Makhluk\+Hidup\+::get\+Ukuran\+Predator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_ad12076a7c63dde29e90b1f4ca48aaff1}{}\label{class_makhluk_hidup_ad12076a7c63dde29e90b1f4ca48aaff1}
+A getter for predator table size \begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!is\+Mati@{is\+Mati}}
+\index{is\+Mati@{is\+Mati}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{is\+Mati()}{isMati()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Makhluk\+Hidup\+::is\+Mati (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_makhluk_hidup_a221406dd7a16071d7e74ef2e10b7fc4b}{}\label{class_makhluk_hidup_a221406dd7a16071d7e74ef2e10b7fc4b}
+A virtual member that takes zero argument and return boolean A function to check if the organism is die or not, \char`\"{}died\char`\"{} defined in the child class \begin{DoxyReturn}{Returns}
+boolean, true if die and false if not. 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!is\+Predator@{is\+Predator}}
+\index{is\+Predator@{is\+Predator}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{is\+Predator(char D\+N\+A\+\_\+predator)}{isPredator(char DNA_predator)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Makhluk\+Hidup\+::is\+Predator (
+\begin{DoxyParamCaption}
+\item[{char}]{D\+N\+A\+\_\+predator}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_aa1b9047625c71988c79bb451622f3218}{}\label{class_makhluk_hidup_aa1b9047625c71988c79bb451622f3218}
+A normal member that takes one char argument and return boolean 
+\begin{DoxyParams}{Parameters}
+{\em a} & char of the Predator\textquotesingle{}s D\+NA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that is true if the D\+NA is in the predator table and false if either. 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!is\+Radius@{is\+Radius}}
+\index{is\+Radius@{is\+Radius}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{is\+Radius(int rad, Point p)}{isRadius(int rad, Point p)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Makhluk\+Hidup\+::is\+Radius (
+\begin{DoxyParamCaption}
+\item[{int}]{rad, }
+\item[{{\bf Point}}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a2c7cb45ed87a2dab9fd279c528a6d478}{}\label{class_makhluk_hidup_a2c7cb45ed87a2dab9fd279c528a6d478}
+A normal member that takes two argument and return boolean 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer, the radius of circle \\
+\hline
+{\em a} & \hyperlink{class_point}{Point} of another organism \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that is true if the coordinate of another organism is in the radius area of this organism Position and false if either 
+\end{DoxyReturn}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!menua@{menua}}
+\index{menua@{menua}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{menua()}{menua()}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::menua (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_ae06db2e59854f4cd51aae77ea177405e}{}\label{class_makhluk_hidup_ae06db2e59854f4cd51aae77ea177405e}
+A normal procedure member A procedure that increase the age of the organism when this procedure called \index{Makhluk\+Hidup@{Makhluk\+Hidup}!operator=@{operator=}}
+\index{operator=@{operator=}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{operator=(const Makhluk\+Hidup \&)}{operator=(const MakhlukHidup &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Makhluk\+Hidup} \& Makhluk\+Hidup\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Makhluk\+Hidup} \&}]{M}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a372abdbd24705c1edd3661436947fe22}{}\label{class_makhluk_hidup_a372abdbd24705c1edd3661436947fe22}
+An operator = \index{Makhluk\+Hidup@{Makhluk\+Hidup}!Reaction@{Reaction}}
+\index{Reaction@{Reaction}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{Reaction(\+Makhluk\+Hidup \&)=0}{Reaction(MakhlukHidup &)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Makhluk\+Hidup\+::\+Reaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_makhluk_hidup_a7aafd6122203f48a43b384a9d8175396}{}\label{class_makhluk_hidup_a7aafd6122203f48a43b384a9d8175396}
+A pure virutal member 
+
+Implemented in \hyperlink{class_herbivora_a649b50a3d1e6f8d290baf1977a6ce88a}{Herbivora}, \hyperlink{class_karnivora_a5835b08fcd4ca1d9d45459fedfceaf21}{Karnivora}, \hyperlink{class_tumbuhan_aa4cdb9c1bf7aebe6f35a9292b4d527e1}{Tumbuhan}, \hyperlink{class_pohon_a5c0b3b644fe9109e7ec219bbe04b24ff}{Pohon}, \hyperlink{class_rumput_ab09bf354ca4ceb08cb023ac068a42d90}{Rumput}, \hyperlink{class_omnivora_a1b8937b59e4606e6088add7c10bf3f60}{Omnivora}, \hyperlink{class_pemburu_aca58c57504224a99fc28efe901d47e4d}{Pemburu}, \hyperlink{class_polisi_ad8c80d834481138e1fe1e8b62fad77bd}{Polisi}, \hyperlink{class_gajah_ae9f98bedbe835809f53875b234804e08}{Gajah}, and \hyperlink{class_burung_unta_afbf850167abdb1d2912284cccb497c13}{Burung\+Unta}.
+
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+\_\+\+D\+NA@{set\+\_\+\+D\+NA}}
+\index{set\+\_\+\+D\+NA@{set\+\_\+\+D\+NA}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+D\+N\+A(char)}{set_DNA(char)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+\_\+\+D\+NA (
+\begin{DoxyParamCaption}
+\item[{char}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a816be4a8a08a2daccab170b99fb26ce9}{}\label{class_makhluk_hidup_a816be4a8a08a2daccab170b99fb26ce9}
+A setter for D\+NA 
+\begin{DoxyParams}{Parameters}
+{\em a} & char argument that will be assigned to D\+NA \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+\_\+ulang\+\_\+tahun@{set\+\_\+ulang\+\_\+tahun}}
+\index{set\+\_\+ulang\+\_\+tahun@{set\+\_\+ulang\+\_\+tahun}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+\_\+ulang\+\_\+tahun(int)}{set_ulang_tahun(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+\_\+ulang\+\_\+tahun (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a9db02ead4d61096dbd8f7a9e26901e71}{}\label{class_makhluk_hidup_a9db02ead4d61096dbd8f7a9e26901e71}
+A setter for ulangtahun 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer arguments that will be assigned to ulangtahun \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+\_\+umur@{set\+\_\+umur}}
+\index{set\+\_\+umur@{set\+\_\+umur}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+\_\+umur(int)}{set_umur(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+\_\+umur (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_adc7715c1915723fdf42ff205458923e7}{}\label{class_makhluk_hidup_adc7715c1915723fdf42ff205458923e7}
+A setter for umur 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer arguments that will be assigned to umur \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+Mati@{set\+Mati}}
+\index{set\+Mati@{set\+Mati}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+Mati(bool \+\_\+mati)}{setMati(bool _mati)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+Mati (
+\begin{DoxyParamCaption}
+\item[{bool}]{\+\_\+mati}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a0946620dcf0255e00953f815c976bd4b}{}\label{class_makhluk_hidup_a0946620dcf0255e00953f815c976bd4b}
+A setter for mati 
+\begin{DoxyParams}{Parameters}
+{\em a} & boolean that used to tell if organism die or not \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+Posisi@{set\+Posisi}}
+\index{set\+Posisi@{set\+Posisi}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+Posisi(\+Point)}{setPosisi(Point)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+Posisi (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a62cb644f5defd2cc68783f52ef954b57}{}\label{class_makhluk_hidup_a62cb644f5defd2cc68783f52ef954b57}
+A setter for Position 
+\begin{DoxyParams}{Parameters}
+{\em a} & \hyperlink{class_point}{Point} argument that will be assigned to Position Cordinate \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+Prec\+Posisi@{set\+Prec\+Posisi}}
+\index{set\+Prec\+Posisi@{set\+Prec\+Posisi}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+Prec\+Posisi(\+Point)}{setPrecPosisi(Point)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+Prec\+Posisi (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_a57c79d6367c021752d85599ea6edf6da}{}\label{class_makhluk_hidup_a57c79d6367c021752d85599ea6edf6da}
+A setter for P\+Position 
+\begin{DoxyParams}{Parameters}
+{\em a} & \hyperlink{class_point}{Point} argument that will be assigned to P\+Position Cordinate \\
+\hline
+\end{DoxyParams}
+\index{Makhluk\+Hidup@{Makhluk\+Hidup}!set\+Predator@{set\+Predator}}
+\index{set\+Predator@{set\+Predator}!Makhluk\+Hidup@{Makhluk\+Hidup}}
+\subsubsection[{\texorpdfstring{set\+Predator(int i, char \+\_\+predator)}{setPredator(int i, char _predator)}}]{\setlength{\rightskip}{0pt plus 5cm}void Makhluk\+Hidup\+::set\+Predator (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{char}]{\+\_\+predator}
+\end{DoxyParamCaption}
+)}\hypertarget{class_makhluk_hidup_add4f38ec95f2c1e5b715a7184105288a}{}\label{class_makhluk_hidup_add4f38ec95f2c1e5b715a7184105288a}
+A setter for Predator 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer argument for table index, this integer is always valid \\
+\hline
+{\em a} & char of the predator\textquotesingle{}s D\+NA \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Makhluk\+Hidup.\+h\item 
+Makhluk\+Hidup.\+cpp\end{DoxyCompactItemize}
