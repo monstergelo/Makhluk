@@ -364,3 +364,21 @@ void KonduktorMakhlukHidup::hidup(Omnivora& o1) {
 	}
 	t.detach();
 }
+
+void hidup(Tumbuhan& t1) {
+	thread t(&KonduktorMakhlukHidup::aging, this, ref(t1));
+	while (1) {
+		if (lifeState == 1) {
+			t1.menua();
+			sleep_for(nanoseconds(300000000));
+			if(t1.isMati())
+			{
+				sleep_for(nanoseconds(3000000000));
+				break;
+			}
+		} else if (lifeState == 0) {
+			
+		}
+	}
+	t.detach();
+}
