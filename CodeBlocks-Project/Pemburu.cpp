@@ -36,5 +36,8 @@ void Pemburu::Reaction(MakhlukHidup& M){
             set_Arah_Menjauh(getPosisi(),M.getPosisi());
         else if (isTarget(M.get_DNA()))
             set_Arah_Memburu(getPosisi(),M.getPosisi());
-    }
+        else
+            set_Arah_Bebas();
+    } else
+        set_Arah_Bebas();
 }
