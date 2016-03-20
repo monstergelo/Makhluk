@@ -69,7 +69,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi().getAbsis() == 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= 29)//kanan
 				{
 					m1.set_Arah(7);
 
@@ -81,7 +81,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi().getOrdinat() == 29)
+				else if(m1.getPosisi().getOrdinat() >= 29)
 				{
 					m1.set_Arah(1);
 
@@ -97,7 +97,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 				{
 					m1.Manusia::gerak_berarah();
 				}
-				
+
 				sleep_for(nanoseconds(1000000000/m1.get_Kecepatan()));
 
 				if(m1.isMati())

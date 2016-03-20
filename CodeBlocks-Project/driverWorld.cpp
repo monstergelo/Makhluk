@@ -9,20 +9,20 @@ int GetKey() {
 		        	if (i == 13) // ENTER
 		        		return i;
 		    }
-	    
+
 	    //Looping untuk karakter hruruf dan angka
 	    for(i = 48; i <= 90; i++){
 	        if (GetAsyncKeyState(i) == -32767)
 				if (i == '1' || i == '2' || i == '3' || i == '4' || i=='5' || i=='6' || i=='7' || i=='8' || i=='9' || i=='0' || i == 'P')
 					return i;
 	    }
-	    
+
 		for(i = 91; i <= 222; i++){
 	        if (GetAsyncKeyState(i) == -32767)
 				if (i == '1' || i == '2' || i == '3' || i == '4' || i=='5' || i=='6' || i=='7' || i=='8' || i=='9' || i=='0' || i == 'P')
 					return i;
 	    }
-		    
+
 	}
 }
 
@@ -35,15 +35,15 @@ int main()
 
 
 
-	Point P1(5,5);
+	Point P1(5,18);
 	Polisi m1(P1);
-	Point P2(5,20);
-	Hyena m2(P2);
-	Point P5(20,5);
-	Beruang m3(P5);
+	Point P2(2,29);
+	Polisi m2(P2);
+	Point P5(20,18);
+	Pemburu m3(P5);
 	Point P4(15,29);
-	Gajah m4(P4);
-	Point P9(13,13);
+	Pemburu m4(P4);
+	Point P9(13,18);
 
 	World W;
 	W.fill(&m1);
@@ -61,7 +61,7 @@ int main()
 	Sleep(2000);
 
 
-	
+
 	W.initDraw(m1);
 	W.initDraw(m2);
 	W.initDraw(m3);
@@ -72,9 +72,9 @@ int main()
 
 	//hidupkan makhluk
 	thread t0((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m1));
-	thread t1((hidup_karnivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m2));
-	thread t2((hidup_omnivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m3));
-	thread t3((hidup_herbivora)(&KonduktorMakhlukHidup::hidup), &W, ref(m4));
+	thread t1((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m2));
+	thread t2((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m3));
+	thread t3((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m4));
 
 
 	//tampilkan dunia
