@@ -1,6 +1,6 @@
 #include "Rumput.h"
 
-Rumput::Rumput(int _umur, char _DNA, int _ulangtahun, Point P, char* predators) : Tumbuhan(_umur, _DNA, _ulangtahun, P) {
+Rumput::Rumput(Point P) : Tumbuhan(batasumur_Rumput, DNA_Rumput, ulangtahun_Rumput,P) {
 	setPredator(0,'u');
 	setPredator(1,'g');
 	setPredator(2,'C');

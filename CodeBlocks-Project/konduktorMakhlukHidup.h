@@ -6,6 +6,7 @@
 #include "Herbivora.h"
 #include "Karnivora.h"
 #include "Omnivora.h"
+#include "Tumbuhan.h"
 #include <thread>
 
 
@@ -27,6 +28,7 @@ public:
 	void hidup(Herbivora&);
 	void hidup(Karnivora&);
 	void hidup(Omnivora&);
+	void hidup(Tumbuhan&);
 	void pause();
 	void resume();
 	void aging(MakhlukHidup&);

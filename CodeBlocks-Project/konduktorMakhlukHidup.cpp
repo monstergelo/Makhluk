@@ -365,7 +365,7 @@ void KonduktorMakhlukHidup::hidup(Omnivora& o1) {
 	t.detach();
 }
 
-void hidup(Tumbuhan& t1) {
+void KonduktorMakhlukHidup::hidup(Tumbuhan& t1) {
 	thread t(&KonduktorMakhlukHidup::aging, this, ref(t1));
 	while (1) {
 		if (lifeState == 1) {
@@ -377,7 +377,7 @@ void hidup(Tumbuhan& t1) {
 				break;
 			}
 		} else if (lifeState == 0) {
-			
+
 		}
 	}
 	t.detach();
