@@ -63,11 +63,15 @@ void Karnivora::Reaction(MakhlukHidup& M){
         if (get_DNA() == M.get_DNA()) {
             if (M.get_umur() >= get_umur())
                 setMati(true);
-        } else if (M.isPredator(get_DNA())) {
+        } else if (isPredator(M.get_DNA())) {
                 setMati(true);
         }
-    } else if (isRadius(1,M.getPosisi())){
-        if (isTarget(M.get_DNA()))
-            gerak_memburu(M.getPosisi());
+    }else if (isRadius(1,M.getPosisi())){
+        if (isTarget(M.get_DNA()) && (M.get_DNA() != '!'))
+            set_Arah_Memburu(getPosisi(),M.getPosisi());
+        else
+            set_Arah_Bebas();
+    }else{
+        set_Arah_Bebas();
     }
 }

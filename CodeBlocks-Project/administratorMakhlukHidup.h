@@ -10,6 +10,8 @@
 #include "Polisi.h"
 #include "Hyena.h"
 #include "Beruang.h"
+#include "Pemburu.h"
+#include "Rumput.h"
 
 using namespace std;
 
