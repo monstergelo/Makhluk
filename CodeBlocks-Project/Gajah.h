@@ -11,7 +11,7 @@ public:
   //services
   void Reaction(MakhlukHidup&);
 private:
-  const static int batasumur_Gajah = 10;
+  const static int batasumur_Gajah = 80;
   const static int ulangtahun_Gajah = 2;
   const static int maksimum_tingkat_kekenyangan_Gajah = 9;
   const static int kecepatan_Gajah = 5;

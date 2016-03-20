@@ -1,4 +1,5 @@
 #include "Gajah.h"
+#include <iostream>
 
 Gajah::Gajah(Point P) : Herbivora(batasumur_Gajah,DNA_Gajah,ulangtahun_Gajah,
 									P,maksimum_tingkat_kekenyangan_Gajah,maksimum_tingkat_kekenyangan_Gajah,
@@ -40,10 +41,13 @@ void Gajah::Reaction(MakhlukHidup& M) {
 		if (isRadius(2,M.getPosisi())) {
 			if (isPredator(M.get_DNA())) {
 				prosesMempercepat();
-				gerak_bebas();
+				set_Arah_Bebas();
+			} else {
+				set_Arah_Bebas();
 			}
 		} else {
 			set_Kecepatan(kecepatan_Gajah);
+			set_Arah_Bebas();
 		}
 	}
 }
