@@ -22,6 +22,7 @@ world:
 	g++ -std=c++11 -c Polisi.h Polisi.cpp
 	g++ -std=c++11 -c Manusia.h Manusia.cpp
 	g++ -std=c++11 -c Gerak.h Gerak.cpp
+	g++ -std=c++11 -c HuntingSkill.h HuntingSkill.cpp
 	g++ -std=c++11 -c administratorMakhlukHidup.h administratorMakhlukHidup.cpp
 	g++ -std=c++11 -c konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp
 	g++ -std=c++11 -c world.h world.cpp
