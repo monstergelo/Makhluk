@@ -3,15 +3,19 @@
 
 #include "Hewan.h"
 
+/**
+ *  Class that describes Herbivore animals.
+ */
+
 //Catatan : Hewan inherit ke MakhlukHidup, Gerak, dan HuntingSkill
 class Herbivora : public Hewan {
 public:
     /**
-     *
+     *  
      */
     Herbivora();
     /**
-     *
+     *  
      */
     Herbivora(int _umur, char _DNA, 
               int _ulangtahun, Point P, 
@@ -22,39 +26,39 @@ public:
 
     //CCTOR
     /**
-     *
+     *  
      */
     Herbivora(const Herbivora&);
     /**
-     *
+     *  
      */
     Herbivora& operator=(const Herbivora&);
     /**
-     *
+     *  
      */
     virtual ~Herbivora();
     /**
-     *
+     *  
      */
     void set_percepat( bool cepat);
     /**
-     *
+     *  
      */
     void set_deltaKecepatan(int kec);
     /**
-     *
+     *  
      */
     bool get_percepat();
     /**
-     *
+     *  
      */
     int get_deltaKecepatan();
     /**
-     *
+     *  
      */
     void prosesMempercepat();
     /**
-     *
+     *  
      */
     virtual void Reaction(MakhlukHidup&);
 private:

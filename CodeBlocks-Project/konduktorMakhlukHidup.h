@@ -23,7 +23,7 @@ public:
 	/**
  	* 	Told Manusia to do it's behaviour
  	*/	
-	void hidup(Manusia&);//menghidupkan semua makhluk hidup
+	void hidup(Manusia&); //menghidupkan semua makhluk hidup
 	void hidup(Herbivora&);
 	void hidup(Karnivora&);
 	void hidup(Omnivora&);
