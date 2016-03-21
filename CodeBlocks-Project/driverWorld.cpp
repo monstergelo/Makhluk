@@ -1,5 +1,7 @@
 #include "world.h"
 
+char opsi = 'W';
+
 int GetKey() {
 	int i;
 
@@ -26,13 +28,27 @@ int GetKey() {
 	}
 }
 
+void listenKey()
+{
+	while(1)
+	{
+		opsi = getch();
+		Sleep(50);
+	}
+}
+
 int main()
 {
-	typedef void (KonduktorMakhlukHidup::*hidup_herbivora)(Herbivora&);
+	//typedef void (KonduktorMakhlukHidup::*hidup_herbivora)(Herbivora&);
 	typedef void (KonduktorMakhlukHidup::*hidup_manusia)(Manusia&);
-	typedef void (KonduktorMakhlukHidup::*hidup_karnivora)(Karnivora&);
-	typedef void (KonduktorMakhlukHidup::*hidup_omnivora)(Omnivora&);
+	//typedef void (KonduktorMakhlukHidup::*hidup_karnivora)(Karnivora&);
+	//typedef void (KonduktorMakhlukHidup::*hidup_omnivora)(Omnivora&);
 
+	
+	thread l(listenKey);
+	Sleep(1000);
+	cout << opsi << endl;
+	Sleep(2000);
 
 
 	Point P1(5,18);
@@ -80,30 +96,44 @@ int main()
 	//tampilkan dunia
 
 	thread *d[W.get_size()];
-
 	for(int i=0; i<W.get_size(); ++i)
 	{
 		if(W.get_daftar(i) != NULL)
 			d[i] = new thread(&World::updateMakhluk, &W, i);
 	}
-
+/*
 	Sleep(1000);
 	thread t4(&World::creation, &W, P9, '1');
 	Sleep(4000);
 
-	//pause & tangkap layar
 	W.pause();
 	W.tangkapLayar();
+	thread t5(&World::creation, &W, P9, '1');
 	Sleep(2000);
 	W.resume();
-	/*for(int i=0; i<W.get_size(); ++i)
-	{
-		if(W.get_daftar(i) != NULL)
-			d[i] = new thread(&World::updateMakhluk, &W, i);
-	}*/
+*/
+
 	while(!W.isGameOver())
 	{
-			W.draw(P3, W.get_count());
+		if(opsi == '1')
+		{
+			new thread(&World::creation, &W, P9, '1');
+			opsi = 'W';
+		}
+		else if(opsi == 'p')
+		{
+			W.pause();
+		}
+		else if(opsi == '\n')
+		{
+			W.tangkapLayar();
+		}
+		else
+		{
+			W.resume();
+		}
+
+		W.draw(P3, W.get_count());
 	}
 
 	W.draw(P3, '.');
@@ -112,7 +142,9 @@ int main()
 	t1.join();
 	t2.join();
 	t3.join();
-	t4.detach();
+//	t4.detach();
+//	t5.detach();
+	l.detach();
 	W.draw(P3, '.');
 	cout << "Mati Semua";
 

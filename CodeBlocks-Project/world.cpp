@@ -225,6 +225,13 @@ void World::creation(Point P, char opsi)
 	}	
 }
 
+void World::activate()
+{
+	for(int i=0; i<W.get_size(); ++i)
+	{
+		new thread((hidup_manusia)(&KonduktorMakhlukHidup::hidup), this, ref(*get_daftar(i)));
+	}
+}
 
 //private//=======================================================================================
 void World::resetCursor()
@@ -258,3 +265,4 @@ void World::clear()
 {
 	system("cls");
 }
+
