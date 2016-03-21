@@ -5,7 +5,8 @@ class Point {
 
 public :
     //CTOR
-    Point(int _x=0, int _y=0);
+    Point(int range);
+    Point(int _x = 0, int _y = 0);
     //CCTOR tidak perlu
     //DTOR tidak perlu
     //OPERATOR =
@@ -16,11 +17,11 @@ public :
 
     void geser(int dx, int dy);
     //Menggeser sebuah titik sebesar dx, dy
-    
+
     //Getter
     int getAbsis();
     int getOrdinat();
-    
+
     //Setter
     void setAbsis(int _x);
     void setOrdinat(int _y);
