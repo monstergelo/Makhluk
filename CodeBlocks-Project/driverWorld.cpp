@@ -37,7 +37,7 @@ int main()
 
 	thread l(listenKey);
 
-	Point P3(0,31);
+	Point P3(0,W.getPanjang());
 
 
 	//tes gambar

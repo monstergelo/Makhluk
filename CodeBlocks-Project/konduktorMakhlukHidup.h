@@ -56,6 +56,22 @@ public:
 	 *  Increase the umur of a MakhlukHidup
 	 */
 	void aging(MakhlukHidup&);
+	/**
+	 *  Set the value of batasBawah
+	 */
+	void setBawah(int);
+	/**
+	 *  Set the value of batasSamping
+	 */
+	void setSamping(int);
+	/**
+	 *  returns the value of batasBawah
+	 */
+	int GetBawah();
+	/**
+	 *  returns the value of batasSamping
+	 */
+	int GetSamping();
 
 private:
 	/**
