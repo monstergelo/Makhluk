@@ -12,6 +12,10 @@
 #include "Beruang.h"
 #include "Pemburu.h"
 #include "Rumput.h"
+#include "Pohon.h"
+#include "BurungUnta.h"
+#include "Harimau.h"
+#include "Mandril.h"
 
 using namespace std;
 
