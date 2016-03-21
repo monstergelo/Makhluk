@@ -9,11 +9,8 @@ using namespace std::this_thread;
 KonduktorMakhlukHidup::KonduktorMakhlukHidup()
 {
 	lifeState = 1;
-}
-
-KonduktorMakhlukHidup::~KonduktorMakhlukHidup()
-{
-
+	batasBawah = 30;
+	batasSamping = 30;
 }
 
 void KonduktorMakhlukHidup::aging(MakhlukHidup& m1)
@@ -48,19 +45,19 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 		{
 			if(m1.get_Kecepatan() != 0)
 			{
-				if(m1.getPosisi() == Point(29,29))//ujung kanan-bawah
+				if(m1.getPosisi() == Point(batasSamping-1, batasBawah-1))//ujung kanan-bawah
 				{
 					m1.set_Arah(8);
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
+				else if(m1.getPosisi() == Point(0, batasBawah-1))//kiri-bawah
 				{
 					m1.set_Arah(2);
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(29,0))//kanan-atas
+				else if(m1.getPosisi() == Point(batasSamping-1,0))//kanan-atas
 				{
 					m1.set_Arah(6);
 
@@ -72,7 +69,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi().getAbsis() >= 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= batasSamping-1)//kanan
 				{
 					m1.set_Arah(7);
 
@@ -84,7 +81,7 @@ void KonduktorMakhlukHidup::hidup(Manusia& m1)
 
 					m1.Manusia::gerak_berarah();
 				}
-				else if(m1.getPosisi().getOrdinat() >= 29)
+				else if(m1.getPosisi().getOrdinat() >= batasBawah-1)
 				{
 					m1.set_Arah(1);
 
@@ -133,19 +130,19 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 		{
 			if(m1.get_Kecepatan() != 0)
 			{
-				if(m1.getPosisi() == Point(29,29))//ujung kanan-bawah
+				if(m1.getPosisi() == Point(batasSamping-1, batasBawah-1))//ujung kanan-bawah
 				{
 					m1.set_Arah(8);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
+				else if(m1.getPosisi() == Point(0, batasBawah-1))//kiri-bawah
 				{
 					m1.set_Arah(2);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(29,0))//kanan-atas
+				else if(m1.getPosisi() == Point(batasSamping-1,0))//kanan-atas
 				{
 					m1.set_Arah(6);
 
@@ -157,7 +154,7 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getAbsis() >= 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= batasSamping-1)//kanan
 				{
 					m1.set_Arah(7);
 
@@ -169,7 +166,7 @@ void KonduktorMakhlukHidup::hidup(Herbivora& m1)
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getOrdinat() >= 29)
+				else if(m1.getPosisi().getOrdinat() >= batasBawah-1)
 				{
 					m1.set_Arah(1);
 
@@ -216,19 +213,19 @@ void KonduktorMakhlukHidup::hidup(Karnivora& m1) {
 		{
 			if(m1.get_Kecepatan() != 0)
 			{
-				if(m1.getPosisi() == Point(29,29))//ujung kanan-bawah
+				if(m1.getPosisi() == Point(batasSamping-1, batasBawah-1))//ujung kanan-bawah
 				{
 					m1.set_Arah(8);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
+				else if(m1.getPosisi() == Point(0, batasBawah-1))//kiri-bawah
 				{
 					m1.set_Arah(2);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(29,0))//kanan-atas
+				else if(m1.getPosisi() == Point(batasSamping-1,0))//kanan-atas
 				{
 					m1.set_Arah(6);
 
@@ -240,7 +237,7 @@ void KonduktorMakhlukHidup::hidup(Karnivora& m1) {
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getAbsis() >= 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= batasSamping-1)//kanan
 				{
 					m1.set_Arah(7);
 
@@ -252,7 +249,7 @@ void KonduktorMakhlukHidup::hidup(Karnivora& m1) {
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getOrdinat() >= 29)
+				else if(m1.getPosisi().getOrdinat() >= batasBawah-1)
 				{
 					m1.set_Arah(1);
 
@@ -299,19 +296,19 @@ void KonduktorMakhlukHidup::hidup(Omnivora& m1){
 		{
 			if(m1.get_Kecepatan() != 0)
 			{
-				if(m1.getPosisi() == Point(29,29))//ujung kanan-bawah
+				if(m1.getPosisi() == Point(batasSamping-1, batasBawah-1))//ujung kanan-bawah
 				{
 					m1.set_Arah(8);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(0,29))//kiri-bawah
+				else if(m1.getPosisi() == Point(0, batasBawah-1))//kiri-bawah
 				{
 					m1.set_Arah(2);
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi() == Point(29,0))//kanan-atas
+				else if(m1.getPosisi() == Point(batasSamping-1,0))//kanan-atas
 				{
 					m1.set_Arah(6);
 
@@ -323,7 +320,7 @@ void KonduktorMakhlukHidup::hidup(Omnivora& m1){
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getAbsis() >= 29)//kanan
+				else if(m1.getPosisi().getAbsis() >= batasSamping-1)//kanan
 				{
 					m1.set_Arah(7);
 
@@ -335,7 +332,7 @@ void KonduktorMakhlukHidup::hidup(Omnivora& m1){
 
 					m1.Hewan::gerak_berarah();
 				}
-				else if(m1.getPosisi().getOrdinat() >= 29)
+				else if(m1.getPosisi().getOrdinat() >= batasBawah-1)
 				{
 					m1.set_Arah(1);
 
@@ -390,4 +387,21 @@ void KonduktorMakhlukHidup::hidup(Tumbuhan& t1) {
 		}
 	}
 	t.detach();
+}
+
+void KonduktorMakhlukHidup::setBawah(int i)
+{
+	batasBawah = i;
+}
+void KonduktorMakhlukHidup::setSamping(int i)
+{
+	batasSamping = i;
+}
+int KonduktorMakhlukHidup::GetBawah()
+{
+	return batasBawah;
+}
+int KonduktorMakhlukHidup::GetSamping()
+{
+	return batasSamping;
 }
