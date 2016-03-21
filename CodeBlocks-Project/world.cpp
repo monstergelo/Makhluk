@@ -2,14 +2,20 @@
 #include <mutex>
 
 //public
+World::World()
+{
+	cin >> panjang;
+	cin >> lebar;
+}
+
 void World::initDisplay()
 {
 	cursorSwitch(false);
 	resetCursor();
     clear();
-    for(int i=0; i<30; ++i)
+    for(int i=0; i<panjang; ++i)
     {
-        for(int j=0; j<30; ++j)
+        for(int j=0; j<lebar; ++j)
         {
             cout << '.';
         }
@@ -155,9 +161,9 @@ void World::tangkapLayar()
 	bool found = false;
 	ofstream out("out.txt");
 
-	for(int i=0; i<30; ++i)
+	for(int i=0; i<panjang; ++i)
 	{
-		for(int j=0; j<30; ++j)
+		for(int j=0; j<lebar; ++j)
 		{
 			found = false;
 			for(int k=0; k<get_size(); k++)
@@ -355,6 +361,15 @@ void World::killAll()
 	}
 }
 
+int World::getPanjang()
+{
+	return panjang;
+}
+
+int World::getLebar()
+{
+	return lebar;
+}
 
 //private//=======================================================================================
 void World::resetCursor()

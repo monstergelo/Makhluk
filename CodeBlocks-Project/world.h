@@ -1,6 +1,3 @@
-
-
-using namespace std;
 #include "Point.h"
 #include <iostream>
 #include <fstream>
@@ -12,11 +9,10 @@ using namespace std;
 #include <chrono>
 #include <mutex>
 #include <stdio.h>
-//#include "moderatorMakhlukHidup.h"
 #include "konduktorMakhlukHidup.h"
 #include "administratorMakhlukHidup.h"
 
-
+using namespace std;
 /**
  *  A World is a singleton that 
  *	contains information of all object within it and capable to display them.
@@ -25,6 +21,7 @@ using namespace std;
 class World: public KonduktorMakhlukHidup, public AdministratorMakhlukHidup
 {
 public:
+	World();
 	/**
 	 *  Draw an empty world (all dot)
 	 */
@@ -77,6 +74,9 @@ public:
 	void activate();
 	void killAll();
 	mutex d;
+
+	int getPanjang();
+	int getLebar();
 
 private:
 	//atribut

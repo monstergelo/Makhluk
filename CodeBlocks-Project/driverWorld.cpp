@@ -17,13 +17,6 @@ int main()
 	typedef void (KonduktorMakhlukHidup::*hidup_karnivora)(Karnivora&);
 	typedef void (KonduktorMakhlukHidup::*hidup_omnivora)(Omnivora&);
 
-	
-	thread l(listenKey);
-	Sleep(1000);
-	cout << opsi << endl;
-	Sleep(2000);
-
-
 	Point P1(5,18);
 	Polisi m1(P1);
 	Point P2(2,29);
@@ -40,7 +33,9 @@ int main()
 	W.fill(&m3);
 	W.fill(&m4);
 
+	int border = (W.getPanjang() < W.getLebar())?W.getPanjang():W.getLebar();
 
+	thread l(listenKey);
 
 	Point P3(0,31);
 
@@ -79,7 +74,7 @@ int main()
 	{       
 		if((opsi >= '0') && (opsi <= '9'))
 		{
-			P9 = Point(30); 
+			P9 = Point(border); 
 			new thread(&World::creation, &W, P9, opsi);
 			opsi = 'W';
 		}
