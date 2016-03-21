@@ -1,7 +1,7 @@
 #include "Karnivora.h"
 
 Karnivora::Karnivora() : Hewan(){
-    deltaKecepatan = 0;
+    deltaKecepatan = 1;
     melambat = false;
 }
 
@@ -44,15 +44,18 @@ int Karnivora::getDeltaKecepatan(){
 
 void Karnivora::prosesMelambat(){
     int newKecepatan;
-    if (!getMelambat()){
-        if (get_tingkat_kekenyangan() <= ((8*get_maks_tingkat_kekenyangan())/10)){
+    if (get_tingkat_kekenyangan() >= ((8*get_maks_tingkat_kekenyangan())/10)){
+        if (!getMelambat()){
             newKecepatan = get_Kecepatan() - deltaKecepatan;
             set_Kecepatan(newKecepatan);
             setMelambat(true);
         }
-        else{
+    }
+    else{
+        if (getMelambat()){
             newKecepatan = get_Kecepatan() + deltaKecepatan;
             set_Kecepatan(newKecepatan);
+            setMelambat(false);
         }
     }
 }
@@ -65,7 +68,8 @@ void Karnivora::Reaction(MakhlukHidup& M){
                 setMati(true);
         } else if (isPredator(M.get_DNA())) {
                 setMati(true);
-        }
+        } else if (isTarget(M.get_DNA()))
+            set_tingkat_kekenyangan(get_maks_tingkat_kekenyangan());
     }else if (isRadius(3,M.getPosisi())){
         if (isTarget(M.get_DNA()) && (M.get_DNA() != '!'))
             set_Arah_Memburu(getPosisi(),M.getPosisi());

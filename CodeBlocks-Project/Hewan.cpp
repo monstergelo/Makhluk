@@ -90,8 +90,8 @@ void Hewan::gerak_memburu(Point Target){
 //Membuat gerakan dengan arah menjauhi suatu titik;
 
 void Hewan::gerak_berarah(){
-{
+    tingkat_kekenyangan--;
+    hewanMati();
     setPosisi(Gerak::gerak_berarah(getPosisi()));
-}
 }
 //Membuat gerakan arah yang ditentukan
