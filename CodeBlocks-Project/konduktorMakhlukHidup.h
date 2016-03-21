@@ -26,22 +26,27 @@ public:
 	//method
 	/**
  	* 	Told a Manusia to do it's behaviour
+ 	* 	@param a Manusia
  	*/	
-	void hidup(Manusia&); //menghidupkan semua makhluk hidup
+	void hidup(Manusia&);
 	/**
 	 *  Told a Herbivora to do it's behaviour
+	 * 	@param a Herbivore
 	 */
 	void hidup(Herbivora&);
 	/**
 	 *  Told a Karnivora to do it's behaviour
+	 *  @param a Karnivora
 	 */
 	void hidup(Karnivora&);
 	/**
 	 *  Told a Omnivora to do it's behaviour
+	 * 	@param a Omnivora
 	 */
 	void hidup(Omnivora&);
 	/**
 	 *  Told a Tumbuhan to do it's behaviour
+	 * 	@param a Tumbuhan
 	 */
 	void hidup(Tumbuhan&);
 	/**
@@ -54,22 +59,27 @@ public:
 	void resume();
 	/**
 	 *  Increase the umur of a MakhlukHidup
+	 * 	@param a MakhlukHidup
 	 */
 	void aging(MakhlukHidup&);
 	/**
 	 *  Set the value of batasBawah
+	 *  @param an integer
 	 */
 	void setBawah(int);
 	/**
 	 *  Set the value of batasSamping
+	 * 	@param an integer
 	 */
 	void setSamping(int);
 	/**
 	 *  returns the value of batasBawah
+	 * 	@return an integer
 	 */
 	int GetBawah();
 	/**
 	 *  returns the value of batasSamping
+	 * 	@return an integer
 	 */
 	int GetSamping();
 
