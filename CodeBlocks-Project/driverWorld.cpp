@@ -123,14 +123,21 @@ int main()
 		else if(opsi == 'p')
 		{
 			W.pause();
+			opsi = 'W';
 		}
-		else if(opsi == '\n')
+		else if(opsi == 'c')
 		{
 			W.tangkapLayar();
+			opsi = 'W';
 		}
-		else
+		else if(opsi == ' ')
 		{
 			W.resume();
+			opsi = 'W';
+		}
+		else if(opsi == 'x')
+		{
+			W.killAll();
 		}
 
 		W.draw(P3, W.get_count());
@@ -138,10 +145,10 @@ int main()
 
 	W.draw(P3, '.');
 	cout << "GameOver";
-	t0.join();
-	t1.join();
-	t2.join();
-	t3.join();
+	t0.detach();
+	t1.detach();
+	t2.detach();
+	t3.detach();
 //	t4.detach();
 //	t5.detach();
 	l.detach();

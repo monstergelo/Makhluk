@@ -160,13 +160,13 @@ void World::tangkapLayar()
 		for(int j=0; j<30; ++j)
 		{
 			found = false;
-			for(int k=0; k<get_size(); ++k)
+			for(int k=0; k<get_size(); k++)
 			{
-				if((get_daftar(k) != NULL) && (get_daftar(k)->getPosisi().getAbsis()==i) && (get_daftar(k)->getPosisi().getOrdinat()==j))
+				if((get_daftar(k) != NULL) && (get_daftar(k)->getPosisi().getAbsis()==j) && (get_daftar(k)->getPosisi().getOrdinat()==i))
 				{
 					out << get_daftar(k)->get_DNA();
 					found = true;
-					break;
+					//break;
 				}
 			}
 			if(!found) out << ".";
@@ -225,13 +225,17 @@ void World::creation(Point P, char opsi)
 	}	
 }
 
-void World::activate()
+void World::killAll()
 {
-	for(int i=0; i<W.get_size(); ++i)
+	for(int i=0; i<get_size(); ++i)
 	{
-		new thread((hidup_manusia)(&KonduktorMakhlukHidup::hidup), this, ref(*get_daftar(i)));
+		if(get_daftar(i) != NULL)
+		{
+			get_daftar(i)->setMati(true);
+		}
 	}
 }
+
 
 //private//=======================================================================================
 void World::resetCursor()
