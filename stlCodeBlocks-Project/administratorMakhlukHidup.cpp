@@ -97,7 +97,6 @@ void AdministratorMakhlukHidup::sinyal(int i1, int i2)
 		Sleep(100);
 	}
 }
-
 void AdministratorMakhlukHidup::newSinyal(int index)
 {
 	typedef void (AdministratorMakhlukHidup::*my_sinyal)(int, int);
@@ -123,11 +122,10 @@ void AdministratorMakhlukHidup::newSinyal(int index)
 	{
 		for(int i=0; i<size; ++i)
 		{
-			pemantauObjek[index][i] = NULL;
+				pemantauObjek[index][i] = NULL;
 		}
 	}
 }
-
 void AdministratorMakhlukHidup::activate()
 {
 	
@@ -152,7 +150,7 @@ int AdministratorMakhlukHidup::get_count()
 	return count;
 }
 
-MakhlukHidup** AdministratorMakhlukHidup::get_daftar()
+vector<MakhlukHidup*> AdministratorMakhlukHidup::get_daftar()
 {
 	return daftar;
 }
