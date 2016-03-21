@@ -2,11 +2,13 @@
 
 class Pohon : public Tumbuhan {
 public:
-	Pohon(int=0 , char='*' , int=0 , Point=PAwal ,char* predators=NULL);
+	Pohon(Point=PAwal);
 	~Pohon();
 	Pohon(const Pohon&);
 	Pohon& operator=(const Pohon&);
 	void Reaction(MakhlukHidup&);
 private:
-
+	const static int batasumur_Pohon = 10;
+    const static int ulangtahun_Pohon = 2;
+    const static int DNA_Pohon = '!';
 };
