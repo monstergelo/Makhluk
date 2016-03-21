@@ -7,6 +7,7 @@
 #include <thread>
 #include <windows.h>
 #include <vector>
+#include <algorithm>
 #include "Gajah.h"
 #include "Polisi.h"
 #include "Hyena.h"
@@ -68,7 +69,7 @@ public:
 	//getter
 	int get_size();
 	int get_count();
-	MakhlukHidup** get_daftar();
+	vector<MakhlukHidup*> get_daftar();
 	MakhlukHidup* get_daftar(int i);
 	thread* get_pemantau(int index, int i);	
 
@@ -79,8 +80,8 @@ public:
 private:
 	int size; //banyak makhluk maksimal
 	int count; //banyak makhluk dalam daftar
-	vector<MakhlukHidup> daftar;  		//array pointer objek makhluk
-	vector<vector<thread>> pemantauObjek;   //masing-masing memantau reaksi objek terhadap
+	vector<MakhlukHidup*> daftar;  		//array pointer objek makhluk
+	vector<vector<thread*>> pemantauObjek;   //masing-masing memantau reaksi objek terhadap
 									   //satu objek lainnya
 
 
