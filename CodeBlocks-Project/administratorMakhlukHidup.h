@@ -22,7 +22,6 @@ using namespace std;
 /**
  *  Class for monitoring interaction between object within the world
  */
-//class untuk memasukkan/mendaftar makhluk dalam world serta mematikannya
 class AdministratorMakhlukHidup
 {
 public:
@@ -36,33 +35,41 @@ public:
 	 */
 	~AdministratorMakhlukHidup();
 
-	//method
 	/**
- 	*  put in a MakhlukHidup in the monitored list
+ 	*  	A member procedure that take one arguments
+ 	* 	put in a MakhlukHidup in the monitored list
+ 	*  	@param a MakhlukHidup, an input Makhluk Hidup that want to be inserted
  	*/
 	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
 	/**
- 	*  put out a MakhlukHidup in the monitored list with certain pointer
+ 	*  	put out a MakhlukHidup in the monitored list with certain pointer
+ 	* 	@param A MakhlukHidup pointer, the address of MakhlukHidup
  	*/	
 	void pluck(MakhlukHidup*);//mengeluarkan makhluk dari daftar berdasarkan indeks
 	/**
- 	*  put out a MakhlukHidup in the monitored list with certain index
+ 	*  	put out a MakhlukHidup in the monitored list with certain index
+ 	* 	@param an integer
  	*/		
 	void pluck(int);
 	/**
+	*  A member procedure
  	*  create a thread to monitor each pair of MakhlukHidup
  	*/	
 	void sinyal();
 	/**
  	*  create a thread to monitor a MakhlukHidup to rest of it's peers
+ 	*  @param an integer
  	*/	
 	void sinyal(int);
 	/**
  	*  create a thread to monitor a MakhlukHidup with another
+ 	*  @param an integer, the index of the first organism
+ 	*  @param an integer, the index of the second organism
  	*/	
 	void sinyal(int, int);
 	/**
 	 *  create a thread to monitor a newly created MakhlukHidup during runtime
+	 * 	@param an integer
 	 */
 	void newSinyal(int);
 	/**
@@ -70,43 +77,54 @@ public:
 	 */
 	void check();
 	/**
- 	*  return number of thread that monitors interaction between MakhlukHidup
+ 	*   return number of thread that monitors interaction between MakhlukHidup
+ 	* 	@return an integer
  	*/	
 	int pemantau_count();
 	/**
 	 *  search the index of daftar which contains specific pointer of MakhlukHidup
+	 * 	@return an integer
 	 */
 	int searchDaftar(MakhlukHidup*);
 
 	//getter
 	/**
 	 *  returns the value of size
+	 * 	@return an integer
 	 */
 	int get_size();
 	/**
-	 *  returns the value of count
+	 *  getter for count and returns the value of count
+	 *  @return an integer
 	 */
 	int get_count();
 	/**
 	 *  returns the value daftar
+	 *  @return the whole list
 	 */
 	MakhlukHidup** get_daftar();
 	/**
 	 *  returns the value daftar[i]
+	 * 	@param an integer
+	 * 	@return a Makhluk Hidup in a certain index
 	 */
 	MakhlukHidup* get_daftar(int i);
 	/**
 	 *  returns the value of pemantau[index][i]
+	 * 	@param an integer for row index
+	 * 	@param an integer for column index
+	 * 	@return an address of the thread
 	 */
 	thread* get_pemantau(int index, int i);	
 
-	//setter
 	/**
-	 *  set the value of size
+	 *  set the value of size with an input integer
+	 *  @param an integer
 	 */
 	void set_size(int);
 	/**
 	 *  set the value of count
+	 *  @param an integer
 	 */
 	void set_count(int);
 
@@ -122,17 +140,12 @@ private:
 	/**
 	 *  Holds array of MakhlukHidup to be used in world
 	 */
-	MakhlukHidup *daftar[10];  		//array pointer objek makhluk
+	MakhlukHidup *daftar[10];  		
 	/**
 	 *  Thread to control interaction between each pair of MakhlukHidup within daftar
 	 */
-	thread *pemantauObjek[10][10];   //masing-masing memantau reaksi objek terhadap
-									   //satu objek lainnya
+	thread *pemantauObjek[10][10];  
 
-
-
-
-	//helper
 	/**
 	 *  initialize daftar with NULL
 	 */
