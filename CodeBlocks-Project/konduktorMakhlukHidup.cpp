@@ -20,7 +20,10 @@ void KonduktorMakhlukHidup::aging(MakhlukHidup& m1)
 {
 	while(1)
 	{
-		m1.menua();
+		if(lifeState == 1)
+		{
+			m1.menua();
+		}
 		sleep_for(nanoseconds(1000000000));
 	}
 }
