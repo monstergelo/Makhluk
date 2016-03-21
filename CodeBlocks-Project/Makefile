@@ -31,7 +31,7 @@ world:
 	g++ -std=c++11 -c administratorMakhlukHidup.h administratorMakhlukHidup.cpp
 	g++ -std=c++11 -c konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp
 	g++ -std=c++11 -c world.h world.cpp
-	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.h Point.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp Tumbuhan.cpp Rumput.cpp Pohon.cpp Harimau.cpp Mandril.cpp BurungUnta.cpp
+	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp Tumbuhan.cpp Rumput.cpp Pohon.cpp Harimau.cpp Mandril.cpp BurungUnta.cpp
 	
 konduktor:
 	g++ -std=c++11 -o driverKon konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp driverKonduktor.cpp Manusia.cpp Gerak.cpp MakhlukHidup.cpp Point.cpp HuntingSkill.cpp

@@ -62,6 +62,14 @@ private:
 	 *  a flag to pause method hidup
 	 */
 	int lifeState;
+	/**
+	 *  bottom edge of map
+	 */
+	int batasBawah;
+	/**
+	 *  right edge of map
+	 */
+	int batasSamping;
 };
 
 #endif

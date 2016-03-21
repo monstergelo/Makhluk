@@ -140,11 +140,6 @@ void AdministratorMakhlukHidup::newSinyal(int index)
 	}
 }
 
-void AdministratorMakhlukHidup::activate()
-{
-	
-}
-
 void AdministratorMakhlukHidup::check()
 {
 	for(int i=0; i<count; ++i)

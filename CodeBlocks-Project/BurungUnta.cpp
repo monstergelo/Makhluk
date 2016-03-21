@@ -43,7 +43,11 @@ void BurungUnta::Reaction(MakhlukHidup& M) {
 				prosesMempercepat();
 				gerak_bebas();
 			}
+			else{
+				set_Arah_Bebas();
+			}
 		} else {
+			set_Arah_Bebas();
 			set_Kecepatan(kecepatan_BurungUnta);
 		}
 	}
