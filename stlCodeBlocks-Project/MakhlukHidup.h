@@ -7,6 +7,8 @@
 #include "Point.h"
 #include <stdlib.h>
 
+using namespace std;
+
 /**
  * A Global Value
  * A Point with cordinate (0,0)

@@ -8,6 +8,8 @@ gerak:
 	g++ -std=c++11 -o Gerak Gerak.cpp Gerak.h driverGerak.cpp Point.h Point.cpp
 rumputc:
 	g++ -std=c++11 -c Rumput.h Rumput.cpp
+apac:
+	g++ -std=c++11 -c MakhlukHidup.h MakhlukHidup.cpp
 world:
 	g++ -std=c++11 -c BurungUnta.h BurungUnta.cpp
 	g++ -std=c++11 -c Gajah.h Gajah.cpp
@@ -24,13 +26,14 @@ world:
 	g++ -std=c++11 -c Manusia.h Manusia.cpp
 	g++ -std=c++11 -c Gerak.h Gerak.cpp
 	g++ -std=c++11 -c HuntingSkill.h HuntingSkill.cpp
-	g++ -std=c++11 -c administratorMakhlukHidup.h administratorMakhlukHidup.cpp
-	g++ -std=c++11 -c konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp
-	g++ -std=c++11 -c world.h world.cpp
 	g++ -std=c++11 -c Pemburu.h Pemburu.cpp
 	g++ -std=c++11 -c Pohon.h Pohon.cpp
 	g++ -std=c++11 -c Rumput.h Rumput.cpp
-	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.h Point.cpp moderatorMakhlukHidup.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp Tumbuhan.cpp Rumput.cpp
+	g++ -std=c++11 -c Point.h Point.cpp
+	g++ -std=c++11 -c administratorMakhlukHidup.h administratorMakhlukHidup.cpp
+	g++ -std=c++11 -c konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp
+	g++ -std=c++11 -c world.h world.cpp
+	g++ -std=c++11 -o world driverWorld.cpp world.h world.cpp Point.h Point.cpp administratorMakhlukHidup.cpp konduktorMakhlukHidup.cpp Manusia.cpp MakhlukHidup.cpp HuntingSkill.cpp Gerak.cpp Polisi.cpp Hewan.cpp Herbivora.cpp Gajah.cpp Karnivora.cpp Hyena.cpp Omnivora.cpp Beruang.cpp Pemburu.cpp Tumbuhan.cpp Rumput.cpp Pohon.cpp Harimau.cpp Mandril.cpp BurungUnta.cpp
 	
 konduktor:
 	g++ -std=c++11 -o driverKon konduktorMakhlukHidup.h konduktorMakhlukHidup.cpp driverKonduktor.cpp Manusia.cpp Gerak.cpp MakhlukHidup.cpp Point.cpp HuntingSkill.cpp
