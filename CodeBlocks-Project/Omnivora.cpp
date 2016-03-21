@@ -54,5 +54,9 @@ void Omnivora::Reaction(MakhlukHidup& M){
     } else if (isRadius(2,M.getPosisi())){
         if (isTarget(M.get_DNA()))
             gerak_memburu(M.getPosisi());
+        else
+            set_Arah_Bebas();
+    }else{
+        set_Arah_Bebas();
     }
 }

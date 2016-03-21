@@ -77,10 +77,10 @@ int main()
 
 	while(!W.isGameOver())
 	{       
-		if(opsi == '1')
+		if((opsi >= '0') && (opsi <= '9'))
 		{
 			P9 = Point(30); 
-			new thread(&World::creation, &W, P9, '1');
+			new thread(&World::creation, &W, P9, opsi);
 			opsi = 'W';
 		}
 		else if(opsi == 'p')
