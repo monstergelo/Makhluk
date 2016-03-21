@@ -190,7 +190,7 @@ void World::creation(Point P, char opsi)
 			case '1' :
 			{
 				Polisi *m = new Polisi(P);
-				fill(m);
+				fillDaftar(m);
 				int i = searchDaftar(m);
 				typedef void (KonduktorMakhlukHidup::*myHidup)(Manusia&);
 				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
@@ -208,7 +208,7 @@ void World::creation(Point P, char opsi)
 				cout << "wewe" << endl;
 				MakhlukHidup *m = new Herbivora;
 				m->setPosisi(P);
-				fill(m);
+				fillDaftar(m);
 				break;
 			} 
 
@@ -217,7 +217,7 @@ void World::creation(Point P, char opsi)
 				cout << "wowo" << endl;
 				MakhlukHidup *m = new Herbivora;
 				m->setPosisi(P);
-				fill(m);
+				fillDaftar(m);
 				break;
 			} 
 */			
