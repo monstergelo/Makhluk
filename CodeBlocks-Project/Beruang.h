@@ -3,7 +3,7 @@
 
 #include "Omnivora.h"
 /**
- *  Class for constructing an omnivore called Beruan
+ *  Class for constructing an omnivore called Beruang
  */
 
 class Beruang: public Omnivora{
@@ -22,7 +22,7 @@ class Beruang: public Omnivora{
 		 */
         Beruang& operator=(const Beruang&);
         /**
-		 *  an operator=
+		 *  a destructor
 		 */
         ~Beruang();
     private :
