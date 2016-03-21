@@ -30,6 +30,9 @@ public:
 	 *  Draw all current object within world
 	 */
 	void updateDisplay();							//pindah posisi makhluk
+	/**
+	 *  Draw the new position of an object within world
+	 */
 	void updateMakhluk(int i);
 	/**
 	 *  Draw display at Pc and remove the previous drawing at Px
@@ -71,22 +74,52 @@ public:
  	*  create a new MakhlukHidup and put it in monitored list
  	*/	
 	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
-	void activate();
+	/**
+	 *  Kill all object
+	 */
 	void killAll();
+
+	/**
+	 *  mutex for draw
+	 */
 	mutex d;
 
+	/**
+	 *  returns the value of panjang
+	 */
 	int getPanjang();
+	/**
+	 *  returns the value of lebar
+	 */
 	int getLebar();
 
 private:
 	//atribut
+	/**
+	 *  length of the world
+	 */
 	int panjang;
+	/**
+	 *  width of the world
+	 */
 	int lebar;
 
 
 	//method pembantu
+	/**
+	 *  move cursor to point(0,0)
+	 */
 	void resetCursor();
+	/**
+	 *  move cursor to point(x, y)
+	 */
 	void moveCursor(int, int);
+	/**
+	 *  set cursor to hidden or not
+	 */
 	void cursorSwitch(bool b);
+	/**
+	 *  clear the screen
+	 */
 	void clear();
 };
