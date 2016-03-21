@@ -32,7 +32,6 @@ int main()
 	typedef void (KonduktorMakhlukHidup::*hidup_manusia)(Manusia&);
 	typedef void (KonduktorMakhlukHidup::*hidup_karnivora)(Karnivora&);
 	typedef void (KonduktorMakhlukHidup::*hidup_omnivora)(Omnivora&);
-	typedef void (KonduktorMakhlukHidup::*hidup_tumbuhan)(Tumbuhan&);
 
 
 
@@ -43,15 +42,14 @@ int main()
 	Point P5(20,18);
 	Pemburu m3(P5);
 	Point P4(15,29);
-	Rumput m4(P4);
+	Pemburu m4(P4);
 	Point P9(13,18);
-
-
+/*
 	World W;
-	W.fill(&m1);
-	W.fill(&m2);
-	W.fill(&m3);
-	W.fill(&m4);
+	W.fillDaftar(&m1);
+	W.fillDaftar(&m2);
+	W.fillDaftar(&m3);
+	W.fillDaftar(&m4);
 
 
 
@@ -70,17 +68,17 @@ int main()
 	W.initDraw(m4);
 
 	//pantau makhluk
-	W.sinyal();
+//	W.sinyal();
 
 	//hidupkan makhluk
 	thread t0((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m1));
 	thread t1((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m2));
 	thread t2((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m3));
-	thread t3((hidup_tumbuhan)(&KonduktorMakhlukHidup::hidup), &W, ref(m4));
+	thread t3((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m4));
 
 
 	//tampilkan dunia
-
+/*
 	thread *d[W.get_size()];
 
 	for(int i=0; i<W.get_size(); ++i)
@@ -98,11 +96,6 @@ int main()
 	W.tangkapLayar();
 	Sleep(2000);
 	W.resume();
-	/*for(int i=0; i<W.get_size(); ++i)
-	{
-		if(W.get_daftar(i) != NULL)
-			d[i] = new thread(&World::updateMakhluk, &W, i);
-	}*/
 	while(!W.isGameOver())
 	{
 			W.draw(P3, W.get_count());
@@ -129,5 +122,9 @@ int main()
 		}
 	}
 
+	t0.join();
+	t1.join();
+	t2.join();
+	t3.join();*/
 	return 0;
 }
