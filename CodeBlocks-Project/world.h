@@ -11,6 +11,7 @@ using namespace std;
 #include <thread>
 #include <chrono>
 #include <mutex>
+#include <stdio.h>
 //#include "moderatorMakhlukHidup.h"
 #include "konduktorMakhlukHidup.h"
 #include "administratorMakhlukHidup.h"
@@ -73,7 +74,8 @@ public:
  	*  create a new MakhlukHidup and put it in monitored list
  	*/	
 	void creation(Point, char);//memilih makhluk dan memasukkannya dalam daftar
-
+	void activate();
+	void killAll();
 	mutex d;
 
 private:
