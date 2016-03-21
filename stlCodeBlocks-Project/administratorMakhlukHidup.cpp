@@ -66,7 +66,7 @@ void AdministratorMakhlukHidup::sinyal(int index)
 			}
 			else
 			{
-				pemantauObjek[index][i] = NULL;
+				//pemantauObjek[index][i] = NULL;
 			}
 		}
 	}
@@ -74,7 +74,7 @@ void AdministratorMakhlukHidup::sinyal(int index)
 	{
 		for(int i=0; i<size; ++i)
 		{
-			pemantauObjek[index][i] = NULL;
+			//pemantauObjek[index][i] = NULL;
 		}
 	}
 }
@@ -113,8 +113,8 @@ void AdministratorMakhlukHidup::newSinyal(int index)
 			}
 			else
 			{
-				pemantauObjek[index][i] = NULL;
-				pemantauObjek[i][index] = NULL;
+				//pemantauObjek[index][i] = NULL;
+				//pemantauObjek[i][index] = NULL;
 			}
 		}
 	}
@@ -122,7 +122,7 @@ void AdministratorMakhlukHidup::newSinyal(int index)
 	{
 		for(int i=0; i<size; ++i)
 		{
-				pemantauObjek[index][i] = NULL;
+				//pemantauObjek[index][i] = NULL;
 		}
 	}
 }

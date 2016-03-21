@@ -4,6 +4,7 @@ MakhlukHidup::MakhlukHidup(int _umur, char _DNA, int _ulangtahun, Point P) : uku
     umur = 0;
     DNA = _DNA;
     ulang_tahun = _ulangtahun;
+    predator = new char[ukuran_predator];
     for (int i=0; i<ukuran_predator; i++)
         predator[i] = ' ';
     mati = false;
@@ -16,6 +17,7 @@ MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(M.ukuran_pre
     posisi  = M.posisi;
     PPosisi = M.PPosisi;
     ulang_tahun = M.ulang_tahun;
+    predator = new char[ukuran_predator];
     for (int i = 0; i < ukuran_predator; i++){
         predator[i] = M.predator[i];
     }
@@ -23,14 +25,15 @@ MakhlukHidup::MakhlukHidup(const MakhlukHidup& M) : ukuran_predator(M.ukuran_pre
 }
 
 MakhlukHidup::~MakhlukHidup(){
-    predator.clear();
+    delete [] predator;
 }
 
 MakhlukHidup& MakhlukHidup::operator=(const MakhlukHidup& M){
-    predator.clear();
+    delete [] predator;
     umur = M.umur;
     DNA = M.DNA;
     ulang_tahun = M.ulang_tahun;
+    predator = new char[ukuran_predator];
     for (int i = 0; i < ukuran_predator; i++){
         predator[i] = M.predator[i];
     }
