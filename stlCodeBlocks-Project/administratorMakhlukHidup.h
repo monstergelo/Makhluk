@@ -6,12 +6,17 @@
 #include <iostream>
 #include <thread>
 #include <windows.h>
+#include <vector>
 #include "Gajah.h"
 #include "Polisi.h"
 #include "Hyena.h"
 #include "Beruang.h"
 #include "Pemburu.h"
 #include "Rumput.h"
+#include "Pohon.h"
+#include "BurungUnta.h"
+#include "Harimau.h"
+#include "Mandril.h"
 
 using namespace std;
 
@@ -30,7 +35,7 @@ public:
 	/**
  	*  put in a MakhlukHidup in the monitored list
  	*/
-	void fill(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
+	void fillDaftar(MakhlukHidup*);//memasukkan makhluk ke dalam daftar
 	/**
  	*  put out a MakhlukHidup in the monitored list with certain pointer
  	*/	
@@ -74,8 +79,8 @@ public:
 private:
 	int size; //banyak makhluk maksimal
 	int count; //banyak makhluk dalam daftar
-	MakhlukHidup *daftar[10];  		//array pointer objek makhluk
-	thread *pemantauObjek[10][10];   //masing-masing memantau reaksi objek terhadap
+	vector<MakhlukHidup> daftar;  		//array pointer objek makhluk
+	vector<vector<thread>> pemantauObjek;   //masing-masing memantau reaksi objek terhadap
 									   //satu objek lainnya
 
 

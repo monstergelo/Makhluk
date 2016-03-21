@@ -7,34 +7,22 @@ using namespace std;
 //ctor,  dtor
 AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 {
-	size = 10;
+	size = 0;
 	//daftar = new MakhlukHidup[size];
-	initDaftar();
 	count = 0;
 
 }
 
 AdministratorMakhlukHidup::~AdministratorMakhlukHidup()
 {
-	for(int i=0; i<10; ++i)
-	{
-		delete daftar[i];
-	}
+	daftar.clear();
+	pemantauObjek.clear();
 }
 
-void AdministratorMakhlukHidup::fill(MakhlukHidup* n)
+void AdministratorMakhlukHidup::fillDaftar(MakhlukHidup* n)
 {
-	int i = 0;
-	while(i<size)
-	{
-		if(daftar[i] == NULL)
-		{
-			daftar[i] = n;
-			count++;
-			break;
-		}
-		++i;
-	}
+	daftar.push_back(n);
+	count++;
 }
 
 void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
@@ -43,7 +31,7 @@ void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 	{
 		if(daftar[i] == n)
 		{
-			daftar[i] = NULL;
+			daftar.erase(daftar.begin()+i);
 			count--;
 			break;
 		}
@@ -52,7 +40,7 @@ void AdministratorMakhlukHidup::pluck(MakhlukHidup* n)
 
 void AdministratorMakhlukHidup::pluck(int i)
 {
-	daftar[i] = NULL;
+	daftar.erase(daftar.begin()+i);
 	count--;
 }
 
@@ -152,14 +140,6 @@ void AdministratorMakhlukHidup::check()
 		if(daftar[i]!=NULL)
 			cout << i << " " << daftar[i]->getPosisi().getAbsis() << " " << daftar[i]->getPosisi().getOrdinat	() << endl; 
 	}	
-}
-
-void AdministratorMakhlukHidup::initDaftar()
-{
-	for(int i=0; i<size; ++i)
-	{
-		daftar[i] = NULL;
-	}
 }
 
 int AdministratorMakhlukHidup::get_size()
