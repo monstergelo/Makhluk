@@ -29,7 +29,7 @@ class Harimau : public Karnivora{
 		/**
 		 * A static constant value of Harimau's age limit
 		 */
-        const static int batasumur_Harimau = 10;
+        const static int batasumur_Harimau = 99;
         /**
 		 * A static constant value of Harimau's birthday
 		 */
@@ -41,11 +41,11 @@ class Harimau : public Karnivora{
         /**
 		 * A static constant value of Harimau's velocity
 		 */
-        const static int kecepatan_Harimau = 8;
+        const static int kecepatan_Harimau = 3;
         /**
 		 * A static constant value of Harimau's acceleration
 		 */
-        const static int deltaKecepatan_Harimau = 3;
+        const static int deltaKecepatan_Harimau = 2;
 };
 
 
