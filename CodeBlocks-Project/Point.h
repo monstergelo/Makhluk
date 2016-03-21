@@ -5,8 +5,9 @@ class Point {
 
 public :
     //CTOR
+    Point();
     Point(int range);
-    Point(int _x = 0, int _y = 0);
+    Point(int _x, int _y);
     //CCTOR tidak perlu
     //DTOR tidak perlu
     //OPERATOR =

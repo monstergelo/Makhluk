@@ -177,16 +177,10 @@ void World::tangkapLayar()
 
 void World::creation(Point P, char opsi)
 {
-	if((get_count() < get_size()) && (opsi != '0'))
+	if(get_count() < get_size())
 	{
 		switch (opsi)
 		{
-			case '0' :
-			{
-				cout << "wawa" << endl;
-				break;
-			}
-
 			case '1' :
 			{
 				Polisi *m = new Polisi(P);
@@ -202,25 +196,150 @@ void World::creation(Point P, char opsi)
 				t2.join();
 				break;
 			} 
-/*
+
 			case '2' :
 			{
-				cout << "wewe" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
+				Gajah *m = new Gajah(P);
 				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Herbivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
 				break;
 			} 
 
 			case '3' :
 			{
-				cout << "wowo" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
+				Hyena *m = new Hyena(P);
 				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Karnivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
 				break;
 			} 
-*/			
+
+			case '4' :
+			{
+				Beruang *m = new Beruang(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Omnivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '5' :
+			{
+				Pemburu *m = new Pemburu(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Manusia&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '6' :
+			{
+				Rumput *m = new Rumput(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Tumbuhan&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '7' :
+			{
+				Pohon *m = new Pohon(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Tumbuhan&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '8' :
+			{
+				BurungUnta *m = new BurungUnta(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Herbivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '9' :
+			{
+				Harimau *m = new Harimau(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Karnivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
+
+			case '0' :
+			{
+				Mandril *m = new Mandril(P);
+				fill(m);
+				int i = searchDaftar(m);
+				typedef void (KonduktorMakhlukHidup::*myHidup)(Omnivora&);
+				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
+				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
+				thread t1(&World::updateMakhluk, this, i);
+				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
+				t.join();
+				t1.join();
+				t2.join();
+				break;
+			} 
 		}
 	}	
 }

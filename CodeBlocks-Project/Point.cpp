@@ -5,6 +5,11 @@ std::random_device acak;
 std::mt19937 mt1(acak());
 
 //CTOR
+Point::Point(){
+    x = 0;
+    y = 0;
+}
+
 Point::Point(int range) {
     std::uniform_int_distribution<int> distance(0, (range-1));
     int sumbuX = distance(mt1);
