@@ -10,9 +10,9 @@ public:
     //services
     void Reaction(MakhlukHidup&);
 private:
-  const static int batasumur_BurungUnta = 10;
+  const static int batasumur_BurungUnta = 20;
   const static int ulangtahun_BurungUnta = 2;
-  const static int maksimum_tingkat_kekenyangan_BurungUnta = 9;
+  const static int maksimum_tingkat_kekenyangan_BurungUnta = 70;
   const static int kecepatan_BurungUnta = 5;
   const static int deltaKecepatan_BurungUnta = 2;
   const static char DNA_BurungUnta = 'u';

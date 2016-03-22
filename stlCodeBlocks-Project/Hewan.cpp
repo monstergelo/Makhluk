@@ -89,10 +89,7 @@ void Hewan::gerak_memburu(Point Target){
 }
 //Membuat gerakan dengan arah menjauhi suatu titik;
 
-void Hewan::gerak_berarah(int _arah){
-    setPrecPosisi(getPosisi());
-    Gerak::set_Arah(_arah);
-    setPosisi(Gerak::gerak_berarah(getPosisi()));
+void Hewan::gerak_berarah(){
     tingkat_kekenyangan--;
     hewanMati();
     if (!isMati()){
@@ -104,5 +101,6 @@ void Hewan::gerak_berarah(int _arah){
             setMemburu(false);
         }
     }
+    setPosisi(Gerak::gerak_berarah(getPosisi()));
 }
 //Membuat gerakan arah yang ditentukan

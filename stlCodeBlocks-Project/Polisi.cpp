@@ -36,7 +36,7 @@ void Polisi::Reaction(MakhlukHidup& M){
                 setMati(true);
         }
     }else if (isRadius(10,M.getPosisi())){
-        if (isTarget(M.get_DNA()) && (M.get_DNA() != '!')){
+        if (isTarget(M.get_DNA()) && (M.get_DNA() != '^')){
             set_Arah_Memburu(getPosisi(),M.getPosisi());
             setSedangMemburu(true);
         }

@@ -21,29 +21,21 @@ void World::initDisplay()
 //=======================================================================================
 void World::updateDisplay()
 {
-	bool end = false;
-	while(!end)
-	{
-		for(int i=0; i<get_size(); ++i)
-		{
-			if(get_daftar(i) != NULL)
-			{
-				if(!get_daftar(i)->isMati())
-				{
-					draw(get_daftar(i));
-					Sleep(100);
-				}
-				else
-				{
-					endDraw(*get_daftar(i));
-					Sleep(3000);
-					pluck(i);
-				}
-			}
-			
-			if(isGameOver()) end = true;
-		}
-	}
+    for(int i=0; i<get_count(); ++i)
+    {
+        if(get_daftar(i) != NULL)
+        {
+            if(!get_daftar(i)->isMati())
+            {
+                draw(get_daftar(i));
+            }
+            else
+            {
+                endDraw(*get_daftar(i));
+                pluck(i);
+            }
+        }
+    }
 }
 
 void World::updateMakhluk(int i)
@@ -65,7 +57,7 @@ void World::updateMakhluk(int i)
 				pluck(i);
 				end = true;
 			}
-		}		
+		}
 	}
 }
 
@@ -160,13 +152,13 @@ void World::tangkapLayar()
 		for(int j=0; j<30; ++j)
 		{
 			found = false;
-			for(int k=0; k<get_size(); ++k)
+			for(int k=0; k<get_size(); k++)
 			{
-				if((get_daftar(k) != NULL) && (get_daftar(k)->getPosisi().getAbsis()==i) && (get_daftar(k)->getPosisi().getOrdinat()==j))
+				if((get_daftar(k) != NULL) && (get_daftar(k)->getPosisi().getAbsis()==j) && (get_daftar(k)->getPosisi().getOrdinat()==i))
 				{
 					out << get_daftar(k)->get_DNA();
 					found = true;
-					break;
+					//break;
 				}
 			}
 			if(!found) out << ".";
@@ -177,52 +169,92 @@ void World::tangkapLayar()
 
 void World::creation(Point P, char opsi)
 {
-	if((get_count() < get_size()) && (opsi != '0'))
+	if(get_count() < get_size())
 	{
 		switch (opsi)
 		{
-			case '0' :
-			{
-				cout << "wawa" << endl;
-				break;
-			}
-
 			case '1' :
 			{
 				Polisi *m = new Polisi(P);
 				fillDaftar(m);
-				int i = searchDaftar(m);
-				typedef void (KonduktorMakhlukHidup::*myHidup)(Manusia&);
-				typedef void (AdministratorMakhlukHidup::*mySinyal)(int);
-				thread t((myHidup)(&KonduktorMakhlukHidup::hidup), this, ref(*m));
-				thread t1(&World::updateMakhluk, this, i);
-				thread t2((mySinyal)(&AdministratorMakhlukHidup::newSinyal), this, i);
-				t.join();
-				t1.join();
-				t2.join();
 				break;
-			} 
-/*
+			}
+
 			case '2' :
 			{
-				cout << "wewe" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
+				Gajah *m = new Gajah(P);
 				fillDaftar(m);
 				break;
-			} 
+			}
 
 			case '3' :
 			{
-				cout << "wowo" << endl;
-				MakhlukHidup *m = new Herbivora;
-				m->setPosisi(P);
+				Hyena *m = new Hyena(P);
 				fillDaftar(m);
 				break;
-			} 
-*/			
+			}
+
+			case '4' :
+			{
+				Beruang *m = new Beruang(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '5' :
+			{
+				Pemburu *m = new Pemburu(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '6' :
+			{
+				Rumput *m = new Rumput(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '7' :
+			{
+				Pohon *m = new Pohon(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '8' :
+			{
+				BurungUnta *m = new BurungUnta(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '9' :
+			{
+				Harimau *m = new Harimau(P);
+				fillDaftar(m);
+				break;
+			}
+
+			case '0' :
+			{
+				Mandril *m = new Mandril(P);
+				fillDaftar(m);
+				break;
+			}
 		}
-	}	
+	}
+}
+
+void World::killAll()
+{
+	for(int i=0; i<get_count(); i++)
+	{
+		if(get_daftar(i) != NULL)
+		{
+			get_daftar(i)->setMati(true);
+		}
+	}
 }
 
 
@@ -258,3 +290,4 @@ void World::clear()
 {
 	system("cls");
 }
+

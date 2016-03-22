@@ -1,6 +1,6 @@
 #include "Pohon.h"
 
-Pohon::Pohon(int _umur, char _DNA, int _ulangtahun, Point P, char* predators) : Tumbuhan(_umur, _DNA, _ulangtahun, P) {
+Pohon::Pohon(Point P) : Tumbuhan(batasumur_Pohon, DNA_Pohon, ulangtahun_Pohon,P) {
 	setPredator(0,'g');
 	setPredator(1,'u');
 }

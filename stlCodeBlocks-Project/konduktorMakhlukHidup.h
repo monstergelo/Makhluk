@@ -18,23 +18,28 @@ public:
 	KonduktorMakhlukHidup();
 	~KonduktorMakhlukHidup();
 
-	
+
 
 	//method
 	/**
  	* 	Told Manusia to do it's behaviour
- 	*/	
+ 	*/
+
+	void hidup(MakhlukHidup&); //menghidupkan semua makhluk hidup
 	void hidup(Manusia&); //menghidupkan semua makhluk hidup
 	void hidup(Herbivora&);
 	void hidup(Karnivora&);
 	void hidup(Omnivora&);
 	void hidup(Tumbuhan&);
+	void setCount(int c);
+	int getCount();
 	void pause();
 	void resume();
 	void aging(MakhlukHidup&);
 
 private:
 	int lifeState;
+	int Count;
 };
 
 #endif

@@ -12,7 +12,7 @@ class Beruang: public Omnivora{
     private :
         const static int batasumur_Beruang = 7;
         const static int ulangtahun_Beruang = 4;
-        const static int maksimum_tingkat_kekenyangan_Beruang = 10;
+        const static int maksimum_tingkat_kekenyangan_Beruang = 70;
         const static int kecepatan_Beruang = 4;
 };
 

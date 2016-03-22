@@ -7,7 +7,6 @@
 #include <thread>
 #include <windows.h>
 #include <vector>
-#include <algorithm>
 #include "Gajah.h"
 #include "Polisi.h"
 #include "Hyena.h"
@@ -52,27 +51,11 @@ public:
 	/**
  	*  create a thread to monitor a MakhlukHidup to rest of it's peers
  	*/	
-	void sinyal(int);
-	/**
- 	*  create a thread to monitor a MakhlukHidup with another
- 	*/	
-	void sinyal(int, int);
-	void newSinyal(int);
-	void activate();
-	void check();
-	/**
- 	*  return number of thread that monitors interaction between MakhlukHidup
- 	*/	
-	int pemantau_count();
-	int searchDaftar(MakhlukHidup*);
-
 	//getter
 	int get_size();
 	int get_count();
 	vector<MakhlukHidup*> get_daftar();
-	MakhlukHidup* get_daftar(int i);
-	thread* get_pemantau(int index, int i);	
-
+	MakhlukHidup* get_daftar(int i);	
 	//setter
 	void set_size(int);
 	void set_count(int);
@@ -80,12 +63,7 @@ public:
 private:
 	int size; //banyak makhluk maksimal
 	int count; //banyak makhluk dalam daftar
-	vector<MakhlukHidup*> daftar;  		//array pointer objek makhluk
-	vector<vector<thread*>> pemantauObjek;   //masing-masing memantau reaksi objek terhadap
-									   //satu objek lainnya
-
-
-
+	vector<MakhlukHidup *> daftar;  		//array pointer objek makhluk
 
 	//helper
 	void initDaftar();

@@ -59,7 +59,7 @@ Point Gerak::gerak_berarah(Point Awal)
         case 5 : temp.geser(0,1); break;
         case 6 : temp.geser(-1,1); break;
         case 7 : temp.geser(-1,0); break;
-        case 8 : temp.geser(-1,1); break;
+        case 8 : temp.geser(-1,-1); break;
     }
     return temp;
 }

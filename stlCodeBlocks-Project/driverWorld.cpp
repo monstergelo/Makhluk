@@ -44,7 +44,7 @@ int main()
 	Point P4(15,29);
 	Pemburu m4(P4);
 	Point P9(13,18);
-/*
+
 	World W;
 	W.fillDaftar(&m1);
 	W.fillDaftar(&m2);
@@ -68,8 +68,8 @@ int main()
 	W.initDraw(m4);
 
 	//pantau makhluk
-//	W.sinyal();
-
+	W.sinyal();
+/*
 	//hidupkan makhluk
 	thread t0((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m1));
 	thread t1((hidup_manusia)(&KonduktorMakhlukHidup::hidup), &W, ref(m2));
@@ -78,15 +78,15 @@ int main()
 
 
 	//tampilkan dunia
-/*
+
 	thread *d[W.get_size()];
 
 	for(int i=0; i<W.get_size(); ++i)
 	{
+
 		if(W.get_daftar(i) != NULL)
 			d[i] = new thread(&World::updateMakhluk, &W, i);
 	}
-
 	Sleep(1000);
 	thread t4(&World::creation, &W, P9, '1');
 	Sleep(4000);

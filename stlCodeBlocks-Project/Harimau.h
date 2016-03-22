@@ -10,9 +10,9 @@ class Harimau : public Karnivora{
         ~Harimau();
         Harimau& operator= (const Harimau&);
     private:
-        const static int batasumur_Harimau = 10;
+        const static int batasumur_Harimau = 25;
         const static int ulangtahun_Harimau = 2;
-        const static int maksimum_tingkat_kekenyangan_Harimau = 8;
+        const static int maksimum_tingkat_kekenyangan_Harimau = 70;
         const static int kecepatan_Harimau = 8;
         const static int deltaKecepatan_Harimau = 3;
 };
