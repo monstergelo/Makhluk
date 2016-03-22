@@ -1,14 +1,12 @@
 #include "administratorMakhlukHidup.h"
 
 #include <iostream>
-#include <thread>
 using namespace std;
 
 //ctor,  dtor
 AdministratorMakhlukHidup::AdministratorMakhlukHidup()
 {
 	size = 10;
-	//daftar = new MakhlukHidup[size];
 	count = 0;
 
 }
@@ -53,14 +51,6 @@ void AdministratorMakhlukHidup::sinyal()
             }
         }
     }
-}
-
-void AdministratorMakhlukHidup::initDaftar()
-{
-	for(int i=0; i<size; ++i)
-	{
-		daftar[i] = NULL;
-	}
 }
 
 int AdministratorMakhlukHidup::get_size()
