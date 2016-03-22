@@ -1,0 +1,11 @@
+1:18 PM (21/03/16) administratorMakhlukHidup.h administratorMakhlukHidup.cpp world.cpp
+6:11 PM (21/03/16) administratorMakhlukHidup.h administratorMakhlukHidup.cpp --Lulus
+8:33 PM (21/03/16) MakhlukHidup.h MakhlukHidup.cpp
+8:48 PM (21/03/16) driverWorld.cpp
+9:11 PM (21/03/16) 
+
+
+
+cp-s :	array -- vector
+		
+cp : world
