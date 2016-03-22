@@ -8,7 +8,7 @@ public:
 	Pohon& operator=(const Pohon&);
 	void Reaction(MakhlukHidup&);
 private:
-	const static int batasumur_Pohon = 50;
-    const static int ulangtahun_Pohon = 2;
+	const static int batasumur_Pohon = 73;
+    const static int ulangtahun_Pohon = 1;
     const static int DNA_Pohon = '!';
 };

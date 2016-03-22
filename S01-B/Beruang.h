@@ -10,10 +10,10 @@ class Beruang: public Omnivora{
         Beruang& operator=(const Beruang&);
         ~Beruang();
     private :
-        const static int batasumur_Beruang = 7;
-        const static int ulangtahun_Beruang = 4;
+        const static int batasumur_Beruang = 39;
+        const static int ulangtahun_Beruang = 5;
         const static int maksimum_tingkat_kekenyangan_Beruang = 70;
-        const static int kecepatan_Beruang = 4;
+        const static int kecepatan_Beruang = 3;
 };
 
 #endif // BERUANG_H_INCLUDED

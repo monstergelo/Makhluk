@@ -10,10 +10,10 @@ class Mandril: public Omnivora{
         Mandril& operator=(const Mandril&);
         ~Mandril();
     private :
-        const static int batasumur_Mandril = 16;
+        const static int batasumur_Mandril = 87;
         const static int ulangtahun_Mandril = 4;
-        const static int maksimum_tingkat_kekenyangan_Mandril = 100;
-        const static int kecepatan_Mandril = 4;
+        const static int maksimum_tingkat_kekenyangan_Mandril = 25;
+        const static int kecepatan_Mandril = 3;
 };
 
 #endif // MANDRIL_H_INCLUDED
