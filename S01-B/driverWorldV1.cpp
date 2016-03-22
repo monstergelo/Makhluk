@@ -1,12 +1,14 @@
 #include "world.h"
 
 char opsi = 'W';
+char sbs = 'W';
 
 void listenKey()
 {
     while(1)
     {
-        opsi = getch();
+        if((sbs != 'b') && (opsi != 'm'))
+            opsi = getch();
     }
 }
 
@@ -61,11 +63,6 @@ int main()
             W.creation(P9,opsi);
             opsi = 'W';
         }
-        else if(opsi == 'p')
-        {
-            W.pause();
-            opsi = 'W';
-        }
         else if(opsi == 'c')
         {
             W.tangkapLayar();
@@ -80,11 +77,32 @@ int main()
         {
             W.killAll();
         }
+        else if(opsi == 'm')
+        {
+
+            if(sbs == 'b'){
+                 sbs = 'W';
+                 W.resume();
+                 opsi = 'W';
+             }
+            else if (sbs == 'W'){
+                 sbs = 'b';
+                 opsi = 'W';
+             }
+        }
+        else if((opsi == 'p') || (sbs == 'b'))
+        {
+            W.pause();
+            opsi = 'W';
+        }
         W.updateDisplay();
         W.setCount(W.getCount()+1);
-        W.draw(P3, W.getCount());
-        cout << endl <<m2.get_Kecepatan();
-        Sleep(100);
+        W.draw(P3, sbs);
+
+        if(sbs == 'b')
+            opsi = getch();
+        else
+            Sleep(100);
     }
 
     W.draw(P3, '.');
@@ -95,4 +113,3 @@ int main()
 
     return 0;
 }
-
