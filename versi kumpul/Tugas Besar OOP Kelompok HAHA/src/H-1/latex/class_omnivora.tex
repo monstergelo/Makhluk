@@ -1,0 +1,151 @@
+\hypertarget{class_omnivora}{}\section{Omnivora Class Reference}
+\label{class_omnivora}\index{Omnivora@{Omnivora}}
+
+
+{\ttfamily \#include $<$Omnivora.\+h$>$}
+
+Inheritance diagram for Omnivora\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_omnivora}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_omnivora_a5073dcd66e4ebe988dffbafd2bb9b745}{Omnivora} ()
+\item 
+\hyperlink{class_omnivora_a1fb1d0e6f790f45af95f9887b20e24ad}{Omnivora} (int \+\_\+umur, char \+\_\+\+D\+NA, int \+\_\+ulangtahun, \hyperlink{class_point}{Point} P, int kenyang, int maks, char $\ast$tar, bool \+\_\+memburu, int k, int a)
+\item 
+\hyperlink{class_omnivora_afb44343570d732d361bfc7630da078c7}{Omnivora} (const \hyperlink{class_omnivora}{Omnivora} \&)
+\item 
+\hyperlink{class_omnivora_a37db286415e25f2f470a39b8405e2b58}{$\sim$\+Omnivora} ()
+\item 
+\hyperlink{class_omnivora}{Omnivora} \& \hyperlink{class_omnivora_a5e805170a3e3bd6ab15763229e58eb63}{operator=} (const \hyperlink{class_omnivora}{Omnivora} \&)
+\item 
+void \hyperlink{class_omnivora_a73ce54c452342971c4e1208ece7900b9}{memuda} ()
+\item 
+bool \hyperlink{class_omnivora_a2e63b0beba365ec5e3ec79975fe1204c}{is\+Tumbuhan} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)
+\item 
+void \hyperlink{class_omnivora_a1b8937b59e4606e6088add7c10bf3f60}{Reaction} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_omnivora}{Omnivora} class. A Class that describe a Carnivore Animals. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{Omnivora()}{Omnivora()}}]{\setlength{\rightskip}{0pt plus 5cm}Omnivora\+::\+Omnivora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a5073dcd66e4ebe988dffbafd2bb9b745}{}\label{class_omnivora_a5073dcd66e4ebe988dffbafd2bb9b745}
+A constructor Making a carnivore animals with a default value in every parameter \index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{Omnivora(int \+\_\+umur, char \+\_\+\+D\+N\+A, int \+\_\+ulangtahun, Point P, int kenyang, int maks, char $\ast$tar, bool \+\_\+memburu, int k, int a)}{Omnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char *tar, bool _memburu, int k, int a)}}]{\setlength{\rightskip}{0pt plus 5cm}Omnivora\+::\+Omnivora (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+umur, }
+\item[{char}]{\+\_\+\+D\+NA, }
+\item[{int}]{\+\_\+ulangtahun, }
+\item[{{\bf Point}}]{P, }
+\item[{int}]{kenyang, }
+\item[{int}]{maks, }
+\item[{char $\ast$}]{tar, }
+\item[{bool}]{\+\_\+memburu, }
+\item[{int}]{k, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a1fb1d0e6f790f45af95f9887b20e24ad}{}\label{class_omnivora_a1fb1d0e6f790f45af95f9887b20e24ad}
+A constructor that take 10 parameter 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer for the age limit of the omnivore \\
+\hline
+{\em a} & character of the omnivore\textquotesingle{}s D\+NA \\
+\hline
+{\em an} & integer \char`\"{}birthday\char`\"{} that saves the birthday time for omnivore \\
+\hline
+{\em a} & \hyperlink{class_point}{Point} that tells the position of the omnivore \\
+\hline
+{\em an} & integer that set \char`\"{}tingkat\+\_\+kekenyangan\char`\"{} \\
+\hline
+{\em an} & integer that set \char`\"{}maks\+\_\+tingkat\+\_\+kekenyangan\char`\"{} \\
+\hline
+{\em a} & character pointer that contain prey of the carnivore \\
+\hline
+{\em a} & boolean, the hunting state of the omnivore \\
+\hline
+{\em an} & integer k, contain the omnivore velocity \\
+\hline
+{\em an} & integer a, contain the omnivore first move default direction \\
+\hline
+\end{DoxyParams}
+\index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\index{Omnivora@{Omnivora}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{Omnivora(const Omnivora \&)}{Omnivora(const Omnivora &)}}]{\setlength{\rightskip}{0pt plus 5cm}Omnivora\+::\+Omnivora (
+\begin{DoxyParamCaption}
+\item[{const {\bf Omnivora} \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_afb44343570d732d361bfc7630da078c7}{}\label{class_omnivora_afb44343570d732d361bfc7630da078c7}
+A copy constructor \index{Omnivora@{Omnivora}!````~Omnivora@{$\sim$\+Omnivora}}
+\index{````~Omnivora@{$\sim$\+Omnivora}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{$\sim$\+Omnivora()}{~Omnivora()}}]{\setlength{\rightskip}{0pt plus 5cm}Omnivora\+::$\sim$\+Omnivora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a37db286415e25f2f470a39b8405e2b58}{}\label{class_omnivora_a37db286415e25f2f470a39b8405e2b58}
+A destructor 
+
+\subsection{Member Function Documentation}
+\index{Omnivora@{Omnivora}!is\+Tumbuhan@{is\+Tumbuhan}}
+\index{is\+Tumbuhan@{is\+Tumbuhan}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{is\+Tumbuhan(\+Makhluk\+Hidup \&)}{isTumbuhan(MakhlukHidup &)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Omnivora\+::is\+Tumbuhan (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} \&}]{M}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a2e63b0beba365ec5e3ec79975fe1204c}{}\label{class_omnivora_a2e63b0beba365ec5e3ec79975fe1204c}
+A function to check whether the organism is plant or not 
+\begin{DoxyParams}{Parameters}
+{\em a} & \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean 
+\end{DoxyReturn}
+\index{Omnivora@{Omnivora}!memuda@{memuda}}
+\index{memuda@{memuda}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{memuda()}{memuda()}}]{\setlength{\rightskip}{0pt plus 5cm}void Omnivora\+::memuda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a73ce54c452342971c4e1208ece7900b9}{}\label{class_omnivora_a73ce54c452342971c4e1208ece7900b9}
+A member procedure A process that make the age of the omnivore decrease by one \index{Omnivora@{Omnivora}!operator=@{operator=}}
+\index{operator=@{operator=}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{operator=(const Omnivora \&)}{operator=(const Omnivora &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Omnivora} \& Omnivora\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Omnivora} \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{class_omnivora_a5e805170a3e3bd6ab15763229e58eb63}{}\label{class_omnivora_a5e805170a3e3bd6ab15763229e58eb63}
+An operator= \index{Omnivora@{Omnivora}!Reaction@{Reaction}}
+\index{Reaction@{Reaction}!Omnivora@{Omnivora}}
+\subsubsection[{\texorpdfstring{Reaction(\+Makhluk\+Hidup \&)}{Reaction(MakhlukHidup &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Omnivora\+::\+Reaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} \&}]{M}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_omnivora_a1b8937b59e4606e6088add7c10bf3f60}{}\label{class_omnivora_a1b8937b59e4606e6088add7c10bf3f60}
+A procedure that make the omnivore react to the other \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup}} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_makhluk_hidup_a7aafd6122203f48a43b384a9d8175396}{Makhluk\+Hidup}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Omnivora.\+h\item 
+Omnivora.\+cpp\end{DoxyCompactItemize}

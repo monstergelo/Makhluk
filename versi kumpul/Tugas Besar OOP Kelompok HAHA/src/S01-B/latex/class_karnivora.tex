@@ -1,0 +1,186 @@
+\hypertarget{class_karnivora}{}\section{Karnivora Class Reference}
+\label{class_karnivora}\index{Karnivora@{Karnivora}}
+
+
+{\ttfamily \#include $<$Karnivora.\+h$>$}
+
+Inheritance diagram for Karnivora\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_karnivora}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_karnivora_afd4a31df2afd0c4b453092a4b554d46a}{Karnivora} ()
+\item 
+\hyperlink{class_karnivora_aa49aa02796b7915613503502a5ef64ee}{Karnivora} (int \+\_\+umur, char \+\_\+\+D\+NA, int \+\_\+ulangtahun, \hyperlink{class_point}{Point} P, int kenyang, int maks, char $\ast$tar, bool \+\_\+memburu, int k, int a, bool lambat, int delta)
+\item 
+\hyperlink{class_karnivora_a0ad77b06c2cbd1a19f477eb95449afed}{Karnivora} (const \hyperlink{class_karnivora}{Karnivora} \&)
+\item 
+\hyperlink{class_karnivora}{Karnivora} \& \hyperlink{class_karnivora_a7a89e24705bddf06a2c55a3fdc9d3047}{operator=} (const \hyperlink{class_karnivora}{Karnivora} \&)
+\item 
+\hyperlink{class_karnivora_ae6aa88535e87ff86244742167d940018}{$\sim$\+Karnivora} ()
+\item 
+void \hyperlink{class_karnivora_ad5085dc989bcb5ddb709d7351e01f7aa}{set\+Melambat} (bool lambat)
+\item 
+void \hyperlink{class_karnivora_a7252b3126157047d2467828b63e27766}{set\+Delta\+Kecepatan} (int delta)
+\item 
+bool \hyperlink{class_karnivora_afed2521496766e61af3f0977686a2fad}{get\+Melambat} ()
+\item 
+int \hyperlink{class_karnivora_a3668b84ed03d4584b95ffdf0b88fd2cd}{get\+Delta\+Kecepatan} ()
+\item 
+void \hyperlink{class_karnivora_a8e69eda1144d6789bb6d51aa48b5e569}{proses\+Melambat} ()
+\item 
+void \hyperlink{class_karnivora_a5835b08fcd4ca1d9d45459fedfceaf21}{Reaction} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_hewan}{Hewan} class. A Class that describe a Carnivore Animals. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{Karnivora()}{Karnivora()}}]{\setlength{\rightskip}{0pt plus 5cm}Karnivora\+::\+Karnivora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_afd4a31df2afd0c4b453092a4b554d46a}{}\label{class_karnivora_afd4a31df2afd0c4b453092a4b554d46a}
+A constructor Making a carnivore animals with a default value in every parameter \index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{Karnivora(int \+\_\+umur, char \+\_\+\+D\+N\+A, int \+\_\+ulangtahun, Point P, int kenyang, int maks, char $\ast$tar, bool \+\_\+memburu, int k, int a, bool lambat, int delta)}{Karnivora(int _umur, char _DNA, int _ulangtahun, Point P, int kenyang, int maks, char *tar, bool _memburu, int k, int a, bool lambat, int delta)}}]{\setlength{\rightskip}{0pt plus 5cm}Karnivora\+::\+Karnivora (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+umur, }
+\item[{char}]{\+\_\+\+D\+NA, }
+\item[{int}]{\+\_\+ulangtahun, }
+\item[{{\bf Point}}]{P, }
+\item[{int}]{kenyang, }
+\item[{int}]{maks, }
+\item[{char $\ast$}]{tar, }
+\item[{bool}]{\+\_\+memburu, }
+\item[{int}]{k, }
+\item[{int}]{a, }
+\item[{bool}]{lambat, }
+\item[{int}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_aa49aa02796b7915613503502a5ef64ee}{}\label{class_karnivora_aa49aa02796b7915613503502a5ef64ee}
+A constructor that take 12 parameter 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer for the age limit of the carnivore \\
+\hline
+{\em a} & character of the carnivore\textquotesingle{}s D\+NA \\
+\hline
+{\em an} & integer \char`\"{}birthday\char`\"{} that saves the birthday time for carnivore \\
+\hline
+{\em a} & \hyperlink{class_point}{Point} that tells the position of the Carnivore \\
+\hline
+{\em an} & integer that set \char`\"{}tingkat\+\_\+kekenyangan\char`\"{} \\
+\hline
+{\em an} & integer that set \char`\"{}maks\+\_\+tingkat\+\_\+kekenyangan\char`\"{} \\
+\hline
+{\em a} & character pointer that contain prey of the carnivore \\
+\hline
+{\em a} & boolean, the hunting state of the carnivore \\
+\hline
+{\em an} & integer k, contain the carnivore velocity \\
+\hline
+{\em an} & integer a, contain the carnivore first move default direction \\
+\hline
+{\em a} & boolean, the state that the tell whether the carnivore is slowed or not \\
+\hline
+{\em an} & integer that contain the acceleration of the carnivore \\
+\hline
+\end{DoxyParams}
+\index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\index{Karnivora@{Karnivora}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{Karnivora(const Karnivora \&)}{Karnivora(const Karnivora &)}}]{\setlength{\rightskip}{0pt plus 5cm}Karnivora\+::\+Karnivora (
+\begin{DoxyParamCaption}
+\item[{const {\bf Karnivora} \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_a0ad77b06c2cbd1a19f477eb95449afed}{}\label{class_karnivora_a0ad77b06c2cbd1a19f477eb95449afed}
+A copy constructor \index{Karnivora@{Karnivora}!````~Karnivora@{$\sim$\+Karnivora}}
+\index{````~Karnivora@{$\sim$\+Karnivora}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{$\sim$\+Karnivora()}{~Karnivora()}}]{\setlength{\rightskip}{0pt plus 5cm}Karnivora\+::$\sim$\+Karnivora (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_ae6aa88535e87ff86244742167d940018}{}\label{class_karnivora_ae6aa88535e87ff86244742167d940018}
+A destructor Virtual destructor to destruct a carnivore 
+
+\subsection{Member Function Documentation}
+\index{Karnivora@{Karnivora}!get\+Delta\+Kecepatan@{get\+Delta\+Kecepatan}}
+\index{get\+Delta\+Kecepatan@{get\+Delta\+Kecepatan}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{get\+Delta\+Kecepatan()}{getDeltaKecepatan()}}]{\setlength{\rightskip}{0pt plus 5cm}int Karnivora\+::get\+Delta\+Kecepatan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_a3668b84ed03d4584b95ffdf0b88fd2cd}{}\label{class_karnivora_a3668b84ed03d4584b95ffdf0b88fd2cd}
+A getter for acceleration of the carnivore \index{Karnivora@{Karnivora}!get\+Melambat@{get\+Melambat}}
+\index{get\+Melambat@{get\+Melambat}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{get\+Melambat()}{getMelambat()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Karnivora\+::get\+Melambat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_afed2521496766e61af3f0977686a2fad}{}\label{class_karnivora_afed2521496766e61af3f0977686a2fad}
+A getter for slowed status \index{Karnivora@{Karnivora}!operator=@{operator=}}
+\index{operator=@{operator=}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{operator=(const Karnivora \&)}{operator=(const Karnivora &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Karnivora} \& Karnivora\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Karnivora} \&}]{K}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_a7a89e24705bddf06a2c55a3fdc9d3047}{}\label{class_karnivora_a7a89e24705bddf06a2c55a3fdc9d3047}
+An operator= \index{Karnivora@{Karnivora}!proses\+Melambat@{proses\+Melambat}}
+\index{proses\+Melambat@{proses\+Melambat}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{proses\+Melambat()}{prosesMelambat()}}]{\setlength{\rightskip}{0pt plus 5cm}void Karnivora\+::proses\+Melambat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_a8e69eda1144d6789bb6d51aa48b5e569}{}\label{class_karnivora_a8e69eda1144d6789bb6d51aa48b5e569}
+A normal member procedure A procedure to make the animal slowed \index{Karnivora@{Karnivora}!Reaction@{Reaction}}
+\index{Reaction@{Reaction}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{Reaction(\+Makhluk\+Hidup \&)}{Reaction(MakhlukHidup &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Karnivora\+::\+Reaction (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} \&}]{M}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_karnivora_a5835b08fcd4ca1d9d45459fedfceaf21}{}\label{class_karnivora_a5835b08fcd4ca1d9d45459fedfceaf21}
+A normal member procedure that take 1 arguments A procedure that makes carnivore react to an organism input 
+\begin{DoxyParams}{Parameters}
+{\em an} & organism \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_makhluk_hidup_a7aafd6122203f48a43b384a9d8175396}{Makhluk\+Hidup}.
+
+\index{Karnivora@{Karnivora}!set\+Delta\+Kecepatan@{set\+Delta\+Kecepatan}}
+\index{set\+Delta\+Kecepatan@{set\+Delta\+Kecepatan}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{set\+Delta\+Kecepatan(int delta)}{setDeltaKecepatan(int delta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Karnivora\+::set\+Delta\+Kecepatan (
+\begin{DoxyParamCaption}
+\item[{int}]{delta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_a7252b3126157047d2467828b63e27766}{}\label{class_karnivora_a7252b3126157047d2467828b63e27766}
+A setter for the carnivore acceleration 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer arguments that will be assigned to true if the carnivore want to be slowed \\
+\hline
+\end{DoxyParams}
+\index{Karnivora@{Karnivora}!set\+Melambat@{set\+Melambat}}
+\index{set\+Melambat@{set\+Melambat}!Karnivora@{Karnivora}}
+\subsubsection[{\texorpdfstring{set\+Melambat(bool lambat)}{setMelambat(bool lambat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Karnivora\+::set\+Melambat (
+\begin{DoxyParamCaption}
+\item[{bool}]{lambat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_karnivora_ad5085dc989bcb5ddb709d7351e01f7aa}{}\label{class_karnivora_ad5085dc989bcb5ddb709d7351e01f7aa}
+A setter for slowed status 
+\begin{DoxyParams}{Parameters}
+{\em a} & boolean arguments that will be assigned to true if the carnivore want to be slowed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Karnivora.\+h\item 
+Karnivora.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,225 @@
+\hypertarget{class_gerak}{}\section{Gerak Class Reference}
+\label{class_gerak}\index{Gerak@{Gerak}}
+
+
+{\ttfamily \#include $<$Gerak.\+h$>$}
+
+Inheritance diagram for Gerak\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.255814cm]{class_gerak}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gerak_a02d91105bf6d068a736b83cb8384771d}{Gerak} (int k=0, int a=0)
+\item 
+\hyperlink{class_gerak}{Gerak} \& \hyperlink{class_gerak_a305ed06e393e3e51cfca2ef6e7c76afb}{operator=} (const \hyperlink{class_gerak}{Gerak} \&)
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_gerak_af22d628d35499daa0531c7ec33bc203c}{gerak\+\_\+bebas} (\hyperlink{class_point}{Point} Awal)
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_gerak_ad5580d6323e4c6b4ef8df2b66ae0e3d4}{gerak\+\_\+memburu} (\hyperlink{class_point}{Point} Awal, \hyperlink{class_point}{Point} Target)
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_gerak_a35bd72ee39648608e80e3a6e64529629}{gerak\+\_\+menjauh} (\hyperlink{class_point}{Point} Awal, \hyperlink{class_point}{Point} Predator)
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_gerak_a523d205606d855b9776ef64f92cc756e}{gerak\+\_\+berarah} (\hyperlink{class_point}{Point} Awal)
+\item 
+void \hyperlink{class_gerak_aeb2593139ccb712e979d2be884f7b964}{set\+\_\+\+Kecepatan} (int \+\_\+kecepatan)
+\item 
+void \hyperlink{class_gerak_a79f2c0d4777b7fdf7828783b4b6ebf59}{set\+\_\+\+Arah} (int \+\_\+arah)
+\item 
+void \hyperlink{class_gerak_a2b06276ef18ad27ab8cbe71655e9c198}{set\+\_\+\+Arah\+\_\+\+Bebas} ()
+\item 
+void \hyperlink{class_gerak_a0d31d49a0104e4d823bbfc2881a0f599}{set\+\_\+\+Arah\+\_\+\+Memburu} (\hyperlink{class_point}{Point} Awal, \hyperlink{class_point}{Point} Target)
+\item 
+void \hyperlink{class_gerak_a8a5617adee7b2c7d67b0f4571ca4b448}{set\+\_\+\+Arah\+\_\+\+Menjauh} (\hyperlink{class_point}{Point} Awal, \hyperlink{class_point}{Point} Predator)
+\item 
+int \hyperlink{class_gerak_a7c19aee88213b75f332d286458069ccd}{get\+\_\+\+Kecepatan} ()
+\item 
+int \hyperlink{class_gerak_ae808d0044c5221cf7e265fb43288b51b}{get\+\_\+\+Arah} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A gerak class. A class that describe a movement. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Gerak@{Gerak}!Gerak@{Gerak}}
+\index{Gerak@{Gerak}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{Gerak(int k=0, int a=0)}{Gerak(int k=0, int a=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Gerak\+::\+Gerak (
+\begin{DoxyParamCaption}
+\item[{int}]{k = {\ttfamily 0}, }
+\item[{int}]{a = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a02d91105bf6d068a736b83cb8384771d}{}\label{class_gerak_a02d91105bf6d068a736b83cb8384771d}
+A constructor. Making a movement with default parameter value in every parameter. 
+\begin{DoxyParams}{Parameters}
+{\em k} & A parameter that will be assign to direction. \\
+\hline
+{\em a} & A parameter that will be assign to velocity. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Gerak@{Gerak}!gerak\+\_\+bebas@{gerak\+\_\+bebas}}
+\index{gerak\+\_\+bebas@{gerak\+\_\+bebas}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{gerak\+\_\+bebas(\+Point Awal)}{gerak_bebas(Point Awal)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Gerak\+::gerak\+\_\+bebas (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_af22d628d35499daa0531c7ec33bc203c}{}\label{class_gerak_af22d628d35499daa0531c7ec33bc203c}
+A movement function returns a new cordinate. This movement use random direction. It just can move in one block. 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & Awal parameter that describe the first cordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_point}{Point}, new cordinate 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!gerak\+\_\+berarah@{gerak\+\_\+berarah}}
+\index{gerak\+\_\+berarah@{gerak\+\_\+berarah}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{gerak\+\_\+berarah(\+Point Awal)}{gerak_berarah(Point Awal)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Gerak\+::gerak\+\_\+berarah (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a523d205606d855b9776ef64f92cc756e}{}\label{class_gerak_a523d205606d855b9776ef64f92cc756e}
+A movement function returns a new cordinate. This movement use direction which get from attribute. It just can move in one block 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & Awal parameter that describe the first cordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_point}{Point}, new cordinate 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!gerak\+\_\+memburu@{gerak\+\_\+memburu}}
+\index{gerak\+\_\+memburu@{gerak\+\_\+memburu}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{gerak\+\_\+memburu(\+Point Awal, Point Target)}{gerak_memburu(Point Awal, Point Target)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Gerak\+::gerak\+\_\+memburu (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal, }
+\item[{{\bf Point}}]{Target}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_ad5580d6323e4c6b4ef8df2b66ae0e3d4}{}\label{class_gerak_ad5580d6323e4c6b4ef8df2b66ae0e3d4}
+A movement function returns a new cordinate. This movement use direction which close to target. It just can move in one block 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & parameter that describe the first cordinate. \\
+\hline
+{\em Target} & Target parameter that describe the cordinate of target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_point}{Point}, new cordinate 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!gerak\+\_\+menjauh@{gerak\+\_\+menjauh}}
+\index{gerak\+\_\+menjauh@{gerak\+\_\+menjauh}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{gerak\+\_\+menjauh(\+Point Awal, Point Predator)}{gerak_menjauh(Point Awal, Point Predator)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} Gerak\+::gerak\+\_\+menjauh (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal, }
+\item[{{\bf Point}}]{Predator}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a35bd72ee39648608e80e3a6e64529629}{}\label{class_gerak_a35bd72ee39648608e80e3a6e64529629}
+A movement function returns a new cordinate. This movement use direction which away from target. It just can move in one block 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & parameter that describe the first cordinate. \\
+\hline
+{\em Predator} & parameter that describe the cordinate of predator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_point}{Point}, new cordinate 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!get\+\_\+\+Arah@{get\+\_\+\+Arah}}
+\index{get\+\_\+\+Arah@{get\+\_\+\+Arah}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Arah()}{get_Arah()}}]{\setlength{\rightskip}{0pt plus 5cm}int Gerak\+::get\+\_\+\+Arah (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_ae808d0044c5221cf7e265fb43288b51b}{}\label{class_gerak_ae808d0044c5221cf7e265fb43288b51b}
+A getter for Kecepatan \begin{DoxyReturn}{Returns}
+an integer, direction 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!get\+\_\+\+Kecepatan@{get\+\_\+\+Kecepatan}}
+\index{get\+\_\+\+Kecepatan@{get\+\_\+\+Kecepatan}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{get\+\_\+\+Kecepatan()}{get_Kecepatan()}}]{\setlength{\rightskip}{0pt plus 5cm}int Gerak\+::get\+\_\+\+Kecepatan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a7c19aee88213b75f332d286458069ccd}{}\label{class_gerak_a7c19aee88213b75f332d286458069ccd}
+A getter for Kecepatan \begin{DoxyReturn}{Returns}
+an integer, velocity 
+\end{DoxyReturn}
+\index{Gerak@{Gerak}!operator=@{operator=}}
+\index{operator=@{operator=}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{operator=(const Gerak \&)}{operator=(const Gerak &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gerak} \& Gerak\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Gerak} \&}]{G}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a305ed06e393e3e51cfca2ef6e7c76afb}{}\label{class_gerak_a305ed06e393e3e51cfca2ef6e7c76afb}
+An Operator = \index{Gerak@{Gerak}!set\+\_\+\+Arah@{set\+\_\+\+Arah}}
+\index{set\+\_\+\+Arah@{set\+\_\+\+Arah}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+Arah(int \+\_\+arah)}{set_Arah(int _arah)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gerak\+::set\+\_\+\+Arah (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+arah}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a79f2c0d4777b7fdf7828783b4b6ebf59}{}\label{class_gerak_a79f2c0d4777b7fdf7828783b4b6ebf59}
+A setter for Arah. 
+\begin{DoxyParams}{Parameters}
+{\em a} & int argument that will be assigned to dircetion. It has value between 1 to 8. \\
+\hline
+\end{DoxyParams}
+\index{Gerak@{Gerak}!set\+\_\+\+Arah\+\_\+\+Bebas@{set\+\_\+\+Arah\+\_\+\+Bebas}}
+\index{set\+\_\+\+Arah\+\_\+\+Bebas@{set\+\_\+\+Arah\+\_\+\+Bebas}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+Arah\+\_\+\+Bebas()}{set_Arah_Bebas()}}]{\setlength{\rightskip}{0pt plus 5cm}void Gerak\+::set\+\_\+\+Arah\+\_\+\+Bebas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a2b06276ef18ad27ab8cbe71655e9c198}{}\label{class_gerak_a2b06276ef18ad27ab8cbe71655e9c198}
+A setter for Arah. Set direction attribute with random integer which has value between 1 to 8. \index{Gerak@{Gerak}!set\+\_\+\+Arah\+\_\+\+Memburu@{set\+\_\+\+Arah\+\_\+\+Memburu}}
+\index{set\+\_\+\+Arah\+\_\+\+Memburu@{set\+\_\+\+Arah\+\_\+\+Memburu}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+Arah\+\_\+\+Memburu(\+Point Awal, Point Target)}{set_Arah_Memburu(Point Awal, Point Target)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gerak\+::set\+\_\+\+Arah\+\_\+\+Memburu (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal, }
+\item[{{\bf Point}}]{Target}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a0d31d49a0104e4d823bbfc2881a0f599}{}\label{class_gerak_a0d31d49a0104e4d823bbfc2881a0f599}
+A setter for Arah. Set direction attribute with integer which references direction from origin to destination 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & A point argument describe the origin \\
+\hline
+{\em Target} & A point argument describe the destination. \\
+\hline
+\end{DoxyParams}
+\index{Gerak@{Gerak}!set\+\_\+\+Arah\+\_\+\+Menjauh@{set\+\_\+\+Arah\+\_\+\+Menjauh}}
+\index{set\+\_\+\+Arah\+\_\+\+Menjauh@{set\+\_\+\+Arah\+\_\+\+Menjauh}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+Arah\+\_\+\+Menjauh(\+Point Awal, Point Predator)}{set_Arah_Menjauh(Point Awal, Point Predator)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gerak\+::set\+\_\+\+Arah\+\_\+\+Menjauh (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{Awal, }
+\item[{{\bf Point}}]{Predator}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_a8a5617adee7b2c7d67b0f4571ca4b448}{}\label{class_gerak_a8a5617adee7b2c7d67b0f4571ca4b448}
+A setter for Arah. Set direction attribute with integer which references direction which away from predator 
+\begin{DoxyParams}{Parameters}
+{\em Awal} & A point argument describe the origin \\
+\hline
+{\em Predator} & A point argument describe the predator. \\
+\hline
+\end{DoxyParams}
+\index{Gerak@{Gerak}!set\+\_\+\+Kecepatan@{set\+\_\+\+Kecepatan}}
+\index{set\+\_\+\+Kecepatan@{set\+\_\+\+Kecepatan}!Gerak@{Gerak}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+Kecepatan(int \+\_\+kecepatan)}{set_Kecepatan(int _kecepatan)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gerak\+::set\+\_\+\+Kecepatan (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+kecepatan}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gerak_aeb2593139ccb712e979d2be884f7b964}{}\label{class_gerak_aeb2593139ccb712e979d2be884f7b964}
+A setter for Kecepatan. 
+\begin{DoxyParams}{Parameters}
+{\em a} & int argument that will be assigned to velocity. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Gerak.\+h\item 
+Gerak.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{classlinked_list}{}\section{linked\+List Class Reference}
+\label{classlinked_list}\index{linked\+List@{linked\+List}}
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlinked_list_a9c60821596e60f06c51e72c15f919709}{linked\+List} ()
+\item 
+\hyperlink{classlinked_list_a48697c9dde287ec065bd968cdd39b7ea}{linked\+List} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} $\ast$)
+\item 
+\hyperlink{classlinked_list_a8667006a08e31c5a52835749eb15fca4}{$\sim$linked\+List} ()
+\item 
+void \hyperlink{classlinked_list_abfccc5a0dfc257fea6dffd6717f935a5}{Add\+Last} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} $\ast$)
+\item 
+void \hyperlink{classlinked_list_a680ba19e4eaf4f3b923de498a76a9768}{Del} (int)
+\item 
+\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} $\ast$ \hyperlink{classlinked_list_ad810b23d27e11a44dc551ff7d507dc4e}{retrieve} (int)
+\item 
+void \hyperlink{classlinked_list_a3db922e69a1a03c95bbf0f966920462a}{Set\+Curr} (\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} $\ast$)
+\item 
+void \hyperlink{classlinked_list_a2dcd8a48e8fe874b8f1847b52cb4950f}{Set\+Next} (\hyperlink{classlinked_list}{linked\+List} $\ast$)
+\item 
+void \hyperlink{classlinked_list_a73393452a59e9a4d9958ca9f301e5ee2}{Set\+Prev} (\hyperlink{classlinked_list}{linked\+List} $\ast$)
+\item 
+\hyperlink{classlinked_list}{linked\+List} $\ast$ \hyperlink{classlinked_list_a75213b3c1e4bf71a8fe7c6fb1aeb2d9c}{Get\+Next} ()
+\item 
+\hyperlink{classlinked_list}{linked\+List} $\ast$ \hyperlink{classlinked_list_aca4819988d60a89c6f61132ca9997a63}{Get\+Prev} ()
+\item 
+\hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} $\ast$ \hyperlink{classlinked_list_a979e7bc9816fda56541832eb5f3be4f5}{Get\+Curr} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for constructing a Linked List /$\ast$ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{linked\+List@{linked\+List}!linked\+List@{linked\+List}}
+\index{linked\+List@{linked\+List}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{linked\+List()}{linkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}linked\+List\+::linked\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a9c60821596e60f06c51e72c15f919709}{}\label{classlinked_list_a9c60821596e60f06c51e72c15f919709}
+A constructor for Linked List \index{linked\+List@{linked\+List}!linked\+List@{linked\+List}}
+\index{linked\+List@{linked\+List}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{linked\+List(\+Makhluk\+Hidup $\ast$)}{linkedList(MakhlukHidup *)}}]{\setlength{\rightskip}{0pt plus 5cm}linked\+List\+::linked\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} $\ast$}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a48697c9dde287ec065bd968cdd39b7ea}{}\label{classlinked_list_a48697c9dde287ec065bd968cdd39b7ea}
+A constructor for Linked List that takes one argument 
+\begin{DoxyParams}{Parameters}
+{\em A} & list of makhluk hidup \\
+\hline
+\end{DoxyParams}
+\index{linked\+List@{linked\+List}!````~linked\+List@{$\sim$linked\+List}}
+\index{````~linked\+List@{$\sim$linked\+List}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{$\sim$linked\+List()}{~linkedList()}}]{\setlength{\rightskip}{0pt plus 5cm}linked\+List\+::$\sim$linked\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a8667006a08e31c5a52835749eb15fca4}{}\label{classlinked_list_a8667006a08e31c5a52835749eb15fca4}
+A destructor 
+
+\subsection{Member Function Documentation}
+\index{linked\+List@{linked\+List}!Add\+Last@{Add\+Last}}
+\index{Add\+Last@{Add\+Last}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Add\+Last(\+Makhluk\+Hidup $\ast$)}{AddLast(MakhlukHidup *)}}]{\setlength{\rightskip}{0pt plus 5cm}void linked\+List\+::\+Add\+Last (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} $\ast$}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_abfccc5a0dfc257fea6dffd6717f935a5}{}\label{classlinked_list_abfccc5a0dfc257fea6dffd6717f935a5}
+A member procedure to Add a Makhluk hidup at the last of the list 
+\begin{DoxyParams}{Parameters}
+{\em a} & pointer to Makhluk Hidup \\
+\hline
+\end{DoxyParams}
+\index{linked\+List@{linked\+List}!Del@{Del}}
+\index{Del@{Del}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Del(int)}{Del(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void linked\+List\+::\+Del (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a680ba19e4eaf4f3b923de498a76a9768}{}\label{classlinked_list_a680ba19e4eaf4f3b923de498a76a9768}
+A member procedure to Delete a member in list in a certain index 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer \\
+\hline
+\end{DoxyParams}
+\index{linked\+List@{linked\+List}!Get\+Curr@{Get\+Curr}}
+\index{Get\+Curr@{Get\+Curr}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Get\+Curr()}{GetCurr()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Makhluk\+Hidup} $\ast$ linked\+List\+::\+Get\+Curr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a979e7bc9816fda56541832eb5f3be4f5}{}\label{classlinked_list_a979e7bc9816fda56541832eb5f3be4f5}
+Get the current Makhluk Hidup \begin{DoxyReturn}{Returns}
+an address of Makhluk Hidup 
+\end{DoxyReturn}
+\index{linked\+List@{linked\+List}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Get\+Next()}{GetNext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linked\+List} $\ast$ linked\+List\+::\+Get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a75213b3c1e4bf71a8fe7c6fb1aeb2d9c}{}\label{classlinked_list_a75213b3c1e4bf71a8fe7c6fb1aeb2d9c}
+Get the next value \begin{DoxyReturn}{Returns}
+\hyperlink{classlinked_list}{linked\+List} 
+\end{DoxyReturn}
+\index{linked\+List@{linked\+List}!Get\+Prev@{Get\+Prev}}
+\index{Get\+Prev@{Get\+Prev}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Get\+Prev()}{GetPrev()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linked\+List} $\ast$ linked\+List\+::\+Get\+Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_aca4819988d60a89c6f61132ca9997a63}{}\label{classlinked_list_aca4819988d60a89c6f61132ca9997a63}
+Get the previous value \begin{DoxyReturn}{Returns}
+\hyperlink{classlinked_list}{linked\+List} 
+\end{DoxyReturn}
+\index{linked\+List@{linked\+List}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{retrieve(int)}{retrieve(int)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Makhluk\+Hidup} $\ast$ linked\+List\+::retrieve (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_ad810b23d27e11a44dc551ff7d507dc4e}{}\label{classlinked_list_ad810b23d27e11a44dc551ff7d507dc4e}
+A member function to get a pointer of Makhluk Hidup in a certain index 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to Makhluk Hiudp 
+\end{DoxyReturn}
+\index{linked\+List@{linked\+List}!Set\+Curr@{Set\+Curr}}
+\index{Set\+Curr@{Set\+Curr}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Set\+Curr(\+Makhluk\+Hidup $\ast$)}{SetCurr(MakhlukHidup *)}}]{\setlength{\rightskip}{0pt plus 5cm}void linked\+List\+::\+Set\+Curr (
+\begin{DoxyParamCaption}
+\item[{{\bf Makhluk\+Hidup} $\ast$}]{m1}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a3db922e69a1a03c95bbf0f966920462a}{}\label{classlinked_list_a3db922e69a1a03c95bbf0f966920462a}
+A setter to set the current Makhluk Hidup in List 
+\begin{DoxyParams}{Parameters}
+{\em a} & pointer to \hyperlink{class_makhluk_hidup}{Makhluk\+Hidup} \\
+\hline
+\end{DoxyParams}
+\index{linked\+List@{linked\+List}!Set\+Next@{Set\+Next}}
+\index{Set\+Next@{Set\+Next}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Set\+Next(linked\+List $\ast$)}{SetNext(linkedList *)}}]{\setlength{\rightskip}{0pt plus 5cm}void linked\+List\+::\+Set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+List} $\ast$}]{l1}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a2dcd8a48e8fe874b8f1847b52cb4950f}{}\label{classlinked_list_a2dcd8a48e8fe874b8f1847b52cb4950f}
+A setter to set the next value of the List 
+\begin{DoxyParams}{Parameters}
+{\em a} & linked List \\
+\hline
+\end{DoxyParams}
+\index{linked\+List@{linked\+List}!Set\+Prev@{Set\+Prev}}
+\index{Set\+Prev@{Set\+Prev}!linked\+List@{linked\+List}}
+\subsubsection[{\texorpdfstring{Set\+Prev(linked\+List $\ast$)}{SetPrev(linkedList *)}}]{\setlength{\rightskip}{0pt plus 5cm}void linked\+List\+::\+Set\+Prev (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+List} $\ast$}]{l1}
+\end{DoxyParamCaption}
+)}\hypertarget{classlinked_list_a73393452a59e9a4d9958ca9f301e5ee2}{}\label{classlinked_list_a73393452a59e9a4d9958ca9f301e5ee2}
+A setter to set the previous of the List 
+\begin{DoxyParams}{Parameters}
+{\em a} & linked List \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+List.\+h\item 
+List.\+cpp\end{DoxyCompactItemize}

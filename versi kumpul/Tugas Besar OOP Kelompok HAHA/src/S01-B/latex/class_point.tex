@@ -1,0 +1,151 @@
+\hypertarget{class_point}{}\section{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$Point.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point_ad92f2337b839a94ce97dcdb439b4325a}{Point} ()
+\item 
+\hyperlink{class_point_ace0a15218bffd7544273b5848de039e0}{Point} (int range)
+\item 
+\hyperlink{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02}{Point} (int \+\_\+x, int \+\_\+y)
+\item 
+\hyperlink{class_point}{Point} \& \hyperlink{class_point_a55eeab949e62268da63176d48570eb54}{operator=} (const \hyperlink{class_point}{Point} \&)
+\item 
+bool \hyperlink{class_point_a9201e61e7884cb0f861f09639cb1c121}{operator==} (const \hyperlink{class_point}{Point} \&)
+\item 
+void \hyperlink{class_point_ad2432ee1f003f107b898243a1285a14b}{geser} (int dx, int dy)
+\item 
+int \hyperlink{class_point_ae33b5d39a797830928a7d38376b23d21}{get\+Absis} ()
+\item 
+int \hyperlink{class_point_a23af70007db8db0ac9f74d1eafecdadc}{get\+Ordinat} ()
+\item 
+void \hyperlink{class_point_add1782a8109328ad174a8bc829621011}{set\+Absis} (int \+\_\+x)
+\item 
+void \hyperlink{class_point_adcb07a7e64713bc497e5174b5bec6a10}{set\+Ordinat} (int \+\_\+y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{class_point}{Point} Class, A Class to describe a \hyperlink{class_point}{Point} in Cartesian Diagram 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point()}{Point()}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_ad92f2337b839a94ce97dcdb439b4325a}{}\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}
+A ctor that construct A \hyperlink{class_point}{Point} with cordinate(0,0) \index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point(int range)}{Point(int range)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_ace0a15218bffd7544273b5848de039e0}{}\label{class_point_ace0a15218bffd7544273b5848de039e0}
+A ctor that construct A \hyperlink{class_point}{Point} with a random cordinate that range from 0 to range 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer, a range to random \\
+\hline
+\end{DoxyParams}
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point(int \+\_\+x, int \+\_\+y)}{Point(int _x, int _y)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+x, }
+\item[{int}]{\+\_\+y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02}{}\label{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02}
+A ctor that construct A \hyperlink{class_point}{Point} with absis = \+\_\+x and ordinate = \+\_\+y 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer for the absis \\
+\hline
+{\em an} & integer for the ordinate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Point@{Point}!geser@{geser}}
+\index{geser@{geser}!Point@{Point}}
+\subsubsection[{\texorpdfstring{geser(int dx, int dy)}{geser(int dx, int dy)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::geser (
+\begin{DoxyParamCaption}
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_ad2432ee1f003f107b898243a1285a14b}{}\label{class_point_ad2432ee1f003f107b898243a1285a14b}
+A member procedure to make a point move tc x+dx and y+dy 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer for dx \\
+\hline
+{\em an} & integer for dy \\
+\hline
+\end{DoxyParams}
+\index{Point@{Point}!get\+Absis@{get\+Absis}}
+\index{get\+Absis@{get\+Absis}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Absis()}{getAbsis()}}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::get\+Absis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_ae33b5d39a797830928a7d38376b23d21}{}\label{class_point_ae33b5d39a797830928a7d38376b23d21}
+Get the absis of the \hyperlink{class_point}{Point} \begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\index{Point@{Point}!get\+Ordinat@{get\+Ordinat}}
+\index{get\+Ordinat@{get\+Ordinat}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Ordinat()}{getOrdinat()}}]{\setlength{\rightskip}{0pt plus 5cm}int Point\+::get\+Ordinat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_a23af70007db8db0ac9f74d1eafecdadc}{}\label{class_point_a23af70007db8db0ac9f74d1eafecdadc}
+Get the ordinate of the \hyperlink{class_point}{Point} \begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\index{Point@{Point}!operator=@{operator=}}
+\index{operator=@{operator=}!Point@{Point}}
+\subsubsection[{\texorpdfstring{operator=(const Point \&)}{operator=(const Point &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} \& Point\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_a55eeab949e62268da63176d48570eb54}{}\label{class_point_a55eeab949e62268da63176d48570eb54}
+An operator= \index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\subsubsection[{\texorpdfstring{operator==(const Point \&)}{operator==(const Point &)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Point\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point} \&}]{P}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_a9201e61e7884cb0f861f09639cb1c121}{}\label{class_point_a9201e61e7884cb0f861f09639cb1c121}
+An operator== \index{Point@{Point}!set\+Absis@{set\+Absis}}
+\index{set\+Absis@{set\+Absis}!Point@{Point}}
+\subsubsection[{\texorpdfstring{set\+Absis(int \+\_\+x)}{setAbsis(int _x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+Absis (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+x}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_add1782a8109328ad174a8bc829621011}{}\label{class_point_add1782a8109328ad174a8bc829621011}
+Set the absis 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer \\
+\hline
+\end{DoxyParams}
+\index{Point@{Point}!set\+Ordinat@{set\+Ordinat}}
+\index{set\+Ordinat@{set\+Ordinat}!Point@{Point}}
+\subsubsection[{\texorpdfstring{set\+Ordinat(int \+\_\+y)}{setOrdinat(int _y)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::set\+Ordinat (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_point_adcb07a7e64713bc497e5174b5bec6a10}{}\label{class_point_adcb07a7e64713bc497e5174b5bec6a10}
+Set the ordinate 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Point.\+h\item 
+Point.\+cpp\end{DoxyCompactItemize}
