@@ -11,17 +11,8 @@
 class Hewan : public MakhlukHidup, public HuntingSkill, public Gerak{
 public :
     /**
-	 * A constructor that take 12 parameter
-	 * @param an integer for the age limit of the animal
-	 * @param a character of the carnivore's DNA
-	 * @param an integer "birthday" that saves the birthday time for animal
-	 * @param a Point that tells the position of the Carnivore
-	 * @param an integer that set "tingkat_kekenyangan"
-	 * @param an integer that set "maks_tingkat_kekenyangan"
-	 * @param a character pointer that contain prey of the animal
-	 * @param a boolean, the hunting state of the animal
-	 * @param an integer k, contain the animal velocity
-	 * @param an integer a, contain the animal first move default direction
+	 * A constructor
+	 * Making an organism with a default value in every parameter
 	 */
     Hewan(int _umur = 0, char _DNA = '*', int _ulangtahun = 0, 
 		Point P = PAwal, int kenyang = 0, int maks = 0, char* tar = NULL, bool _memburu = false, int k = 0, int a = 0);

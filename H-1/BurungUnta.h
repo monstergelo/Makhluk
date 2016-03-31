@@ -32,7 +32,7 @@ class BurungUnta : public Herbivora {
 		/**
 		 * A static constant value of Burung Unta age limit
 		 */
-		const static int batasumur_BurungUnta = 10;
+		const static int batasumur_BurungUnta = 80;
 		/**
 		 * A static constant value of Burung Unta birthday
 		 */

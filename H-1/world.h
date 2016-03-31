@@ -16,6 +16,7 @@ using namespace std;
 /**
  *  A World is a singleton that 
  *	contains information of all object within it and capable to display them.
+ *	Do not exit the application when the number of MakhlukHidup reach its maximum value.
  */
 //menggambarkan tampilan makhluk hidup dan dunia
 class World: public KonduktorMakhlukHidup, public AdministratorMakhlukHidup

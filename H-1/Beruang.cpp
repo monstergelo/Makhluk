@@ -5,13 +5,14 @@ Beruang::Beruang(Point P) : Omnivora(batasumur_Beruang,'b',ulangtahun_Beruang,P,
 {
     setPredator(0,'h');
     setPredator(1,'y');
-    setPredator(2,'p');
+    setPredator(2,'H');
 
     setTarget(0,'u');
     setTarget(1,'g');
-    setTarget(2,'r');
-    setTarget(3,'t');
+    setTarget(2,'^');
+    setTarget(3,'!');
     setTarget(4,'m');
+    setTarget(5,'C');
 }
 
 Beruang::Beruang(const Beruang& H) : Omnivora(H){

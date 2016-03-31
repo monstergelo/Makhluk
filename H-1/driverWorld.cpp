@@ -96,8 +96,6 @@ int main()
 		{
 			W.killAll();
 		}
-
-		W.draw(P3, W.get_count());
 	}
 
 	W.draw(P3, '.');
@@ -110,13 +108,13 @@ int main()
 	W.draw(P3, '.');
 	cout << "Mati Semua";
 
-	for(int i=0; i<10; ++i)
+	for(int i=0; i<W.get_count(); ++i)
 	{
-		for(int j=0; j<10; ++j)
+		for(int j=0; j<W.get_count(); ++j)
 		{
 			if(W.get_pemantau(i,j) != NULL)
 			{
-				W.get_pemantau(i,j)->join();
+				W.get_pemantau(i,j)->detach();
 			}
 		}
 	}

@@ -29,15 +29,15 @@ class Beruang: public Omnivora{
 		/**
 		 * A static constant value of Beruang age limit
 		 */
-        const static int batasumur_Beruang = 7;
+        const static int batasumur_Beruang = 39;
         /**
 		 * A static constant value of Beruang birthday
 		 */
-        const static int ulangtahun_Beruang = 4;
+        const static int ulangtahun_Beruang = 5;
         /**
 		 * A static constant value of maksimum_tingkat_kekenyangan_Beruang
 		 */
-        const static int maksimum_tingkat_kekenyangan_Beruang = 10;
+        const static int maksimum_tingkat_kekenyangan_Beruang = 70;
         /**
 		 * A static constant value of Beruang's velocity
 		 */

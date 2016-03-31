@@ -30,11 +30,11 @@ class Rumput : public Tumbuhan {
 		/**
 		 * A static constant value of Pohon age limit
 		 */
-		const static int batasumur_Rumput = 10;
+		const static int batasumur_Rumput = 99;
 		/**
 		 * A static constant value of Pohon birthday
 		 */
-		const static int ulangtahun_Rumput = 2;
+		const static int ulangtahun_Rumput = 1;
 		/**
 		 * A static constant value of Pohon's DNA
 		 */

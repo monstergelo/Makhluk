@@ -5,13 +5,14 @@ Mandril::Mandril(Point P) : Omnivora(batasumur_Mandril,'m',ulangtahun_Mandril,P,
 {
     setPredator(0,'h');
     setPredator(1,'y');
-    setPredator(2,'p');
+    setPredator(2,'H');
     setPredator(3,'b');
 
     setTarget(0,'u');
     setTarget(1,'g');
-    setTarget(2,'r');
-    setTarget(3,'t');
+    setTarget(2,'^');
+    setTarget(3,'!');
+    setTarget(4,'C');
 }
 
 Mandril::Mandril(const Mandril& H) : Omnivora(H){

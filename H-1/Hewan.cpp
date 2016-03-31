@@ -92,6 +92,15 @@ void Hewan::gerak_memburu(Point Target){
 void Hewan::gerak_berarah(){
     tingkat_kekenyangan--;
     hewanMati();
+    if (!isMati()){
+        setLapar();
+        if (Lapar){
+            setMemburu(true);
+        }
+        else{
+            setMemburu(false);
+        }
+    }
     setPosisi(Gerak::gerak_berarah(getPosisi()));
 }
 //Membuat gerakan arah yang ditentukan

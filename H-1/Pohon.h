@@ -5,7 +5,7 @@
 class Pohon : public Tumbuhan {
 	public:
 		/**
-		*  	ctor that take one argument to set the position of the Harimau
+		*  	ctor that take one argument to set the position of the Pohon
 		* 	@param A Point
 		*/
 		Pohon(Point=PAwal);
@@ -30,11 +30,11 @@ class Pohon : public Tumbuhan {
 		/**
 		 * A static constant value of Pohon age limit
 		 */
-		const static int batasumur_Pohon = 10;
+		const static int batasumur_Pohon = 73;
 		/**
 		 * A static constant value of Pohon birthday
 		 */
-		const static int ulangtahun_Pohon = 2;
+		const static int ulangtahun_Pohon = 1;
 		/**
 		 * A static constant value of Pohon's DNA
 		 */

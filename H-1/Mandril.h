@@ -28,7 +28,7 @@ class Mandril: public Omnivora{
 		/**
 		 * A static constant value of Mandril age limit
 		 */
-        const static int batasumur_Mandril = 7;
+        const static int batasumur_Mandril = 87;
         /**
 		 * A static constant value of Mandril birthday
 		 */
@@ -36,11 +36,11 @@ class Mandril: public Omnivora{
         /**
 		 * A static constant value of maksimum_tingkat_kekenyangan_Mandril
 		 */
-        const static int maksimum_tingkat_kekenyangan_Mandril = 10;
+        const static int maksimum_tingkat_kekenyangan_Mandril = 25;
         /**
 		 * A static constant value of Mandril's velocity
 		 */
-        const static int kecepatan_Mandril = 4;
+        const static int kecepatan_Mandril = 3;
 };
 
 #endif // MANDRIL_H_INCLUDED

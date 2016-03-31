@@ -3,7 +3,7 @@
 #include "Karnivora.h"
 
 /**
- *  Class for constructing a carnivore called Beruang
+ *  Class for constructing a carnivore called Harimau
  */
  
 class Harimau : public Karnivora{

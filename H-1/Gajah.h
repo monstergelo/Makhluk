@@ -31,11 +31,11 @@ class Gajah : public Herbivora {
 		/**
 		 * A static constant value of Gajah's age limit
 		 */
-		const static int batasumur_Gajah = 80;
+		const static int batasumur_Gajah = 76;
 		/**
 		 * A static constant value of Gajah's birthday
 		 */
-		const static int ulangtahun_Gajah = 2;
+		const static int ulangtahun_Gajah = 3;
 		/**
 		 * A static constant value of maksimum_tingkat_kekenyangan_Gajah
 		 */
@@ -43,7 +43,7 @@ class Gajah : public Herbivora {
 		/**
 		 * A static constant value of Gajah's velocity
 		 */
-		const static int kecepatan_Gajah = 5;
+		const static int kecepatan_Gajah = 2;
 		/**
 		 * A static constant value of Gajah's acceleration
 		 */

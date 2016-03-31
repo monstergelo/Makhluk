@@ -34,26 +34,21 @@ void Omnivora::memuda(){
 void Omnivora::Reaction(MakhlukHidup& M){
     if (M.getPosisi()== getPosisi()){
         if (get_DNA() == M.get_DNA()) {
-            if (M.get_umur() > get_umur())
-                setMati(true);
-            else if (M.get_umur() < get_umur())
-                M.setMati(true);
-            else {
-                M.setMati(true);
+            if (M.get_umur() >= get_umur()) {
                 setMati(true);
             }
         } else {
-            if (M.isPredator(get_DNA()))
+            if (isPredator(M.get_DNA()))
                 setMati(true);
             else
                 if (isTumbuhan(M)){
                     memuda();
                 }
-                M.setMati(true);
+                set_tingkat_kekenyangan(get_tingkat_kekenyangan());
         }
     } else if (isRadius(2,M.getPosisi())){
-        if (isTarget(M.get_DNA()))
-            gerak_memburu(M.getPosisi());
+        if ((isTarget(M.get_DNA())) && (getMemburu()))
+            set_Arah_Memburu(getPosisi(),M.getPosisi());
         else
             set_Arah_Bebas();
     }else{
